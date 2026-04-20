@@ -1,0 +1,413 @@
+@import url("../font/style.css");
+
+#sections {
+    width: 100%;
+    height: 100%;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+}
+
+#sections p {
+    background: rgba(79, 95, 187, 0.15);
+    backdrop-filter: blur(10px) saturate(180%);
+    -webkit-backdrop-filter: blur(10px) saturate(180%);
+    border: 1px solid rgba(79, 95, 187, 0.3);
+    border-radius: 30px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    color: white;
+    padding: 1rem;
+    margin: 1rem;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+#sections p:hover {
+    color: #00a8ff;
+    transform: scale(1.05);
+    filter: brightness(1.2);
+    transition: all 0.2s;
+}
+
+#content {
+    width: 100%;
+    height: 100%;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: #00a8ff #1e1e1e;
+}
+
+#towers-content {
+    width: 100%;
+    scrollbar-width: thin;
+    scrollbar-color: #00a8ff #1e1e1e;
+}
+
+#tiered-obby-content {
+    width: 100%;
+    scrollbar-width: thin;
+    scrollbar-color: #00a8ff #1e1e1e;
+}
+
+#mobile-tower-list-content {
+    scrollbar-width: thin;
+    scrollbar-color: #00a8ff #1e1e1e;
+}
+
+/* ===== Card — List View (Image 1) ===== */
+.list-card {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 14px;
+    padding: 18px 22px;
+    margin: 8px 0;
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s, transform 0.15s;
+    width: 100%;
+    box-sizing: border-box;
+    gap: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+.list-card:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.22);
+    transform: translateY(-2px);
+}
+
+.card-rank-col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 54px;
+}
+
+.card-rank-label {
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.35);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.card-rank-num {
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 1;
+    color: white;
+}
+
+.card-diff-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 900;
+    flex-shrink: 0;
+}
+
+.card-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.card-info-name {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 5px 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.card-info-sub {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5);
+    margin: 2px 0 0 0;
+}
+
+.card-info-sub strong {
+    color: rgba(255, 255, 255, 0.75);
+    font-weight: 600;
+}
+
+.card-arrow {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.2);
+    transition: color 0.2s, transform 0.2s;
+    flex-shrink: 0;
+}
+
+.list-card:hover .card-arrow {
+    color: #00a8ff;
+    transform: translateX(5px);
+}
+
+.card-thumb {
+    width: 255px;
+    height: 115px;
+    border-radius: 12px;
+    overflow: hidden;
+    flex-shrink: 0;
+    background: rgba(255, 255, 255, 0.07);
+}
+
+.card-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-thumb-placeholder {
+    width: 100%;
+    height: 100%;
+}
+
+/* ===== Detail Overlay — Detail View (Image 2) ===== */
+#detail-overlay {
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle at center, #0b0e2b, #1e1e57 70%, #202081);
+    z-index: 200;
+    overflow-y: auto;
+    padding: 32px 24px 60px;
+    display: none;
+}
+
+#detail-overlay.visible {
+    display: block;
+    animation: overlayFadeIn 0.22s ease forwards;
+}
+
+#detail-panel {
+    max-width: 940px;
+    margin: 0 auto;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    animation: panelSlideUp 0.32s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+#detail-panel a {
+    font-size: inherit;
+    margin: 0;
+}
+
+#detail-back-btn {
+    background: none;
+    border: none;
+    color: rgb(253, 253, 253);
+    cursor: pointer;
+    font-size: 13px;
+    padding: 10px 12px;
+    margin: 0 0 50px 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.2s;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: sticky;
+    top: 40px;
+    z-index: 10;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+#detail-back-btn:hover {
+    color: white;
+}
+
+.detail-title-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 12px;
+}
+
+.detail-icon-box {
+    width: 52px;
+    height: 52px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    font-weight: 900;
+    flex-shrink: 0;
+}
+
+.detail-rank-name {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    flex: 1;
+    min-width: 0;
+}
+
+.detail-rank {
+    font-size: 36px;
+    font-weight: 900;
+    white-space: nowrap;
+}
+
+.detail-name {
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.detail-badges {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 24px;
+    padding: 0 4px;
+}
+
+.detail-badge {
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    border: 1px solid currentColor;
+    background: rgba(255, 255, 255, 0.06);
+}
+
+#detail-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    align-items: start;
+}
+
+.detail-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 14px;
+    padding: 20px 24px;
+}
+
+.detail-card h3 {
+    margin: 0 0 16px 0;
+    font-size: 15px;
+    font-weight: 700;
+    color: white;
+}
+
+.detail-stats-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.detail-stats-table td {
+    padding: 9px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    vertical-align: top;
+    font-size: 13px;
+}
+
+.detail-stats-table tr:last-child td {
+    border-bottom: none;
+}
+
+.detail-stats-table td.stat-label {
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.35);
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    width: 42%;
+    padding-right: 10px;
+    font-weight: 600;
+    padding-top: 11px;
+}
+
+.detail-stats-table td.stat-value {
+    color: white;
+    font-weight: 400;
+}
+
+.detail-video-iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 8px;
+    border: none;
+    display: block;
+}
+
+.detail-no-video {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 13px;
+    padding: 40px 0;
+}
+
+@media (max-width: 700px) {
+    #detail-body { grid-template-columns: 1fr; }
+    .card-thumb { display: none; }
+}
+
+/* ===== Smooth Animations ===== */
+@keyframes overlayFadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes panelSlideUp {
+    from { opacity: 0; transform: translateY(28px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes cardFadeUp {
+    from { opacity: 0; transform: translateY(14px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.section-button {
+    margin: 10px;
+    background: rgba(20, 45, 99, 0.15);
+    backdrop-filter: blur(10px) saturate(180%);
+    -webkit-backdrop-filter: blur(10px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 30px;
+    box-shadow: 0 8px 32px 0 rgba(27, 29, 117, 0.897);
+    color: white;
+    padding: 1rem;
+    margin: 1rem;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.section-button:hover {
+    color: #00a8ff;
+    transform: scale(1.05);
+    filter: brightness(1.2);
+    transition: all 0.2s;
+}
+
+/* Section fade-slide on switch */
+#list-container #content > div {
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
