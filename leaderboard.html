@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Thai Obbies Website</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="shortcut icon" href="./images/TOC.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="style/leaderboard.css">
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/bg.css">
+    <link rel="stylesheet" href="style/list.css">
+    <link rel="stylesheet" href="style/tabs.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script type="module" src="scripts/Data_Player.js"></script>
+    <script type="module" src="scripts/LeaderboardManager.js"></script>
+</head>
+
+<body>
+    <div id="stars1"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
+    <div id="navbar">
+        <div id="navbar-logo">
+            <img src="./images/TOC.png" alt="TOC">
+            <a href="main.html">Home</a>
+            <a href="leaderboard.html">Leaderboard</a>
+            <a href="list.html">List</a>
+        </div>
+        <div id="navbar-links">
+            <p><i class="fab fa-discord" style="font-size:24px"></i>
+                <a href="https://discord.gg/SWsqxZ9CTm">Discord Server</a>
+            </p>
+            <p><i class="fab fa-github" style="font-size:24px"></i>
+                <a href="https://github.com/">GitHub</a>
+            </p>
+            <p><i class="fab fa-google" style="font-size:24px"></i>
+                <a
+                    href="https://docs.google.com/spreadsheets/d/1XLUy2jmo9XKshRr_qkfkvByQ9RBAROWzpPADDJ88rGw/edit?gid=1463707024#gid=1463707024">
+                    List Sheets</a>
+            </p>
+        </div>
+    </div>
+    <h1>Leaderboard</h1>
+    <div class="search-box">
+        <input type="text" id="playerInput" class="search-txt" placeholder="Search player..." onkeypress="if(event.key==='Enter') searchPlayer()">
+        <button id="search-icon" onclick="searchPlayer()" style="background:none;border:none;color:white;cursor:pointer;padding:8px;">
+            <i class="fa fa-search"> Search</i>
+        </button>
+    </div>
+    <div id="sections">
+        <button class="section-button" data-section="top-players-content">Top Players</button>
+        <button class="section-button" data-section="province-list-content">Province List</button>
+    </div>
+
+    <div id="leaderboard-container">
+        <div id="top-players-content">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Top</th>
+                        <th>PFP</th>
+                        <th>Types</th>
+                        <th>Points</th>
+                        <th>Player</th>
+                        <th>Hardest</th>
+                        <th>Device</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="data-player"></tbody>
+            </table>
+        </div>
+        <div id="province-list-content">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Top</th>
+                        <th>City</th>
+                        <th>Points</th>
+                        <th>Hardest</th>
+                    </tr>
+                </thead>
+                <tbody id="data-province"></tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
