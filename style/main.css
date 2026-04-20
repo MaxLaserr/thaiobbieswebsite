@@ -122,3 +122,69 @@ th {
   text-decoration: none;
   transition: all 0.2s;
 }
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  body {
+    padding-top: 80px;
+  }
+  
+  h1 {
+    font-size: 1.2rem;
+    margin: 0.5rem;
+    padding: 0.8rem;
+  }
+  
+  h2 {
+    font-size: 1.1rem;
+    margin: 1rem;
+    padding: 1rem;
+  }
+  
+  #home-content {
+    font-size: 1rem;
+    padding: 1rem;
+    margin: 1rem;
+  }
+  
+  a {
+    font-size: 1rem;
+    margin: 0.5rem;
+  }
+  
+  .search-box {
+    width: 90%;
+    margin: 1rem auto;
+  }
+  
+  .search-txt {
+    width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding-top: 100px;
+  }
+  
+  h1 {
+    font-size: 1rem;
+    margin: 0.3rem;
+    padding: 0.6rem;
+  }
+  
+  #home-content {
+    font-size: 0.9rem;
+    padding: 0.8rem;
+    margin: 0.8rem;
+  }
+  
+  a {
+    font-size: 0.9rem;
+  }
+  
+  .search-box {
+    width: 95%;
+    margin: 0.5rem auto;
+  }
+}

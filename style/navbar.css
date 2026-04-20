@@ -180,7 +180,77 @@
   to { transform: translateY(-50%) rotate(360deg); }
 }
 
-/* Responsive design */
+/* Mobile Responsive Navbar */
+@media (max-width: 768px) {
+  #navbar {
+    height: 80px;
+    flex-direction: column;
+    padding: 10px 0;
+  }
+  
+  #navbar-logo {
+    margin: 0 auto 10px auto;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  #navbar-logo img {
+    width: 40px;
+    height: 40px;
+  }
+  
+  #navbar-logo a {
+    font-size: 0.9rem;
+    margin: 0 5px;
+  }
+  
+  #navbar-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 0;
+  }
+  
+  #navbar-links p {
+    margin: 0;
+    font-size: 0.8rem;
+  }
+  
+  #navbar-links i {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  #navbar {
+    height: 100px;
+  }
+  
+  #navbar-logo img {
+    width: 35px;
+    height: 35px;
+  }
+  
+  #navbar-logo a {
+    font-size: 0.8rem;
+    margin: 0 3px;
+  }
+  
+  #navbar-links {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  #navbar-links p {
+    font-size: 0.7rem;
+  }
+  
+  #navbar-links i {
+    font-size: 16px;
+  }
+}
+
+/* Responsive design for sections */
 @media (max-width: 768px) {
   #sections {
     flex-direction: column;

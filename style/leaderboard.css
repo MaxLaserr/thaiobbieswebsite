@@ -78,3 +78,70 @@
         transform: translateY(0);
     }
 }
+
+/* Mobile Responsive for Leaderboard */
+@media (max-width: 768px) {
+    #leaderboard-container {
+        width: 95%;
+        margin: 1rem auto;
+    }
+    
+    #leaderboard-container table {
+        font-size: 0.9rem;
+    }
+    
+    #leaderboard-container table th,
+    #leaderboard-container table td {
+        padding: 0.5rem;
+    }
+    
+    #leaderboard-container table th:nth-child(n+4),
+    #leaderboard-container table td:nth-child(n+4) {
+        display: none;
+    }
+    
+    #data-player {
+        width: 100%;
+    }
+    
+    .search-box {
+        width: 90%;
+        margin: 1rem auto;
+    }
+}
+
+@media (max-width: 480px) {
+    #leaderboard-container {
+        width: 98%;
+        margin: 0.5rem auto;
+    }
+    
+    #leaderboard-container table {
+        font-size: 0.8rem;
+    }
+    
+    #leaderboard-container table th,
+    #leaderboard-container table td {
+        padding: 0.3rem;
+    }
+    
+    #leaderboard-container table th:nth-child(n+3),
+    #leaderboard-container table td:nth-child(n+3) {
+        display: none;
+    }
+    
+    #leaderboard-container table td img {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .search-box {
+        width: 95%;
+        margin: 0.5rem auto;
+    }
+    
+    .search-txt {
+        width: 150px;
+        font-size: 14px;
+    }
+}
