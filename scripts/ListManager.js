@@ -5,28 +5,19 @@ let TowersList = Towers;
 let TieredObby = TieredList;
 let MobileTowerList = TieredList.filter(item => item.tiers === "mobile-tower-list-content");
 
-// Debug: Log the filtered lists
-console.log('TowersList:', TowersList);
-console.log('TieredObby:', TieredObby);
-console.log('MobileTowerList:', MobileTowerList);
-
 export function getTowersList() {
-    console.log('getTowersList called, returning:', TowersList);
     return TowersList;
 }
 
 export function getTieredObbyList() {
-    console.log('getTieredObbyList called, returning:', TieredObby);
     return TieredObby;
 }
 
 export function getMobileTowerList() {
-    console.log('getMobileTowerList called, returning:', MobileTowerList);
     return MobileTowerList;
 }
 
 export function getTowerList() {
-    console.log('getTowerList called, returning:', Towers);
     return Towers.map(tower => tower.name);
 }
 
@@ -92,7 +83,6 @@ function getIconText(item, type) {
     return d ? d[0] : '?';
 }
 
-// ---- Card (Image 1) ----
 function createCard(item, type) {
     const diffStyle = getDiffStyle(item, type);
     const creators = Array.isArray(item.creators) ? item.creators.join(', ') : (item.creators || '—');
@@ -134,7 +124,6 @@ function createCard(item, type) {
     return card;
 }
 
-// ---- Detail Panel (Image 2) ----
 function buildStatsRows(item, type) {
     const diffStyle = getDiffStyle(item, type);
     const diffLabel = getDiffLabel(item, type);
