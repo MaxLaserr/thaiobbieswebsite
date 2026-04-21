@@ -52,7 +52,7 @@ const provinceData = [
     {
         top: 6,
         City: "Chiang Mai",
-        Points: 48.36,
+        Points: 55.25,
         Hardest1: "[Tier 16] The Path To Testosterone [60FPS]",
         Hardest2: "[Tier 16] Comatose [60 FPS]",
         Hardest3: "[Tier 15] the path to estrogen [60FPS]",
@@ -62,7 +62,7 @@ const provinceData = [
     {
         top: 7,
         City: "Pathum Thani",
-        Points: 48.36,
+        Points: 75,
         Hardest1: "[Tier 16] Aurora [60 FPS]",
         Hardest2: "[Tier 16] Comatose [60 FPS]",
         Hardest3: "[Catastrophic] Tower of Linear Jank [144 FPS]",
@@ -72,7 +72,7 @@ const provinceData = [
     {
         top: 8,
         City: "Songkhla",
-        Points: 48.36,
+        Points: 75.55,
         Hardest1: "[Catastrophic] Tower of Descent Into Exile [60 FPS]",
         Hardest2: "[Catastrophic] Tower of Generation Failure [60 FPS]",
         Hardest3: "[Terrifying] Tower of Uncanny Agony [60 FPS]",
@@ -82,7 +82,7 @@ const provinceData = [
     {
         top: 9,
         City: "Nakhon rachasima",
-        Points: 48.36,
+        Points: 81.12,
         Hardest1: "[Catastrophic] Tower of Linear Jank [144 FPS]",
         Hardest2: "[Catastrophic] Tower of Isoprophl-X [165 FPS]",
         Hardest3: "[Catastrophic] Tower of Cataclysmic Layers [120 FPS]",
@@ -92,7 +92,7 @@ const provinceData = [
     {
         top: 10,
         City: "Nonthaburi",
-        Points: 48.36,
+        Points: 106.9,
         Hardest1: "[Catastrophic] Tower of Isoprophl-X [144 FPS]",
         Hardest2: "[Terrifying] Tower of Uncanny Agony [120 FPS]",
         Hardest3: "[Terrifying] Tower of Complexity and Volatility [120 FPS]",
@@ -102,7 +102,7 @@ const provinceData = [
     {
         top: 11,
         City: "Chachoengsao",
-        Points: 48.36,
+        Points: 120.14,
         Hardest1: "[Terrifying] Tower of S Pi Ra Ls [60 FPS]",
         Hardest2: "[Terrifying] Tower of Alien Radiance [60 FPS]",
         Hardest3: "[Terrifying] Tower of Micro Management [60 FPS]",
@@ -112,7 +112,7 @@ const provinceData = [
     {
         top: 12,
         City: "Phetchabun",
-        Points: 48.36,
+        Points: 404.4,
         Hardest1: "[Extreme] Tower of Hopeless Hell [165 FPS]",
         Hardest2: "[Tier 13] Blueberry [60 FPS]",
         Hardest3: "[Inasne] Tower of Thinning Vengeance [144 FPS]",
