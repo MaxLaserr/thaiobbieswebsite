@@ -1,3 +1,51 @@
+import { TIERED_OBBY, DIFF_STYLES } from './keyword.js';
+
+// Helper functions for colored text
+function formatDifficultyItem(item) {
+  // Extract difficulty from brackets
+  const match = item.match(/^\[([^\]]+)\]/);
+  if (!match) return item;
+  
+  const difficulty = match[1];
+  const style = DIFF_STYLES[difficulty];
+  
+  if (!style) return item;
+  
+  const rest = item.replace(/^\[[^\]]+\]/, '');
+  return `<span style="color: ${style.color};">[${difficulty}]</span>${rest}`;
+}
+
+function formatTieredItem(item) {
+  // Extract tier from [Tier X]
+  const match = item.match(/^\[Tier (\d+)\]/);
+  if (!match) return item;
+  
+  const tier = parseInt(match[1]);
+  const style = TIERED_OBBY[tier];
+  
+  if (!style) return item;
+  
+  const rest = item.replace(/^\[Tier \d+\]/, '');
+  return `<span style="color: ${style.color};">[Tier ${tier}]</span>${rest}`;
+}
+
+function formatCompletionItem(item) {
+  if (item === "N/A") return item;
+  
+  // Try difficulty formatting first
+  const diffMatch = item.match(/^\[([A-Za-z]+)\]/);
+  if (diffMatch && DIFF_STYLES[diffMatch[1]]) {
+    return formatDifficultyItem(item);
+  }
+  
+  // Try tiered formatting
+  if (item.startsWith('[Tier ')) {
+    return formatTieredItem(item);
+  }
+  
+  return item;
+}
+
 const players = [
   {
     rank: 1,
@@ -7,10 +55,21 @@ const players = [
     type: "Tiered/Tower",
     points: 10.17,
     device: "PC",
-    hardest: [
-      "[Horrific] Tower of Eternal Void [75 FPS]"
+    hardest: ["[Horrific] Tower of Eternal Void [75 FPS]"],
+    completions_tower: [
+      "[Horrific] Tower of Eternal Void [75 FPS]",
+      "[Horrific] Tower of The Roof's Pique [75 FPS]",
+      "[Catastrophic] Tower of Cruel Punishment [75 FPS]",
+      "[Catastrophic] Tower of Vacant Hindrances [75 FPS]",
+      "[Catastrophic] Tower of Elongated Runs [75 FPS]",
+      "[Catastrophic] Tower of Champion's Road [75 FPS]",
+      "[Catastrophic] Tower of Generation Failure [75 FPS]",
     ],
-    status: "Quit"
+    completions_tiered: [
+      "[Tier 16] Hope for Amendment [60 FPS]",
+      "[Tier 15] Clouds [60 FPS]",
+    ],
+    status: "Quit",
   },
   {
     rank: 2,
@@ -20,10 +79,20 @@ const players = [
     type: "Tiered",
     points: 10.29,
     device: "PC",
-    hardest: [
+    hardest: ["[Tier 17] Emi Nubu [60FPS]"],
+    completions_tower: ["N/A"],
+    completions_tiered: [
       "[Tier 17] Emi Nubu [60FPS]",
+      "[Tier 17] Anata wa horobimasu [60 FPS]",
+      "[Tier 16] Tower of Amalgamation 1 [60 FPS]",
+      "[Tier 16] Shinku no naraku [60 FPS]",
+      "[Tier 15] Clouds [60 FPS]",
+      "[Tier 15] HOMAGE TOWER OF GLORY [60 FPS]",
+      "[Tier 15] TOWER OF GLORY [60 FPS]",
+      "[Tier 15] HOMAGE [60 FPS]",
+      "[Tier 15] Gloomy Mountains [60 FPS]",
     ],
-    status: "Active"
+    status: "Active",
   },
   {
     rank: 3,
@@ -33,10 +102,25 @@ const players = [
     type: "Tower",
     points: 13.7,
     device: "PC",
-    hardest: [
+    hardest: ["[Horrific] Tower of Quite Devious [144 FPS]"],
+    completions_tower: [
+      "[Horrific] Tower of Quite Devious [144 FPS]",
       "[Horrific] Tower of Who Moved My Camera [144 FPS]",
+      "[Horrific] Tower of Malefic Nuisances [144 FPS]",
+      "[Horrific] Tower of Elysian Crossings [144 FPS]",
+      "[Catastrophic] Tower of Jabberwock Jagger [120 FPS]",
+      "[Catastrophic] Tower of Cruel Punishment [90 FPS]",
+      "[Catastrophic] Tower of Shunning Excursion [240 FPS]",
+      "[Catastrophic] Tower of Elongated Runs [90 FPS]",
+      "[Catastrophic] Tower of Champion's Road [90 FPS]",
+      "[Catastrophic] Tower of Raging Tempest [144 FPS]",
+      "[Catastrophic] Tower of Thin Mints [120 FPS]",
+      "[Catastrophic] Tower of Descent Into Exile [144 FPS]",
+      "[Catastrophic] Tower of Empty Meaningless Patterns [90 FPS]",
+      "[Catastrophic] Tower of Generation Failure [75 FPS]",
     ],
-    status: "Active"
+    completions_tiered: ["N/A"],
+    status: "Active",
   },
   {
     rank: 4,
@@ -46,10 +130,25 @@ const players = [
     type: "Tiered/Tower",
     points: 17.36,
     device: "PC",
-    hardest: [
+    hardest: ["[Horrific] Tower of Thje Floor [144 FPS]"],
+    completions_tower: [
       "[Horrific] Tower of Thje Floor [144 FPS]",
+      "[Catastrophic] Tower of Jabberwock Jagger [165 FPS]",
+      "[Catastrophic] Barely Even A Tower [165 FPS]",
+      "[Catastrophic] Tower of Champion's Road [144 FPS]",
+      "[Catastrophic] Tower of Raging Tempest [144 FPS]",
+      "[Catastrophic] Tower of Descent Into Exile [144 FPS]",
+      "[Catastrophic] Tower of Wiggly Worm [165 FPS]",
+      "[Catastrophic] Tower of Cataclysmic Layers [144 FPS]",
     ],
-    status: "Active"
+    completions_tiered: [
+      "[Tier 16] Eau de Nil [60 FPS]",
+      "[Tier 16] Dysphoria [60 FPS]",
+      "[Tier 16] Arcrux [60 FPS]",
+      "[Tier 16] Shinku no naraku [60 FPS]",
+      "[Tier 16] Comatose [60 FPS]",
+    ],
+    status: "Active",
   },
   {
     rank: 5,
@@ -59,10 +158,17 @@ const players = [
     type: "Tower",
     points: 24.96,
     device: "PC",
-    hardest: [
+    hardest: ["[Horrific] Tower of Malefic Nuisances [144 FPS]"],
+    completions_tower: [
       "[Horrific] Tower of Malefic Nuisances [144 FPS]",
+      "[Catastrophic] Tower of Jabberwock Jagger [90 FPS]",
+      "[Catastrophic] Tower of Raging Tempest [60 FPS]",
+      "[Catastrophic] Tower of Descent Into Exile [60 FPS]",
+      "[Catastrophic] Tower of Rove Culmination [60 FPS]",
+      "[Catastrophic] Tower of Generation Failure [60 FPS]",
     ],
-    status: "Active"
+    completions_tiered: ["N/A"],
+    status: "Active",
   },
   {
     rank: 6,
@@ -72,10 +178,24 @@ const players = [
     type: "Tiered/Tower",
     points: 25.15,
     device: "PC",
-    hardest: [
+    hardest: ["[Horrific] Tower of Malefic Nuisances [144 FPS]"],
+    completions_tower: [
       "[Horrific] Tower of Malefic Nuisances [144 FPS]",
+      "[Catastrophic] Tower of Elongated Runs [144 FPS]",
+      "[Catastrophic] Tower of Champion's Road [144 FPS]",
+      "[Catastrophic] Tower of Descent Into Exile [144 FPS]",
+      "[Catastrophic] Tower of Empty Meaningless Patterns [144 FPS]",
+      "[Catastrophic] Tower of Tortuous Oblivion [144 FPS]",
+      "[Catastrophic] Tower of Generation Failure [144 FPS]",
+      "[Catastrophic] Tower of Cataclysmic Layers [144 FPS]",
+      "[Terrifying] Tower of Augmented Misery [144 FPS]",
     ],
-    status: "Active"
+    completions_tiered: [
+      "[Tier 16] Hope for Amendment [60 FPS]",
+      "[Tier 16] Comatose  [60 FPS]",
+      "[Tier 15] Paranoid [60 FPS]",
+    ],
+    status: "Active",
   },
   {
     rank: 7,
@@ -85,10 +205,20 @@ const players = [
     type: "Tiered/Tower",
     points: 25.83,
     device: "PC/Mobile",
-    hardest: [
-      "[Catastrophic?] Tower of Jabberwock Jagger [144 FPS]",
+    hardest: ["[Catastrophic?] Tower of Jabberwock Jagger [144 FPS]"],
+    completions_tower: [
+      "[Catastrophic] Tower of Jabberwock Jagger [144 FPS]",
+      "[Catastrophic] Tower of Cruel Punishment [144 FPS]",
+      "[Catastrophic] Tower of Champion's Road [144 FPS]",
+      "[Catastrophic] Tower of Monty Mole Mayhem [144 FPS]",
+      "[Catastrophic] Tower of Empty Meaningless Patterns [144 FPS]",
+      "[Catastrophic] Tower of Generation Failure [144 FPS]",
+      "[Terrifying] Tower of Augmented Misery [144 FPS]",
+      "[Terrifying] Tower of S Pi Ra Ls [144 FPS]",
+      "[Terrifying] Tower of Cataclysmic Layers: Classic [144 FPS]",
     ],
-    status: "Active"
+    completions_tiered: ["[Tier 16] Enigmatic Void [60FPS]"],
+    status: "Active",
   },
   {
     rank: 8,
@@ -98,10 +228,17 @@ const players = [
     type: "Tiered/Tower",
     points: 30.71,
     device: "PC",
-    hardest: [
-      "[Catastrophic?] Tower of Jabberwock Jagger [144 FPS]",
+    hardest: ["[Catastrophic?] Tower of Jabberwock Jagger [144 FPS]"],
+    completions_tower: [
+      "[Catastrophic] Tower of Jabberwock Jagger [144 FPS]",
+      "[Catastrophic] Tower of Elongated Runs [144 FPS]",
+      "[Catastrophic] Tower of Champion's Road [144 FPS]",
+      "[Catastrophic] Tower of Descent Into Exile [144 FPS]",
+      "[Catastrophic] Tower of Empty Meaningless Patterns [144 FPS]",
+      "[Catastrophic] Tower of Generation Failure [144 FPS]",
     ],
-    status: "Active"
+    completions_tiered: ["N/A"],
+    status: "Active",
   },
   {
     rank: 9,
@@ -111,10 +248,18 @@ const players = [
     type: "Tiered",
     points: 35.97,
     device: "PC",
-    hardest: [
+    hardest: ["[Tier 16] Shinku no naraku [60 FPS]"],
+    completions_tower: ["N/A"],
+    completions_tiered: [
       "[Tier 16] Shinku no naraku [60 FPS]",
+      "[Tier 16] CyclolcyC [60 FPS]",
+      "[Tier 16] Hope for Amendment [60 FPS]",
+      "[Tier 16] Cobalt Paradox [60 FPS]",
+      "[Tier 15] AntediIuvian [60 FPS]",
+      "[Tier 15] TARTARUS [60 FPS]",
+      "[Tier 15] Terrain Error [60 FPS]",
     ],
-    status: "Quit"
+    status: "Quit",
   },
   {
     rank: 10,
@@ -124,10 +269,16 @@ const players = [
     type: "Tiered",
     points: 41,
     device: "PC",
-    hardest: [
+    hardest: ["[Tier 16] Shinku no naraku [60 FPS]"],
+    completions_tower: ["N/A"],
+    completions_tiered: [
       "[Tier 16] Shinku no naraku [60 FPS]",
+      "[Tier 16] Hope for Amendment [60 FPS]",
+      "[Tier 16] Aurora [60 FPS]",
+      "[Tier 16] Comatose [60 FPS]",
+      "[Tier 15] Refraction [60 FPS]",
     ],
-    status: "Quit"
+    status: "Quit",
   },
   {
     rank: 11,
@@ -137,10 +288,17 @@ const players = [
     type: "Tower",
     points: 44.46,
     device: "PC",
-    hardest: [
+    hardest: ["[Catastrophic] Tower of Vacant Hindrances [144 FPS]"],
+    completions_tower: [
       "[Catastrophic] Tower of Vacant Hindrances [144 FPS]",
+      "[Catastrophic] Tower of Terse Persecution [144 FPS]",
+      "[Catastrophic] Tower of Linear Jank [144 FPS]",
+      "[Terrifying] Tower of Classical Difficult Spike [144 FPS]",
+      "[Terrifying] Was A Tower [144 FPS]",
+      "[Terrifying] Tower of Swift Annihilation [144 FPS]",
     ],
-    status: "Active"
+    completions_tiered: ["N/A"],
+    status: "Active",
   },
   {
     rank: 12,
@@ -150,10 +308,22 @@ const players = [
     type: "Tower",
     points: 48.36,
     device: "PC",
-    hardest: [
+    hardest: ["[Catastrophic] Tower of Exodus Obscurity [120 FPS]"],
+    completions_tower: [
       "[Catastrophic] Tower of Exodus Obscurity [120 FPS]",
+      "[Catastrophic] Tower of Rove Culmination [120 FPS]",
+      "[Catastrophic] Steeple of Lyme Disease [120 FPS]",
+      "[Catastrophic] Tower of Linear Jank [120 FPS]",
+      "[Catastrophic] Tower of Cataclysmic Layers [120 FPS]",
+      "[Terrifying] Steeple of Thje Roof [120 FPS]",
+      "[Terrifying] Tower of Thje Corner [120 FPS]",
+      "[Terrifying] Tower of Swift Chacine [120 FPS]",
+      "[Terrifying] Tower of Alien Radiance [120 FPS]",
+      "[Terrifying] Tower of Micro Management [120 FPS]",
+      "[Terrifying] Tower of Intricate Precision [120 FPS]",
     ],
-    status: "Active"
+    completions_tiered: ["N/A"],
+    status: "Active",
   },
   {
     rank: 13,
@@ -163,10 +333,16 @@ const players = [
     type: "Tiered",
     points: 55.25,
     device: "PC",
-    hardest: [
-      "[Tier 16] The Path To Testosterone (60FPS)",
+    hardest: ["[Tier 16] The Path To Testosterone (60FPS)"],
+    completions_tower: ["N/A"],
+    completions_tiered: [
+      "[Tier 16] The Path To Testosterone [60FPS]",
+      "[Tier 16] Comatose [60 FPS]",
+      "[Tier 15] the path to estrogen [60FPS]",
+      "[Tier 14] yea  [60FPS]",
+      "[Tier 14] ice shardz [60FPS]",
     ],
-    status: "Active"
+    status: "Active",
   },
   {
     rank: 14,
@@ -176,10 +352,17 @@ const players = [
     type: "Tower",
     points: 61.08,
     device: "PC",
-    hardest: [
-      "[Catastrophic] Tower of Descent Into Exile [120 FPS]",
+    hardest: ["[Catastrophic] Tower of Descent Into Exile [120 FPS]"],
+    completions_tower: [
+      "[Catastrophic] Tower of Descent Into Exile [144 FPS]",
+      "[Catastrophic] Tower of Generation Failure [120 FPS]",
+      "[Terrifying] Tower of Wildly Wacky Wonders [120 FPS]",
+      "[Terrifying] Tower of Alien Radiance [120 FPS]",
+      "[Terrifying] Tower of Micro Management [120 FPS]",
+      "[Terrifying] Tower of Impossible Movement [120 FPS]",
     ],
-    status: "Active"
+    completions_tiered: ["N/A"],
+    status: "Active",
   },
   {
     rank: 15,
@@ -190,18 +373,40 @@ const players = [
     points: 63.1,
     device: "PC",
     hardest: ["[Catastrophic] Tower of Descent Into Exile [120 FPS]"],
-    status: "Active"
+    completions_tower: [
+      "[Catastrophic] Tower of Descent Into Exile [120 FPS]",
+      "[Catastrophic] Tower of Generation Failure [120 FPS]",
+      "[Terrifying] Tower of Augmented Misery [120 FPS]",
+      "[Terrifying] Tower of Wildly Wacky Wonders [120 FPS]",
+      "[Terrifying] Tower of Uncanny Agony [120 FPS]",
+      "[Terrifying] Tower of Sempiternal Disquietude [120 FPS]",
+      "[Terrifying] Tower of Nervous Sweating [120 FPS]",
+      "[Terrifying] Tower of Alien Radiance [120 FPS]",
+      "[Terrifying] Tower of Agonizing Demise [120 FPS]",
+      "[Terrifying] Tower of Journey's End [120 FPS]",
+      "[Terrifying] Tower of Complexity and Volatility [120 FPS]",
+      "[Terrifying] Tower of Impossible Movement [120 FPS]",
+      "[Terrifying] Tower of Fractured Memories [120 FPS]",
+    ],
+    completions_tiered: ["N/A"],
+    status: "Active",
   },
   {
     rank: 16,
     username: "Tibet_Dev",
-    profileUrl: "#",
+    profileUrl: "https://www.youtube.com/@TibeTeast",
     pfpUrl: "./images/PFP/tibet_dev.jpg",
     type: "Tiered",
     points: 75,
     device: "PC",
     hardest: ["[Tier 16] Aurora [60 FPS]"],
-    status: "Active"
+    completions_tower: ["[Catastrophic] Tower of Linear Jank [144 FPS]"],
+    completions_tiered: [
+      "[Tier 16] Aurora [60 FPS]",
+      "[Tier 16] Comatose [60 FPS]",
+      "[Tier 14] Denial [60 FPS]",
+    ],
+    status: "Active",
   },
   {
     rank: 17,
@@ -212,7 +417,15 @@ const players = [
     points: 75.55,
     device: "Mobile",
     hardest: ["[Catastrophic] Tower of Descent Into Exile [60 FPS]"],
-    status: "Active"
+    completions_tower: [
+      "[Catastrophic] Tower of Descent Into Exile [60 FPS]",
+      "[Catastrophic] Tower of Generation Failure [60 FPS]",
+      "[Terrifying] Tower of Alien Radiance [60 FPS]",
+      "[Terrifying] Tower of Sempiternal Disquietude [60 FPS]",
+      "[Terrifying] Tower of Nervous Sweating [60 FPS]",
+    ],
+    completions_tiered: ["N/A"],
+    status: "Active",
   },
   {
     rank: 18,
@@ -223,7 +436,17 @@ const players = [
     points: 80.32,
     device: "PC",
     hardest: ["[Catastrophic] Tower of Generation Failure [144 FPS]"],
-    status: "Active"
+    completions_tower: [
+      "[Catastrophic] Tower of Cataclysmic Layers [144 FPS]",
+      "[Catastrophic] Tower of Generation Failure [144 FPS]",
+      "[Terrifying] Tower of Augmented Misery [144 FPS]",
+      "[Terrifying] Tower of Alien Radiance [120 FPS]",
+      "[Terrifying] Tower of Frightening Nightmares [75 FPS]",
+      "[Terrifying] Tower of Impossible Movement [75 FPS]",
+      "[Terrifying] Tower of Fractured Memories [75 FPS]",
+    ],
+    completions_tiered: ["N/A"],
+    status: "Active",
   },
   {
     rank: 19,
@@ -234,7 +457,19 @@ const players = [
     points: 80.67,
     device: "Mobile",
     hardest: ["[Catastrophic] Tower of Generation Failure [60 FPS]"],
-    status: "Active"
+    completions_tower: [
+      "[Catastrophic] Tower of Generation Failure [60 FPS]",
+      "[Catastrophic] Tower of Cataclysmic Layers [60 FPS]",
+      "[Terrifying] Tower of Cruel Underestimated Parkour [60 FPS]",
+      "[Terrifying] Tower of Quantum Quadrivium [60 FPS]",
+      "[Terrifying] Tower of Alien Radiance [60 FPS]",
+      "[Terrifying] Tower of Agonizing Demise [60 FPS]",
+      "[Terrifying] Tower of Journey's End [60 FPS]",
+      "[Terrifying] Tower of Impossible Movement [60 FPS]",
+      "[Terrifying] Tower of Fractured Memories [60 FPS]",
+    ],
+    completions_tiered: ["N/A"],
+    status: "Active",
   },
   {
     rank: 20,
@@ -245,7 +480,14 @@ const players = [
     points: 81.12,
     device: "PC",
     hardest: ["[Catastrophic] Tower of Linear Jank [144 FPS]"],
-    status: "Active"
+    completions_tower: [
+      "[Catastrophic] Tower of Cataclysmic Layers V.2 [120 FPS]",
+      "[Terrifying] Tower of Quantum Quadrivium [144 FPS]",
+      "[Terrifying] Steeple of Polynomial-C [144 FPS]",
+      "[Terrifying] Tower of Fractured Memories [144 FPS]",
+    ],
+    completions_tiered: ["N/A"],
+    status: "Active",
   },
   {
     rank: 21,
@@ -256,7 +498,12 @@ const players = [
     points: 94.14,
     device: "PC",
     hardest: ["[Catastrophic] Tower of Vacant Hindrances [144 FPS]"],
-    status: "Active"
+    completions_tower: [
+      "[Catastrophic] Tower of Vacant Hindrances [144 FPS]",
+      "[Terrifying] Tower of Classical Difficult Spike [144 FPS]",
+    ],
+    completions_tiered: ["N/A"],
+    status: "Active",
   },
   {
     rank: 22,
@@ -267,7 +514,15 @@ const players = [
     points: 94.67,
     device: "PC",
     hardest: ["[Catastrophic] Tower of Generation Failure [120 FPS]"],
-    status: "Active"
+    completions_tower: [
+      "[Catastrophic] Tower of Generation Failure [120 FPS]",
+      "[Terrifying] Tower of Inception [120 FPS]",
+      "[Terrifying] Tower of Alien Radiance [120 FPS]",
+      "[Terrifying] Tower of Frightening Nightmares [120 FPS]",
+      "[Terrifying] Tower of Impossible Movement [120 FPS]",
+    ],
+    completions_tiered: ["N/A"],
+    status: "Active",
   },
   {
     rank: 23,
@@ -278,7 +533,17 @@ const players = [
     points: 95.22,
     device: "PC",
     hardest: ["[Catastrophic] Tower of Raging Tempest [144 FPS]"],
-    status: "Active"
+    completions_tower: [
+      "[Catastrophic] Tower of Raging Tempest [144 FPS]",
+      "[Terrifying] Tower of Complexity and Volatility [144 FPS]",
+      "[Terrifying] Tower of Micro Management [144 FPS]",
+      "[Terrifying] Certainly A Tower [144 FPS]",
+      "[Extreme] Tower of Externalizing Insanity [120 FPS]",
+      "[Extreme] Tower of Panelling Barricades [120 FPS]",
+      "[Extreme] Tower of Frightening and Confusing Trials [120 FPS]",
+    ],
+    completions_tiered: ["N/A"],
+    status: "Active",
   },
   {
     rank: 24,
@@ -289,7 +554,13 @@ const players = [
     points: 98.63,
     device: "PC",
     hardest: ["[Catastrophic] Tower of Isoprophl-X [144 FPS]"],
-    status: "Active"
+    completions_tower: [
+      "[Catastrophic] Tower of Isoprophl-X [144 FPS]",
+      "[Terrifying] Tower of Augmented Misery [144 FPS]",
+      "[Terrifying] Tower of Alien Radiance [144 FPS]",
+    ],
+    completions_tiered: ["N/A"],
+    status: "Active",
   },
   {
     rank: 25,
@@ -300,7 +571,17 @@ const players = [
     points: 100.79,
     device: "PC",
     hardest: ["[Terrifying] Tower of Augmented Misery [120 FPS]"],
-    status: "Quit"
+    completions_tower: [
+      "[Terrifying] Tower of Augmented Misery [120 FPS]",
+      "[Terrifying] Tower of Uncanny Agony [120 FPS]",
+      "[Terrifying] Tower of Alien Radiance [120 FPS]",
+      "[Terrifying] Tower of Journey's End [120 FPS]",
+      "[Terrifying] Tower of Complexity and Volatility [120 FPS]",
+      "[Terrifying] Tower of Impossible Movement [120 FPS]",
+      "[Terrifying] Tower of Fractured Memories [120 FPS]",
+    ],
+    completions_tiered: ["N/A"],
+    status: "Quit",
   },
   {
     rank: 26,
@@ -311,7 +592,12 @@ const players = [
     points: 104.8,
     device: "PC",
     hardest: ["[Tier 15] TOWER OF GLORY [60 FPS]"],
-    status: "Quit"
+    completions_tower: ["N/A"],
+    completions_tiered: [
+      "[Tier 15] TOWER OF GLORY [60 FPS]",
+      "[Tier 15] Gloomy Mountains [60 FPS]",
+    ],
+    status: "Quit",
   },
   {
     rank: 27,
@@ -322,7 +608,17 @@ const players = [
     points: 106.9,
     device: "PC",
     hardest: ["[Catastrophic] Tower of Isoprophl-X [144 FPS]"],
-    status: "Active"
+    completions_tower: [
+      "[Catastrophic] Tower of Isoprophl-X [144 FPS]",
+      "[Terrifying] Tower of Complexity and Volatility [120 FPS]",
+      "[Terrifying] Tower of Intricate Precision [120 FPS]",
+      "[Terrifying] Tower of Fractured Memories [120 FPS]",
+      "[Extreme] Tower of Externalizing Insanity [120 FPS]",
+      "[Extreme] Tower of The Dripping Amalgam [120 FPS]",
+      "[Extreme] Tower of Astral Eclipse [120 FPS]",
+    ],
+    completions_tiered: ["N/A"],
+    status: "Active",
   },
   {
     rank: 28,
@@ -333,7 +629,17 @@ const players = [
     points: 115.08,
     device: "PC",
     hardest: ["[Catastrophic] Tower of Linear Jank [144 FPS]"],
-    status: "Active"
+    completions_tower: [
+      "[Catastrophic] Tower of Linear Jank [144 FPS]",
+      "[Terrifying] Tower of Thje Corner [144 FPS]",
+      "[Extreme] Tower of Hopeless Hell [144 FPS]",
+      "[Extreme] Tower of Bloodthirsty Kenos [144 FPS]",
+      "[Extreme] Tower of Astral Eclipse [120 FPS]",
+      "[Inasne] Tower of Inevitable Failure [144 FPS]",
+      "[Inasne] Tower of Difficulty Chart [144 FPS]",
+    ],
+    completions_tiered: ["N/A"],
+    status: "Active",
   },
   {
     rank: 29,
@@ -344,7 +650,11 @@ const players = [
     points: 119.65,
     device: "PC",
     hardest: ["[Tier 16] Hope for Amendment [60 FPS]"],
-    status: "Active"
+    completions_tower: ["N/A"],
+    completions_tiered: [
+      "[Tier 16] Hope for Amendment [60 FPS]",
+    ],
+    status: "Active",
   },
   {
     rank: 30,
@@ -355,7 +665,21 @@ const players = [
     points: 120.14,
     device: "Mobile",
     hardest: ["[Terrifying] Tower of S Pi Ra Ls [60 FPS]"],
-    status: "Active"
+    completions_tower: [
+      "[Catastrophic] Tower of S Pi Ra Ls [60 FPS]",
+      "[Terrifying] Tower of Alien Radiance [60 FPS]",
+      "[Terrifying] Tower of Micro Management [60 FPS]",
+      "[Terrifying] Tower of Fractured Memories [60 FPS]",
+      "[Extreme] Tower of The Dripping Amalgam [60 FPS]",
+      "[Extreme] Tower of Suffering Outside [60 FPS]",
+      "[Extreme] Tower of Hopeless Hell [60 FPS]",
+      "[Extreme] Tower of Bloodthirsty Kenos [60 FPS]",
+    ],
+    completions_tiered: [
+      "[Tier 14] The Traveller [60 FPS]",
+      "[Tier 14] Goliad [60 FPS]"
+    ],
+    status: "Active",
   },
   {
     rank: 31,
@@ -366,7 +690,20 @@ const players = [
     points: 169.71,
     device: "PC",
     hardest: ["[Terrifying] Tower of Alien Radiance [120 FPS]"],
-    status: "Active"
+    completions_tower: [
+    "[Terrifying] Tower of Alien Radiance [144 FPS]",
+    "[Terrifying] Tower of Complexity and Volatility [144 FPS]",
+    "[Terrifying] Tower of Fractured Memories [144 FPS]",
+    "[Extreme] Tower of Blast Power [144 FPS]",
+    "[Extreme] Tower of The Dripping Amalgam [144 FPS]",
+    "[Extreme] Tower of Hopeless Hell [144 FPS]",
+    "[Extreme] Tower of Bloodthirsty Kenos [144 FPS]",
+    "[Extreme] Tower of Astral Eclipse [144 FPS]",
+    "[Inasne] Tower of Thinning Layers [144 FPS]",
+    "[Inasne] Tower of Inevitable Failure [144 FPS]",
+    ],
+    completions_tiered: ["N/A"],
+    status: "Active",
   },
   {
     rank: 32,
@@ -377,7 +714,22 @@ const players = [
     points: 230,
     device: "PC/Mobile",
     hardest: ["[Terrifying] Steeple of Polynomial-C [60 FPS]"],
-    status: "Quit"
+    completions_tower: [
+      "[Terrifying] Steeple of Polynomial-C [60 FPS]",
+      "[Terrifying] Tower of Xerically Infuriating Calamity [60 FPS]",
+      "[Extreme] Tower of Converged Agitation [60 FPS]",
+      "[Extreme] Tower of Panelling Barricades [60 FPS]",
+      "[Inasne] Tower of Thinning Layers [60 FPS]",
+      "[Inasne] Tower of Inevitable Failure [60 FPS]",
+      "[Inasne] Tower of Infinity Gauntlet [60 FPS]",
+      "[Inasne] Tower of Unsettling Heights [60 FPS]",
+      "[Inasne] Tower of Extreme Hell [60 FPS]",
+      "[Inasne] Tower of High Adrenaline [60 FPS]",
+      "[Inasne] Tower of Difficulty Chart [60 FPS]",
+      "[Inasne] Tower of Double Trouble [60 FPS]",
+    ],
+    completions_tiered: ["[Tier 14] The Traveller [60 FPS]"],
+    status: "Quit",
   },
   {
     rank: 33,
@@ -388,7 +740,14 @@ const players = [
     points: 302.28,
     device: "Mobile",
     hardest: ["[Terrifying] Tower of Fractured Memories [144 FPS]"],
-    status: "Active"
+    completions_tower: [
+      "[Terrifying] Tower of Fractured Memories [144 FPS]",
+      "[Terrifying] Tower of Hopeless Hell [144 FPS]",
+      "[Extreme] Tower of Bloodthirsty Kenos [144 FPS]",
+      "[Extreme] Tower of Astral Eclipse [144 FPS]",
+    ],
+    completions_tiered: ["[Tier 13] Metamorphosis [60 FPS]"],
+    status: "Active",
   },
   {
     rank: 34,
@@ -399,7 +758,20 @@ const players = [
     points: 315.5,
     device: "PC",
     hardest: ["[Tier 14] Scarlet Paracosm [60 FPS]"],
-    status: "Quit"
+    completions_tower: ["N/A"],
+    completions_tiered: [
+      "[Tier 14] Scarlet Paracosm [60 FPS]",
+      "[Tier 14] The Remains [60 FPS]",
+      "[Tier 14] Site0 [60 FPS]",
+      "[Tier 13] Tower of Skywing [60 FPS]",
+      "[Tier 13] Tower of Maltael",
+      "[Tier 13] Rise of color [60 FPS]",
+      "[Tier 13] This is the obby [60 FPS]",
+      "[Tier 13] The Shatter [60 FPS]",
+      "[Tier 13] Tower of Climbing to Vicotry [60 FPS]",
+      "[Tier 13] Rainbow beans [60 FPS]",
+    ],
+    status: "Quit",
   },
   {
     rank: 35,
@@ -410,7 +782,21 @@ const players = [
     points: 335.2,
     device: "PC",
     hardest: ["[Extreme] Tower of Uttermost Antagonism [165 FPS]"],
-    status: "Active"
+    completions_tower: [
+      "[Extreme] Tower of Uttermost Antagonism [165 FPS]",
+      "[Extreme] Tower of Hopeless Hell [165 FPS]",
+      "[Inasne] Tower of Thinning Vengeance [165 FPS]",
+      "[Inasne] Tower of Franchun's Lullaby [165 FPS]",
+      "[Inasne] Tower of Peacebringer 7 7 7 [165 FPS]",
+      "[Inasne] Steeple of Rig [165 FPS]",
+      "[Inasne] Tower of Difficulty Chart [60 FPS]",
+      "[Inasne] Tower of Double Trouble [60 FPS]",
+    ],
+    completions_tiered: [
+      "[Tier 13] Blueberry [60 FPS]",
+      "[Tier 13] Firework [60 FPS]",
+    ],
+    status: "Active",
   },
   {
     rank: 36,
@@ -421,7 +807,14 @@ const players = [
     points: 356.6,
     device: "PC",
     hardest: ["[Tier 14] Yea [60 FPS]"],
-    status: "Active"
+    completions_tower: [
+      "[Extreme] Tower of Bloodthirsty Kenos [120 FPS]",
+    ],
+    completions_tiered: [
+      "[Tier 14] Yea [120 FPS]",
+      "[Tier 13] Firework [120 FPS]",
+    ],
+    status: "Active",
   },
   {
     rank: 37,
@@ -432,7 +825,20 @@ const players = [
     points: 363.1,
     device: "PC",
     hardest: ["[Extreme] Tower of Externalizing Insanity [120? FPS]"],
-    status: "Quit"
+    completions_tower: [
+      "[Extreme] Tower of Externalizing Insanity [120? FPS]",
+      "[Extreme] Tower of Hopeless Hell [120? FPS]",
+      "[Inasne] Tower of Thinning Layers [120? FPS]",
+      "[Inasne] Tower of Inevitable Failure [120? FPS]",
+      "[Inasne] Tower of Infinity Gauntlet [120? FPS]",
+      "[Inasne] Tower of Unsettling Heights [120? FPS]",
+      "[Inasne] Tower of Extreme Hell [120? FPS]",
+      "[Inasne] Tower of High Adrenaline [120? FPS]",
+      "[Inasne] Tower of Difficulty Chart [120? FPS]",
+      "[Inasne] Tower of Double Trouble [120? FPS]",
+    ],
+    completions_tiered: ["N/A"],
+    status: "Quit",
   },
   {
     rank: 38,
@@ -443,7 +849,16 @@ const players = [
     points: 394.1,
     device: "Mobile",
     hardest: ["[Tier 14] Yea [60 FPS]"],
-    status: "Active"
+    completions_tower: ["N/A"],
+    completions_tiered: [
+      "[Tier 14] Yea [60 FPS]",
+      "[Tier 13] Tiered obyyy [60 FPS]",
+      "[Tier 13] Fragmented dirty work [60 FPS]",
+      "[Tier 13] Transcendence [60 FPS]",
+      "[Tier 13] Metamophosis [60 FPS]",
+      "[Tier 10] agnoria [60 FPS]",
+    ],
+    status: "Active",
   },
   {
     rank: 39,
@@ -454,8 +869,16 @@ const players = [
     points: 515,
     device: "PC",
     hardest: ["[Tier 14] Yea [60 FPS]"],
-    status: "Active"
-  }
+    completions_tower: ["N/A"],
+    completions_tiered: [
+      "[Tier 14] Yea [60 FPS]",
+      "[Tier 13] Transcendence [60 FPS]",
+      "[Tier 13] Blueberry [60 FPS]",
+      "[Tier 10] agnoria [60 FPS]",
+    ],
+    status: "Active",
+  },
 ];
 
+export { formatCompletionItem, formatDifficultyItem, formatTieredItem };
 export default players;

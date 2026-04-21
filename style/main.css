@@ -13,31 +13,11 @@ body {
   padding-top: 60px;
 }
 
-h1 {
-  background: rgba(56, 55, 109, 0.542);
-  backdrop-filter: blur(10px) saturate(180%) brightness(0.9);
-  -webkit-backdrop-filter: blur(10px) saturate(180%) brightness(0.9);
-  border: 1px solid rgba(173, 187, 214, 0.3);
-  border-radius: 20px;
-  box-shadow: 0 8px 32px 0 rgba(99, 101, 168, 0.37);
-  color: white;
-  padding: 1rem;
-  margin: 1rem;
-  opacity: 0.8;
-
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  text-align: center;
-}
-
 h2 {
   color: #fff;
-  background-color: #030918;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 24px;
   font-weight: 500;
-  padding: 20px;
-  border-radius: 20px;
-  margin: 20px;
 }
 
 a {
@@ -61,8 +41,24 @@ th {
   padding: 10px;
 }
 
+#topic-text h1 {
+  background: rgba(56, 55, 109, 0.542);
+  backdrop-filter: blur(10px) saturate(180%) brightness(0.9);
+  -webkit-backdrop-filter: blur(10px) saturate(180%) brightness(0.9);
+  border: 1px solid rgba(173, 187, 214, 0.3);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px 0 rgba(99, 101, 168, 0.37);
+  color: white;
+  padding: 1rem;
+  margin: 1rem;
+  opacity: 0.8;
+
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+
 .search-box {
-  position: relative;
+  position: center;
   background: #151469;
   border-radius: 40px;
   display: flex;
@@ -70,7 +66,20 @@ th {
   align-items: center;
   margin: 20px;
   width: fit-content;
+
+  
+  align-items: center;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, transform 0.15s;
+  box-sizing: border-box;
+  gap: 18px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
 }
+
 .search-txt {
   border: none;
   background: none;
@@ -81,7 +90,8 @@ th {
   transition: 0.4s;
   width: 0px;
 }
-.search-box:hover > .search-txt {
+
+.search-box:hover>.search-txt {
   width: 240px;
   padding: 0 6px;
 }
@@ -128,35 +138,35 @@ th {
   body {
     padding-top: 80px;
   }
-  
+
   h1 {
     font-size: 1.2rem;
     margin: 0.5rem;
     padding: 0.8rem;
   }
-  
+
   h2 {
     font-size: 1.1rem;
     margin: 1rem;
     padding: 1rem;
   }
-  
+
   #home-content {
     font-size: 1rem;
     padding: 1rem;
     margin: 1rem;
   }
-  
+
   a {
     font-size: 1rem;
     margin: 0.5rem;
   }
-  
+
   .search-box {
     width: 90%;
     margin: 1rem auto;
   }
-  
+
   .search-txt {
     width: 200px;
   }
@@ -166,23 +176,23 @@ th {
   body {
     padding-top: 100px;
   }
-  
+
   h1 {
     font-size: 1rem;
     margin: 0.3rem;
     padding: 0.6rem;
   }
-  
+
   #home-content {
     font-size: 0.9rem;
     padding: 0.8rem;
     margin: 0.8rem;
   }
-  
+
   a {
     font-size: 0.9rem;
   }
-  
+
   .search-box {
     width: 95%;
     margin: 0.5rem auto;

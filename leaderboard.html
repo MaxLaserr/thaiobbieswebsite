@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Thai Obbies Website</title>
+    <title>TOC Leaderboard</title>
     <meta name="keywords" content="" />
     <meta name="description" content="" />
     <meta name="author" content="" />
@@ -32,13 +32,11 @@
             <a href="index.html">Home</a>
             <a href="leaderboard.html">Leaderboard</a>
             <a href="list.html">List</a>
+            <a href="credits.html">Credits</a>
         </div>
         <div id="navbar-links">
             <p><i class="fab fa-discord" style="font-size:24px"></i>
                 <a href="https://discord.gg/SWsqxZ9CTm">Discord Server</a>
-            </p>
-            <p><i class="fab fa-github" style="font-size:24px"></i>
-                <a href="https://github.com/">GitHub</a>
             </p>
             <p><i class="fab fa-google" style="font-size:24px"></i>
                 <a
@@ -47,7 +45,7 @@
             </p>
         </div>
     </div>
-    <h1>Leaderboard</h1>
+    <div id="topic-text"><h1>Leaderboard</h1></div>
     <div class="search-box">
         <input type="text" id="playerInput" class="search-txt" placeholder="Search player..." onkeypress="if(event.key==='Enter') searchPlayer()">
         <button id="search-icon" onclick="searchPlayer()" style="background:none;border:none;color:white;cursor:pointer;padding:8px;">
@@ -61,21 +59,10 @@
 
     <div id="leaderboard-container">
         <div id="top-players-content">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Top</th>
-                        <th>PFP</th>
-                        <th>Types</th>
-                        <th>Points</th>
-                        <th>Player</th>
-                        <th>Hardest</th>
-                        <th>Device</th>
-                        <th>Status</th>
-                    </tr>
-                </thead>
-                <tbody id="data-player"></tbody>
-            </table>
+            <div id="data-player"></div>
+        </div>
+        <div id="player-stats-content">
+            <div id="player-stats"></div>
         </div>
         <div id="province-list-content">
             <table>
@@ -84,11 +71,18 @@
                         <th>Top</th>
                         <th>City</th>
                         <th>Points</th>
-                        <th>Hardest</th>
+                        <th>Hardest #1</th>
+                        <th>Hardest #2</th>
+                        <th>Hardest #3</th>
+                        <th>Hardest #4</th>
+                        <th>Hardest #5</th>
                     </tr>
                 </thead>
                 <tbody id="data-province"></tbody>
             </table>
+        </div>
+        <div id="country-list-content">
+            <div id="country-list"></div>
         </div>
     </div>
 </body>

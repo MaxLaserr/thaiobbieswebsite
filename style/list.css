@@ -41,24 +41,24 @@
     overflow-y: auto;
     overflow-x: hidden;
     scrollbar-width: thin;
-    scrollbar-color: #00a8ff #1e1e1e;
+    scrollbar-color: #003cff #1e1e1e;
 }
 
 #towers-content {
     width: 100%;
     scrollbar-width: thin;
-    scrollbar-color: #00a8ff #1e1e1e;
+    scrollbar-color: #003cff #1e1e1e;
 }
 
 #tiered-obby-content {
     width: 100%;
     scrollbar-width: thin;
-    scrollbar-color: #00a8ff #1e1e1e;
+    scrollbar-color: #003cff #1e1e1e;
 }
 
 #mobile-tower-list-content {
     scrollbar-width: thin;
-    scrollbar-color: #00a8ff #1e1e1e;
+    scrollbar-color: #003cff #1e1e1e;
 }
 
 /* ===== Card — List View (Image 1) ===== */
@@ -345,6 +345,11 @@
     font-weight: 400;
 }
 
+.detail-completions{
+    color: white;
+    font-weight: 350;
+}
+
 .detail-video-iframe {
     width: 100%;
     aspect-ratio: 16 / 9;
@@ -383,12 +388,12 @@
 
 .section-button {
     margin: 10px;
-    background: rgba(20, 45, 99, 0.15);
+    background: rgba(40, 18, 99, 0.15);
     backdrop-filter: blur(10px) saturate(180%);
     -webkit-backdrop-filter: blur(10px) saturate(180%);
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 30px;
-    box-shadow: 0 8px 32px 0 rgba(27, 29, 117, 0.897);
+    box-shadow: 0 8px 32px 0 rgba(33, 34, 139, 0.993);
     color: white;
     padding: 1rem;
     margin: 1rem;
@@ -401,7 +406,7 @@
 }
 
 .section-button:hover {
-    color: #00a8ff;
+    color: #3b2296;
     transform: scale(1.05);
     filter: brightness(1.2);
     transition: all 0.2s;

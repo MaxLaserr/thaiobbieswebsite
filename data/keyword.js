@@ -32,7 +32,7 @@ const DIFF_STYLES = {
   },
   Catastrophic: { 
     background: "#ffffff15", 
-    color: "#ffffff", 
+    color: "#ebebebff", 
     border: "1px solid #ffffff30",
     image: "./images/Difficulty/CatastrophicIcon.webp"
   },
@@ -48,7 +48,7 @@ const DIFF_STYLES = {
     border: "1px solid #3facf430",
     image: "./images/Difficulty/ExtremeIcon.webp"
   },
-  Insane: { 
+  Inasne: { 
     background: "#0d1dff15", 
     color: "#0d1dffff", 
     border: "1px solid #0d1dff30",

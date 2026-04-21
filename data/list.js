@@ -61,6 +61,26 @@ const Towers = [
     },
     {
         top: 4,
+        name: "ToQD (Tower of Quite Devious)",
+        difficulty: DIFF_STYLES.Horrific,
+        rate: 12.25,
+        rateKey: "Mid",
+        firstVictor: "thanksmonno",
+        creators: ["tojma07"],
+
+        location: "https://www.roblox.com/games/15873244701/JToH-The-Eternal-Abyss",
+        gameStyle: "Linear, Technical, Purism",
+        difficultySource: "Raw Difficulty, Punishment",
+        fps: 144,
+
+        verifiedDate: "April 20, 2026",
+        length: "Moderate (15+ min.)",
+        quality: Q_COLORS['B+'],
+        url: "",
+        tiktokUrl: "",
+    },
+    {
+        top: 5,
         name: "ToWMMC (Tower of Who Moved My Camera)",
         difficulty: DIFF_STYLES.Horrific,
         rate: 12.25,
@@ -79,7 +99,7 @@ const Towers = [
         url: "https://www.youtube.com/watch?v=8briVppwHxE",
     },
     {
-        top: 5,
+        top: 6,
         name: "ToMN (Tower of Malefic Nuisances)",
         difficulty: DIFF_STYLES.Horrific,
         rate: 12.14,
@@ -98,7 +118,7 @@ const Towers = [
         url: "https://www.youtube.com/watch?v=lLbRZFwYaUU&t=9s",
     },
     {
-        top: 6,
+        top: 7,
         name: "ToEC (Tower of Elysian Crossings)",
         difficulty: DIFF_STYLES.Horrific,
         rate: 12.13,
@@ -117,7 +137,7 @@ const Towers = [
         url: "https://www.youtube.com/watch?v=SEmFJ7LPpBs&t=1s",
     },
     {
-        top: 7,
+        top: 8,
         name: "ToJJ (Tower of Jabberwock Jagger)",
         difficulty: DIFF_STYLES.Catastrophic,
         rate: 11.99,
@@ -136,7 +156,7 @@ const Towers = [
         url: "https://www.youtube.com/watch?v=V-nlnkwGgyU&t=12s",
     },
     {
-        top: 8,
+        top: 9,
         name: "ToCP (Tower of Cruel Punishment)",
         difficulty: DIFF_STYLES.Catastrophic,
         rate: 11.85,
@@ -155,7 +175,7 @@ const Towers = [
         url: "https://www.youtube.com/watch?v=027xT_d0-J0",
     },
     {
-        top: 9,
+        top: 10,
         name: "ToSE (Tower of Shunning Excursion)",
         difficulty: DIFF_STYLES.Catastrophic,
         rate: 11.81,
@@ -174,7 +194,7 @@ const Towers = [
         url: "https://www.youtube.com/watch?v=EJHZSonfips",
     },
     {
-        top: 10,
+        top: 11,
         name: "ToVH (Tower of Vacant Hindrances)",
         difficulty: DIFF_STYLES.Catastrophic,
         rate: 11.76,

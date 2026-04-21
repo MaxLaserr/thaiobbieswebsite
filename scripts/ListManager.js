@@ -226,8 +226,6 @@ function renderTowersList() {
     if (!container) return;
     TowersList.forEach(item => container.appendChild(createCard(item, 'towers')));
 
-    // Default to towers section
-    switchList('towers-content');
 }
 
 function renderTieredObbyList() {
@@ -235,8 +233,6 @@ function renderTieredObbyList() {
     if (!container) return;
     TieredObby.forEach(item => container.appendChild(createCard(item, 'tiered')));
     
-    // Default to tiered section
-    switchList('tiered-obby-content');
 }
 
 function switchList(sectionId) {
@@ -293,4 +289,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     renderTowersList();
     renderTieredObbyList();
+    
+    // Default to towers section
+    switchList('towers-content');
 });
