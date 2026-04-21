@@ -1,10 +1,9 @@
 import players, { formatCompletionItem } from "../data/player.js";
-const rankIcon = "../images/RankIcon";
 import { provinceData } from "../data/province.js";
 
 function IconRank(rank) {
   const rankConfig = {
-    1: { icon: '../images/RankIcon/toprank.png', color: '#FFD700' },
+    1: { icon: '../images/RankIcon/top_rank.png', color: '#FFD700' },
     2: { icon: '../images/RankIcon/top2.png', color: '#C0C0C0' },
     3: { icon: '../images/RankIcon/top3.png', color: '#CD7F32' },
   };
@@ -31,9 +30,9 @@ function rankColorBackground(rank) {
     return "#CD7F32"; // Bronze
   }
   if (rank <= 10) {
-    return "#d1e754ff"; // Dark green for ranks 4-10
+    return "#3370c0e8"; // Dark green for ranks 4-10
   }
-  return "#69d6d6ff"; // Dark slate gray for ranks 11+
+  return "#949494ff"; // Dark slate gray for ranks 11+
 }
 
 function getStatusIcon(status) {
@@ -121,7 +120,7 @@ function openPlayerDetail(player) {
       <div class="detail-title-row">
         <img src="${player.pfpUrl}" style="width:64px;height:64px;border-radius:50%;object-fit:cover;flex-shrink:0;">
         <div class="detail-rank-name">
-          <span class="detail-rank">#${player.rank}</span>
+          <span class="detail-rank" style="text-align: center; color: ${rankColorBackground(player.rank)};">#${player.rank}</span>
           <h1 class="detail-name">${player.username}</h1>
         </div>
       </div>
@@ -138,7 +137,7 @@ function openPlayerDetail(player) {
           <h2>Profile</h2>
           <div style="display:flex;flex-direction:column;align-items:center;gap:16px;padding:20px;">
             <img src="${player.pfpUrl}" style="width:120px;height:120px;border-radius:50%;object-fit:cover;">
-            <a href="${player.profileUrl}" target="_blank" rel="noopener" style="color:#00a8ff;font-size:16px;">View ↗</a>
+            <a href="${player.profileUrl}" target="_blank" rel="noopener" style="color:#00a8ff;font-size:16px;">View Channel↗</a>
           </div>
         </div>
         <div class="detail-card">

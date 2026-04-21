@@ -1,0 +1,209 @@
+.night {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.night::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    background: transparent;
+    box-shadow:
+        120px 80px #fff, 450px 200px #fff, 780px 50px #fff, 1100px 150px #fff, 1450px 90px #fff, 1750px 200px #fff,
+        200px 350px #fff, 500px 420px #fff, 850px 300px #fff, 1200px 380px #fff, 1550px 310px #fff, 1850px 400px #fff,
+        80px 600px #fff, 380px 650px #fff, 700px 580px #fff, 1050px 620px #fff, 1380px 560px #fff, 1700px 640px #fff,
+        30px 820px #fff, 320px 870px #fff, 650px 800px #fff, 980px 850px #fff, 1300px 780px #fff, 1650px 860px #fff,
+        150px 1050px #fff, 470px 1100px #fff, 800px 1020px #fff, 1130px 1080px #fff, 1470px 1010px #fff, 1780px 1090px #fff,
+        60px 1280px #fff, 390px 1320px #fff, 720px 1250px #fff, 1060px 1300px #fff, 1400px 1240px #fff, 1720px 1310px #fff,
+        250px 1500px #fff, 580px 1560px #fff, 900px 1480px #fff, 1240px 1530px #fff, 1570px 1460px #fff, 1880px 1540px #fff,
+        40px 1720px #fff, 370px 1780px #fff, 690px 1700px #fff, 1020px 1750px #fff, 1360px 1680px #fff, 1680px 1760px #fff,
+        170px 1940px #fff, 490px 1980px #fff, 820px 1900px #fff, 1150px 1960px #fff, 1490px 1890px #fff, 1800px 1970px #fff;
+    animation: twinkle 4s ease-in-out infinite alternate;
+}
+
+.night::after {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    border-radius: 50%;
+    background: transparent;
+    box-shadow:
+        90px 120px #fff, 310px 60px #fff, 640px 180px #fff, 960px 40px #fff, 1280px 130px #fff, 1600px 70px #fff, 1900px 160px #fff,
+        170px 450px #fff, 430px 510px #fff, 760px 460px #fff, 1090px 490px #fff, 1420px 440px #fff, 1730px 500px #fff,
+        50px 700px #fff, 280px 760px #fff, 610px 720px #fff, 930px 690px #fff, 1260px 740px #fff, 1580px 710px #fff, 1880px 770px #fff,
+        130px 950px #fff, 460px 990px #fff, 790px 940px #fff, 1110px 980px #fff, 1440px 920px #fff, 1760px 960px #fff,
+        220px 1180px #fff, 540px 1220px #fff, 870px 1160px #fff, 1190px 1200px #fff, 1520px 1140px #fff, 1840px 1190px #fff,
+        100px 1400px #fff, 420px 1450px #fff, 750px 1390px #fff, 1070px 1430px #fff, 1400px 1370px #fff, 1720px 1420px #fff,
+        300px 1620px #fff, 620px 1670px #fff, 940px 1600px #fff, 1270px 1650px #fff, 1590px 1590px #fff, 1900px 1640px #fff,
+        80px 1850px #fff, 400px 1890px #fff, 730px 1820px #fff, 1050px 1870px #fff, 1380px 1810px #fff, 1700px 1880px #fff;
+    animation: twinkle 6s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes twinkle {
+    0%   { opacity: 0.2; }
+    50%  { opacity: 1; }
+    100% { opacity: 0.4; }
+}
+
+.shooting-stars {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: rotateZ(40deg);
+}
+
+.star {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 2px;
+    background: linear-gradient(-45deg, #FFF, rgba(0, 0, 255, 0));
+    border-radius: 999px;
+    filter: drop-shadow(0 0 6px #FFF);
+    animation: tail 3s ease-in-out infinite,
+        falling 3s ease-in-out infinite;
+}
+
+@keyframes tail {
+    0% {
+        width: 0;
+    }
+
+    30% {
+        width: 100px;
+    }
+
+    100% {
+        width: 0;
+    }
+}
+
+@keyframes falling {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(300px);
+    }
+}
+
+.star::before,
+.star::after {
+    content: "";
+    position: absolute;
+    top: calc(50%-1px);
+    right: 0;
+    height: 2px;
+    background: linear-gradient(-45deg, rgba(0, 0, 255, 0), #FFF, rgba(0, 0, 255, 0));
+    border-radius: 100%;
+    transform: translateX(50%) rotateZ(45deg);
+    animation: shining 3s ease-in-out infinite
+}
+
+@keyframes shining {
+    0% {
+        width: 0;
+    }
+
+    50% {
+        width: 30px;
+    }
+
+    100% {
+        width: 0;
+    }
+}
+
+.star::after {
+    transform: translateX(50%) rotateZ(-45deg);
+}
+
+.star:nth-child(1) {
+    top: calc(10% - 100px);
+    left: calc(10% - 250px);
+    animation-delay: 0s;
+    animation-duration: 4s;
+}
+.star:nth-child(1)::before, .star:nth-child(1)::after { animation-delay: 0s; }
+
+.star:nth-child(2) {
+    top: calc(25% - 50px);
+    left: calc(5% - 200px);
+    animation-delay: 1.5s;
+    animation-duration: 3.5s;
+}
+.star:nth-child(2)::before, .star:nth-child(2)::after { animation-delay: 1.5s; }
+
+.star:nth-child(3) {
+    top: calc(50%);
+    left: calc(50% - 150px);
+    animation-delay: 0.8s;
+    animation-duration: 5s;
+}
+.star:nth-child(3)::before, .star:nth-child(3)::after { animation-delay: 0.8s; }
+
+.star:nth-child(4) {
+    top: calc(70%);
+    left: calc(80% - 200px);
+    animation-delay: 2s;
+    animation-duration: 4.5s;
+}
+.star:nth-child(4)::before, .star:nth-child(4)::after { animation-delay: 2s; }
+
+.star:nth-child(5) {
+    top: calc(85%);
+    left: calc(30% - 250px);
+    animation-delay: 0.3s;
+    animation-duration: 3s;
+}
+.star:nth-child(5)::before, .star:nth-child(5)::after { animation-delay: 0.3s; }
+
+.star:nth-child(6) {
+    top: calc(15%);
+    left: calc(70% - 200px);
+    animation-delay: 2.5s;
+    animation-duration: 4s;
+}
+.star:nth-child(6)::before, .star:nth-child(6)::after { animation-delay: 2.5s; }
+
+.star:nth-child(7) {
+    top: calc(40%);
+    left: calc(90% - 150px);
+    animation-delay: 1s;
+    animation-duration: 5.5s;
+}
+.star:nth-child(7)::before, .star:nth-child(7)::after { animation-delay: 1s; }
+
+.star:nth-child(8) {
+    top: calc(60%);
+    left: calc(20% - 250px);
+    animation-delay: 3s;
+    animation-duration: 3.8s;
+}
+.star:nth-child(8)::before, .star:nth-child(8)::after { animation-delay: 3s; }
+
+.star:nth-child(9) {
+    top: calc(5%);
+    left: calc(45% - 200px);
+    animation-delay: 1.8s;
+    animation-duration: 4.2s;
+}
+.star:nth-child(9)::before, .star:nth-child(9)::after { animation-delay: 1.8s; }
+
+.star:nth-child(10) {
+    top: calc(90%);
+    left: calc(60% - 150px);
+    animation-delay: 0.5s;
+    animation-duration: 3.2s;
+}
+.star:nth-child(10)::before, .star:nth-child(10)::after { animation-delay: 0.5s; }

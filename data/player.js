@@ -205,7 +205,7 @@ const players = [
     type: "Tiered/Tower",
     points: 25.83,
     device: "PC/Mobile",
-    hardest: ["[Catastrophic?] Tower of Jabberwock Jagger [144 FPS]"],
+    hardest: ["[Catastrophic] Tower of Jabberwock Jagger [144 FPS]"],
     completions_tower: [
       "[Catastrophic] Tower of Jabberwock Jagger [144 FPS]",
       "[Catastrophic] Tower of Cruel Punishment [144 FPS]",
@@ -228,7 +228,7 @@ const players = [
     type: "Tiered/Tower",
     points: 30.71,
     device: "PC",
-    hardest: ["[Catastrophic?] Tower of Jabberwock Jagger [144 FPS]"],
+    hardest: ["[Catastrophic] Tower of Jabberwock Jagger [144 FPS]"],
     completions_tower: [
       "[Catastrophic] Tower of Jabberwock Jagger [144 FPS]",
       "[Catastrophic] Tower of Elongated Runs [144 FPS]",
@@ -820,7 +820,7 @@ const players = [
     rank: 37,
     username: "YPJJTHXD1",
     profileUrl: "#",
-    pfpUrl: "./images/PFP/YPJJTHXD1.png",
+    pfpUrl: "./images/PFP/ypjjthxd1.png",
     type: "Tower",
     points: 363.1,
     device: "PC",

@@ -90,8 +90,8 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Expose for backward compatibility
-window.changeSection = function(button) {
-  const sectionId = button.getAttribute('data-section');
-  const manager = new LeaderboardManager();
-  manager.switchSection(sectionId);
-};
+// window.changeSection = function(button) {
+//   const sectionId = button.getAttribute('data-section');
+//   const manager = new LeaderboardManager();
+//   manager.switchSection(sectionId);
+// };

@@ -58,17 +58,11 @@ th {
 }
 
 .search-box {
-  position: center;
-  background: #151469;
-  border-radius: 40px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   margin: 20px;
   width: fit-content;
-
-  
-  align-items: center;
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 14px;
