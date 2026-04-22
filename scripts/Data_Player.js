@@ -3,7 +3,7 @@ import { provinceData } from "../data/province.js";
 
 function IconRank(rank) {
   const rankConfig = {
-    1: { icon: '../images/RankIcon/top_rank.png', color: '#FFD700' },
+    1: { icon: '../images/RankIcon/top1.png', color: '#FFD700' },
     2: { icon: '../images/RankIcon/top2.png', color: '#C0C0C0' },
     3: { icon: '../images/RankIcon/top3.png', color: '#CD7F32' },
   };
@@ -121,7 +121,7 @@ function openPlayerDetail(player) {
         <img src="${player.pfpUrl}" style="width:64px;height:64px;border-radius:50%;object-fit:cover;flex-shrink:0;">
         <div class="detail-rank-name">
           <span class="detail-rank" style="text-align: center; color: ${rankColorBackground(player.rank)};">#${player.rank}</span>
-          <h1 class="detail-name">${player.username}</h1>
+          <h1 class="detail-name">${IconRank(player.rank)} ${player.username}</h1>
         </div>
       </div>
       <div class="detail-badges">

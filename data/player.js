@@ -666,7 +666,7 @@ const players = [
     device: "Mobile",
     hardest: ["[Terrifying] Tower of S Pi Ra Ls [60 FPS]"],
     completions_tower: [
-      "[Catastrophic] Tower of S Pi Ra Ls [60 FPS]",
+      "[Terrifying] Tower of S Pi Ra Ls [60 FPS]",
       "[Terrifying] Tower of Alien Radiance [60 FPS]",
       "[Terrifying] Tower of Micro Management [60 FPS]",
       "[Terrifying] Tower of Fractured Memories [60 FPS]",
@@ -687,11 +687,12 @@ const players = [
     profileUrl: "https://www.youtube.com/@NotQu4z/videos",
     pfpUrl: "./images/PFP/notqu4z.png",
     type: "Tower",
-    points: 169.71,
+    points: 153.95,
     device: "PC",
     hardest: ["[Terrifying] Tower of Alien Radiance [120 FPS]"],
     completions_tower: [
     "[Terrifying] Tower of Alien Radiance [144 FPS]",
+    "[Terrifying] Tower of Journey's End [144 FPS]",
     "[Terrifying] Tower of Complexity and Volatility [144 FPS]",
     "[Terrifying] Tower of Fractured Memories [144 FPS]",
     "[Extreme] Tower of Blast Power [144 FPS]",
