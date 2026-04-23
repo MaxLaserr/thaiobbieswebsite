@@ -852,7 +852,7 @@ const players = [
     rank: 37,
     username: "YPJJTHXD1",
     profileUrl: "#",
-    pfpUrl: "./images/PFP/ypjjthxd1.png",
+    pfpUrl: "./images/PFP/YPJJTHXD1.PNG",
     type: "Tower",
     points: 363.1,
     device: "PC",

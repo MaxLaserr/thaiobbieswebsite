@@ -1,13 +1,13 @@
 import players, { formatCompletionItem } from "../data/player.js";
 import { provinceData } from "../data/province.js";
 
-function IconRank(rank) {
-  const rankConfig = {
-    1: { icon: '../images/RankIcon/top1.png', color: '#FFD700' },
-    2: { icon: '../images/RankIcon/top2.png', color: '#C0C0C0' },
-    3: { icon: '../images/RankIcon/top3.png', color: '#CD7F32' },
-  };
+const rankConfig = {
+    1: { icon: '../images/top1.png', color: '#FFD700' },
+    2: { icon: '../images/top2.png', color: '#C0C0C0' },
+    3: { icon: '../images/top3.png', color: '#CD7F32' },
+};
 
+function IconRank(rank) {
   if (!rankConfig[rank]) {
     return ``;
   }
