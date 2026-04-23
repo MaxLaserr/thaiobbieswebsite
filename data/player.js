@@ -1,8 +1,6 @@
 import { TIERED_OBBY, DIFF_STYLES } from './keyword.js';
 
-// Helper functions for colored text
 function formatDifficultyItem(item) {
-  // Extract difficulty from brackets
   const match = item.match(/^\[([^\]]+)\]/);
   if (!match) return item;
   
@@ -16,7 +14,6 @@ function formatDifficultyItem(item) {
 }
 
 function formatTieredItem(item) {
-  // Extract tier from [Tier X]
   const match = item.match(/^\[Tier (\d+)\]/);
   if (!match) return item;
   
@@ -32,13 +29,11 @@ function formatTieredItem(item) {
 function formatCompletionItem(item) {
   if (item === "N/A") return item;
   
-  // Try difficulty formatting first
   const diffMatch = item.match(/^\[([A-Za-z]+)\]/);
   if (diffMatch && DIFF_STYLES[diffMatch[1]]) {
     return formatDifficultyItem(item);
   }
   
-  // Try tiered formatting
   if (item.startsWith('[Tier ')) {
     return formatTieredItem(item);
   }
@@ -70,6 +65,7 @@ const players = [
       "[Tier 15] Clouds [60 FPS]",
     ],
     status: "Quit",
+    youtubeId: "https://www.youtube.com/watch?v=U_L6khHRkes&t=193s",
   },
   {
     rank: 2,
@@ -93,6 +89,7 @@ const players = [
       "[Tier 15] Gloomy Mountains [60 FPS]",
     ],
     status: "Active",
+    youtubeId: "https://www.youtube.com/watch?v=UTbduieEfwM",
   },
   {
     rank: 3,
@@ -121,6 +118,7 @@ const players = [
     ],
     completions_tiered: ["N/A"],
     status: "Active",
+    youtubeId: "https://www.youtube.com/watch?v=8briVppwHxE",
   },
   {
     rank: 4,
@@ -149,6 +147,7 @@ const players = [
       "[Tier 16] Comatose [60 FPS]",
     ],
     status: "Active",
+    youtubeId: "https://www.youtube.com/watch?v=98luNU_1BSI",
   },
   {
     rank: 5,
@@ -169,6 +168,7 @@ const players = [
     ],
     completions_tiered: ["N/A"],
     status: "Active",
+    youtubeId: "https://www.youtube.com/watch?v=k5insMuMEQ8&list=PLUkx-IRBy28hqzdKi3f4AGhMSype6yM4M",
   },
   {
     rank: 6,
@@ -196,6 +196,7 @@ const players = [
       "[Tier 15] Paranoid [60 FPS]",
     ],
     status: "Active",
+    youtubeId: "https://www.youtube.com/watch?v=lLbRZFwYaUU&t=9s",
   },
   {
     rank: 7,
@@ -219,6 +220,7 @@ const players = [
     ],
     completions_tiered: ["[Tier 16] Enigmatic Void [60FPS]"],
     status: "Active",
+    youtubeId: "https://www.youtube.com/watch?v=mUcDetWhcfo&t=11s",
   },
   {
     rank: 8,
@@ -239,6 +241,7 @@ const players = [
     ],
     completions_tiered: ["N/A"],
     status: "Active",
+    youtubeId: "https://www.youtube.com/watch?v=PRaLa-V07DE",
   },
   {
     rank: 9,
@@ -260,6 +263,7 @@ const players = [
       "[Tier 15] Terrain Error [60 FPS]",
     ],
     status: "Quit",
+    youtubeId: "https://www.youtube.com/watch?v=hAizl27toZw",
   },
   {
     rank: 10,
@@ -279,6 +283,7 @@ const players = [
       "[Tier 15] Refraction [60 FPS]",
     ],
     status: "Quit",
+    youtubeId: "",
   },
   {
     rank: 11,
@@ -299,6 +304,7 @@ const players = [
     ],
     completions_tiered: ["N/A"],
     status: "Active",
+    youtubeId: "",
   },
   {
     rank: 12,
@@ -324,6 +330,7 @@ const players = [
     ],
     completions_tiered: ["N/A"],
     status: "Active",
+    youtubeId: "",
   },
   {
     rank: 13,
@@ -343,6 +350,7 @@ const players = [
       "[Tier 14] ice shardz [60FPS]",
     ],
     status: "Active",
+    youtubeId: "https://youtube.com/watch?v=FNnhYjEZC3k&feature=shared",
   },
   {
     rank: 14,
@@ -363,6 +371,7 @@ const players = [
     ],
     completions_tiered: ["N/A"],
     status: "Active",
+    youtubeId: "",
   },
   {
     rank: 15,
@@ -390,6 +399,7 @@ const players = [
     ],
     completions_tiered: ["N/A"],
     status: "Active",
+    youtubeId: "https://www.youtube.com/watch?v=MtOmsASoy6o",
   },
   {
     rank: 16,
@@ -407,6 +417,7 @@ const players = [
       "[Tier 14] Denial [60 FPS]",
     ],
     status: "Active",
+    youtubeId: "https://www.youtube.com/watch?v=yo8tsL3SvQw",
   },
   {
     rank: 17,
@@ -426,6 +437,7 @@ const players = [
     ],
     completions_tiered: ["N/A"],
     status: "Active",
+    youtubeId: "",
   },
   {
     rank: 18,
@@ -447,6 +459,7 @@ const players = [
     ],
     completions_tiered: ["N/A"],
     status: "Active",
+    youtubeId: "https://www.youtube.com/watch?v=TiOQu_PbfWQ&list=PLUL-Iq15aq8tAWumjVtIjOpqzI9ovgKUu&index=25",
   },
   {
     rank: 19,
@@ -470,11 +483,12 @@ const players = [
     ],
     completions_tiered: ["N/A"],
     status: "Active",
+    youtubeId: "",
   },
   {
     rank: 20,
     username: "RealTime_RT",
-    profileUrl: "https://www.tiktok.com/@realtime_rt",
+    profileUrl: "https://www.youtube.com/@RealTimeFurryObbySomething/videos",
     pfpUrl: "./images/PFP/realtime_rt.jpg",
     type: "Tower",
     points: 81.12,
@@ -488,6 +502,7 @@ const players = [
     ],
     completions_tiered: ["N/A"],
     status: "Active",
+    youtubeId: "https://www.youtube.com/watch?v=W19ZVSLXIjw",
   },
   {
     rank: 21,
@@ -504,6 +519,7 @@ const players = [
     ],
     completions_tiered: ["N/A"],
     status: "Active",
+    youtubeId: "https://www.youtube.com/watch?v=EfNIXeyzTy0&t=351s",
   },
   {
     rank: 22,
@@ -523,6 +539,7 @@ const players = [
     ],
     completions_tiered: ["N/A"],
     status: "Active",
+    youtubeId: "",
   },
   {
     rank: 23,
@@ -544,6 +561,7 @@ const players = [
     ],
     completions_tiered: ["N/A"],
     status: "Active",
+    youtubeId: "https://www.youtube.com/watch?v=nR5aF0rRLo4",
   },
   {
     rank: 24,
@@ -561,6 +579,7 @@ const players = [
     ],
     completions_tiered: ["N/A"],
     status: "Active",
+    youtubeId: "",
   },
   {
     rank: 25,
@@ -582,6 +601,7 @@ const players = [
     ],
     completions_tiered: ["N/A"],
     status: "Quit",
+    youtubeId: "",
   },
   {
     rank: 26,
@@ -598,11 +618,12 @@ const players = [
       "[Tier 15] Gloomy Mountains [60 FPS]",
     ],
     status: "Quit",
+    youtubeId: "https://www.youtube.com/watch?v=i1oWNQUerWk",
   },
   {
     rank: 27,
     username: "siravich26",
-    profileUrl: "https://www.tiktok.com/@c00ngaa",
+    profileUrl: "https://www.youtube.com/@ceasareaconga/videos",
     pfpUrl: "./images/PFP/siravich26.jpeg",
     type: "Tower",
     points: 106.9,
@@ -619,6 +640,7 @@ const players = [
     ],
     completions_tiered: ["N/A"],
     status: "Active",
+    youtubeId: "https://www.youtube.com/watch?v=1A238XOQYEg&t=18s",
   },
   {
     rank: 28,
@@ -640,6 +662,7 @@ const players = [
     ],
     completions_tiered: ["N/A"],
     status: "Active",
+    youtubeId: "",
   },
   {
     rank: 29,
@@ -655,6 +678,7 @@ const players = [
       "[Tier 16] Hope for Amendment [60 FPS]",
     ],
     status: "Active",
+    youtubeId: "",
   },
   {
     rank: 30,
@@ -680,6 +704,7 @@ const players = [
       "[Tier 14] Goliad [60 FPS]"
     ],
     status: "Active",
+    youtubeId: "",
   },
   {
     rank: 31,
@@ -705,6 +730,7 @@ const players = [
     ],
     completions_tiered: ["N/A"],
     status: "Active",
+    youtubeId: "https://www.youtube.com/watch?v=-_EXRHeOI58",
   },
   {
     rank: 32,
@@ -731,6 +757,7 @@ const players = [
     ],
     completions_tiered: ["[Tier 14] The Traveller [60 FPS]"],
     status: "Quit",
+    youtubeId: "",
   },
   {
     rank: 33,
@@ -749,6 +776,7 @@ const players = [
     ],
     completions_tiered: ["[Tier 13] Metamorphosis [60 FPS]"],
     status: "Active",
+    youtubeId: "",
   },
   {
     rank: 34,
@@ -773,6 +801,7 @@ const players = [
       "[Tier 13] Rainbow beans [60 FPS]",
     ],
     status: "Quit",
+    youtubeId: "",
   },
   {
     rank: 35,
@@ -798,6 +827,7 @@ const players = [
       "[Tier 13] Firework [60 FPS]",
     ],
     status: "Active",
+    youtubeId: "https://www.youtube.com/watch?v=kMTA2hMGtAc&t=664s",
   },
   {
     rank: 36,
@@ -816,6 +846,7 @@ const players = [
       "[Tier 13] Firework [120 FPS]",
     ],
     status: "Active",
+    youtubeId: "",
   },
   {
     rank: 37,
@@ -840,6 +871,7 @@ const players = [
     ],
     completions_tiered: ["N/A"],
     status: "Quit",
+    youtubeId: "",
   },
   {
     rank: 38,
@@ -860,6 +892,7 @@ const players = [
       "[Tier 10] agnoria [60 FPS]",
     ],
     status: "Active",
+    youtubeId: "",
   },
   {
     rank: 39,
@@ -878,6 +911,7 @@ const players = [
       "[Tier 10] agnoria [60 FPS]",
     ],
     status: "Active",
+    youtubeId: "",
   },
 ];
 

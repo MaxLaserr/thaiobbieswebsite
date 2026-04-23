@@ -110,11 +110,48 @@ function buildStatsPlayer(p) {
   `;
 }
 
+function getYouTubeId(url) {
+    if (!url) return null;
+    const match = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&\n?#]+)/);
+    return match ? match[1] : null;
+}
+
+function checkVideo(player) {
+  if (player.username == "Krozeq" || player.username == "Snow_o0z" || player.username == "porjai_lanafan10") {
+    return `<div class="detail-no-video">Video was deleted</div>`;
+  } else if (player.username == "datazaaz" || player.username == "SpriteTH" || player.username == "Zenoler" || player.username == "YPJJTHXD1") {
+    return `<div class="detail-no-video">No Video</div>`;
+  }
+  return null;
+}
+
 function openPlayerDetail(player) {
   const overlay = document.getElementById('player-detail-overlay');
+  let videoHtml = getYouTubeId(player.youtubeId)
+
+        ? `<iframe class="detail-video-iframe"
+               src="https://www.youtube.com/embed/${getYouTubeId(player.youtubeId)}"
+               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+               allowfullscreen></iframe>`
+        : `<div class="detail-no-video">${checkVideo(player) || "It cannot be promoted on TikTok"}</div>`;
+  
   if (!overlay) return;
 
   overlay.innerHTML = `
+    <div class="night">
+        <div class="shooting-stars">
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+        </div>
+    </div>
     <div id="detail-panel">
       <button id="detail-back-btn">← Back to Leaderboard</button>
       <div class="detail-title-row">
@@ -126,7 +163,12 @@ function openPlayerDetail(player) {
       </div>
       <div class="detail-badges">
         <span class="detail-badge">${player.type}</span>
-        <span class="detail-badge" style="color:${player.status === 'Active' ? '#00ff00' : '#ff0000'}">${player.status}</span>
+        <span class="detail-badge" 
+        style="color:${player.status === 'Active' ? '#0aa80aff' : '#ac1313ff'}; 
+        background: ${player.status === 'Active' ? 'rgba(0, 255, 0, 0.1)' : 'rgba(255, 0, 0, 0.1)'};
+        border: 1px solid ${player.status === 'Active' ? '#0aa80aff' : '#ac1313ff'}">
+        ${player.status}
+        </span>
       </div>
       <div id="detail-body">
         <div class="detail-card">
@@ -147,6 +189,10 @@ function openPlayerDetail(player) {
             ${player.completions_tower ? `<div><b style="color:#fff;"><br>Towers:</b> <br>${player.completions_tower.map(c => `&bull; ${formatCompletionItem(c)}`).join('<br>')}</div>` : ''}
           </div>
         </div>  
+        <div class="detail-card">
+          <h2>Completion Records</h2>
+          <span>${videoHtml}</span>
+        </div>
       </div>
     </div>
   `;
@@ -188,7 +234,7 @@ function renderLeaderboard(data) {
         <span class="card-rank-label">RANK</span>
         <span class="card-rank-num" style="color:${rankColorBackground(p.rank)}">#${p.rank}</span>
       </div>
-      <img src="${p.pfpUrl}" width="46" height="46" style="border-radius:50%;object-fit:cover;flex-shrink:0;">
+      <img class="card-info-pfp" src="${p.pfpUrl}">
       <div class="card-info">
         <p class="card-info-name">${IconRank(p.rank)} ${p.username}</p>
         <p class="card-info-sub"><strong>Type:</strong> ${p.type} &nbsp;|&nbsp; <strong>Points:</strong> ${p.points}</p>
