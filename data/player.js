@@ -776,7 +776,7 @@ const players = [
       "[Tier 13] Blueberry [60 FPS]",
     ],
     status: "Active",
-    youtubeId: "",
+    youtubeId: "https://youtu.be/8UaebVMVDeQ?si=hFTbjO_Lz5N4H1lN",
   },
   {
     rank: 34,
