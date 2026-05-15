@@ -93,6 +93,63 @@ const TieredList = [
     },
     {
         top: 6,
+        name: "Sanguine",
+        tiers: TIERED_OBBY[16],
+        rateKey: "Mid-Low",
+        firstVictor: "guntfinnjakesanss",
+        creators: ["OFFee2223"],
+
+        location: "https://www.roblox.com/games/126275032227491/CyclolcyC",
+        gameStyle: "Linear",
+        difficultySource: "Raw Gameplay",
+        type: "Regular",
+
+        verifiedDate: "May 7, 2026",
+        length: "Very Short (under 1 minute)",
+        quality: Q_COLORS.B,
+        url: "https://youtu.be/u_EoFdmog24?si=GY4oqCVOMNuwHbX2",
+        tiktokUrl: ""
+    },
+    {
+        top: 7,
+        name: "Plex",
+        tiers: TIERED_OBBY[16],
+        rateKey: "Mid-Low",
+        firstVictor: "guntfinnjakesanss",
+        creators: ["ASETBestYT"],
+
+        location: "https://www.roblox.com/games/126275032227491/CyclolcyC",
+        gameStyle: "Camera Control",
+        difficultySource: "Raw Gameplay",
+        type: "Regular",
+
+        verifiedDate: "May 6, 2026",
+        length: "Short (1-3 minutes)",
+        quality: Q_COLORS.C,
+        url: "https://www.youtube.com/watch?v=UCNx6z_dCQg",
+        tiktokUrl: ""
+    },
+    {
+        top: 8,
+        name: "Mint Skies",
+        tiers: TIERED_OBBY[16],
+        rateKey: "Mid-Low",
+        firstVictor: "Holthouse60053",
+        creators: ["IceNsalt"],
+
+        location: "https://www.roblox.com/games/126275032227491/CyclolcyC",
+        gameStyle: "Jank/Low Roof/Technical",
+        difficultySource: "Raw Gameplay/Endurance",
+        type: "Staged",
+
+        verifiedDate: "May 7, 2026",
+        length: "Long (7-15 minutes)",
+        quality: Q_COLORS.B,
+        url: "https://youtu.be/qvezpKo0vrU?si=S4D4Eqkji9EEwzix",
+        tiktokUrl: ""
+    },
+    {
+        top: 9,
         name: "CyclolcyC",
         tiers: TIERED_OBBY[16],
         rateKey: "Mid-Low",
@@ -111,7 +168,7 @@ const TieredList = [
         tiktokUrl: "https://www.tiktok.com/@imrealofe/video/7534203031370353928"
     },
     {
-        top: 7,
+        top: 10,
         name: "Enigmatic Void",
         rateKey: "Low",
         tiers: TIERED_OBBY[16],
@@ -129,7 +186,7 @@ const TieredList = [
         url: "https://www.youtube.com/watch?v=mUcDetWhcfo"
     },
     {
-        top: 8,
+        top: 11,
         name: "Arcrux",
         tiers: TIERED_OBBY[16],
         rateKey: "Low",
@@ -147,7 +204,7 @@ const TieredList = [
         url: "https://www.youtube.com/watch?v=kiA93G7NHts&list=PLUMkgPwlekNgbixRieVlqzd00YqG6sBuq&index=2"
     },
     {
-        top: 9,
+        top: 12,
         name: "Shinku no naraku",
         tiers: TIERED_OBBY[16],
         rateKey: "Low",
@@ -165,7 +222,7 @@ const TieredList = [
         url: "https://www.youtube.com/watch?v=XgpKJf_yWSU&t=5s"
     },
     {
-        top: 10,
+        top: 13,
         name: "The Path To Testosterone",
         tiers: TIERED_OBBY[16],
         rateKey: "Low",
@@ -183,7 +240,7 @@ const TieredList = [
         url: "https://youtube.com/watch?v=FNnhYjEZC3k&feature=shared"
     },
     {
-        top: 11,
+        top: 14,
         name: "Chromium",
         tiers: TIERED_OBBY[16],
         rateKey: "Low",

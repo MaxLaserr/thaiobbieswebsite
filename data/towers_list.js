@@ -59,8 +59,48 @@ const Towers = [
         url: "",
         tiktokUrl: "https://www.tiktok.com/@airiliiiz/video/7569651157916847380",
     },
-    {
+     {
         top: 4,
+        name: "ToWC (Tower of Weird Core)",
+        difficulty: DIFF_STYLES.Horrific,
+        rate: 12.25,
+        rateKey: "Mid",
+        firstVictor: "Ta1_ocha",
+        creators: ["tojma07"],
+
+        location: "https://www.roblox.com/games/15873244701/JToH-The-Eternal-Abyss",
+        gameStyle: "Linear, Technical, Purism",
+        difficultySource: "Raw Difficulty, Punishment",
+        fps: 165,
+
+        verifiedDate: "April 7, 2026",
+        length: "Very Short (5+ min.)",
+        quality: Q_COLORS['B-'],
+        url: "https://youtu.be/EEhbPcs1ZQY?si=BSMDHxGm3rv6YQGZ",
+        tiktokUrl: "",
+    },
+     {
+        top: 5,
+        name: "ToW:C (Tower of Wigglecore: Classic)",
+        difficulty: DIFF_STYLES.Horrific,
+        rate: 12.25,
+        rateKey: "Mid",
+        firstVictor: "Ta1_ocha",
+        creators: ["tojma07"],
+
+        location: "https://www.roblox.com/games/15873244701/JToH-The-Eternal-Abyss",
+        gameStyle: "Linear, Technical, Purism",
+        difficultySource: "Raw Difficulty, Punishment",
+        fps: 165,
+
+        verifiedDate: "April 5, 2026",
+        length: "Very Short (5+ min.)",
+        quality: Q_COLORS['C'],
+        url: "https://youtu.be/bQchcYsmN2w?si=r4vG10nZPZ6Nokor",
+        tiktokUrl: "",
+    },
+    {
+        top: 6,
         name: "ToQD (Tower of Quite Devious)",
         difficulty: DIFF_STYLES.Horrific,
         rate: 12.25,
@@ -80,7 +120,7 @@ const Towers = [
         tiktokUrl: "",
     },
     {
-        top: 5,
+        top: 7,
         name: "ToWMMC (Tower of Who Moved My Camera)",
         difficulty: DIFF_STYLES.Horrific,
         rate: 12.25,
@@ -99,7 +139,7 @@ const Towers = [
         url: "https://www.youtube.com/watch?v=8briVppwHxE",
     },
     {
-        top: 6,
+        top: 8,
         name: "ToMN (Tower of Malefic Nuisances)",
         difficulty: DIFF_STYLES.Horrific,
         rate: 12.14,
@@ -118,7 +158,7 @@ const Towers = [
         url: "https://www.youtube.com/watch?v=lLbRZFwYaUU&t=9s",
     },
     {
-        top: 7,
+        top: 9,
         name: "ToEC (Tower of Elysian Crossings)",
         difficulty: DIFF_STYLES.Horrific,
         rate: 12.13,
@@ -137,7 +177,7 @@ const Towers = [
         url: "https://www.youtube.com/watch?v=SEmFJ7LPpBs&t=1s",
     },
     {
-        top: 8,
+        top: 10,
         name: "ToJJ (Tower of Jabberwock Jagger)",
         difficulty: DIFF_STYLES.Catastrophic,
         rate: 11.99,
@@ -156,7 +196,7 @@ const Towers = [
         url: "https://www.youtube.com/watch?v=V-nlnkwGgyU&t=12s",
     },
     {
-        top: 9,
+        top: 11,
         name: "ToCP (Tower of Cruel Punishment)",
         difficulty: DIFF_STYLES.Catastrophic,
         rate: 11.85,
@@ -175,7 +215,7 @@ const Towers = [
         url: "https://www.youtube.com/watch?v=027xT_d0-J0",
     },
     {
-        top: 10,
+        top: 12,
         name: "ToSE (Tower of Shunning Excursion)",
         difficulty: DIFF_STYLES.Catastrophic,
         rate: 11.81,
@@ -194,7 +234,7 @@ const Towers = [
         url: "https://www.youtube.com/watch?v=EJHZSonfips",
     },
     {
-        top: 11,
+        top: 13,
         name: "ToVH (Tower of Vacant Hindrances)",
         difficulty: DIFF_STYLES.Catastrophic,
         rate: 11.76,
