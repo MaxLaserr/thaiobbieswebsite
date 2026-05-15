@@ -112,9 +112,9 @@ const provinceData = [
     {
         top: 12,
         City: "Phetchabun",
-        Points: 404.4,
-        Hardest1: "[Extreme] Tower of Hopeless Hell [165 FPS]",
-        Hardest2: "[Tier 13] Blueberry [60 FPS]",
+        Points: 378.81,
+        Hardest1: "[Extreme] Tower of Uttermost Antagonism [165 FPS]",
+        Hardest2: "[Extreme] Tower of Hopeless Hell [165 FPS]",
         Hardest3: "[Inasne] Tower of Thinning Vengeance [144 FPS]",
         Hardest4: "[Inasne] Tower of Franchun's Lullaby [144 FPS]",
         Hardest5: "[Inasne] Tower of Peacebringer 7 7 7 [144 FPS]"

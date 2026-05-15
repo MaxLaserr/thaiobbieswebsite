@@ -5,7 +5,7 @@
     <meta charset=UTF-8>
     <meta http-equiv=X-UA-Compatible content="IE=edge" />
     <meta name=viewport content="width=device-width, initial-scale=1.0">
-    <title>TOC Website</title>
+    <title>Thai Obbies Community</title>
     <meta name=keywords content />
     <meta name=description content />
     <meta name=author content />
@@ -35,16 +35,23 @@
     <div id=navbar>
         <div id=navbar-logo>
             <img src=./images/TOC.png alt=TOC>
-            <a href=index.html>Home</a>
-            <a href=leaderboard.html>Leaderboard</a>
-            <a href=list.html>List</a>
-            <a href=credits.html>Credits</a>
+            <a href=index.html>Thai Obbies Community</a>
+            <div id="navbar-links">
+                <a href=leaderboard.html><i class="fas fa-trophy"></i> Leaderboard</a>
+                <a href=list.html><i class="fas fa-list"></i> List</a>
+            </div>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
         <div id=navbar-links>
-            <p><i class="fab fa-discord" style=font-size:24px></i>
+            <a href=credits.html><i class="fas fa-users"></i> Credits</a>
+            <p><i class="fab fa-discord"></i>
                 <a href=https://discord.gg/SWsqxZ9CTm>Discord Server</a>
             </p>
-            <p><i class="fab fa-google" style=font-size:24px></i>
+            <p><i class="fab fa-google"></i>
                 <a
                     href="https://docs.google.com/spreadsheets/d/1XLUy2jmo9XKshRr_qkfkvByQ9RBAROWzpPADDJ88rGw/edit?gid=1463707024#gid=1463707024">
                     List Sheets</a>
@@ -120,11 +127,33 @@
     <div id=home-content>
         <dl>
             <dt>เราจะเอา Hardest 1-5 ของคุณมา คูณและบวกรวม โดยทจะมี Point ที่กำหนดไว้ใน Sheet แล้ว</dt>
-            <p> 
+            <p>
                 (Hardest 1 * 1) + (Hardest 2 * 0.66) + (Hardest 3 * 0.45) + (Hardest 4 * 0.3) + (Hardest 5 * 0.2)
             </p>
         </dl>
     </div>
+    <script>
+        function toggleMenu() {
+            const hamburger = document.querySelector('.hamburger');
+            const navbarLinks = document.getElementById('navbar-links');
+
+            hamburger.classList.toggle('active');
+            navbarLinks.classList.toggle('active');
+        }
+
+        // Close menu when clicking on a link (mobile)
+        document.querySelectorAll('#navbar-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                const hamburger = document.querySelector('.hamburger');
+                const navbarLinks = document.getElementById('navbar-links');
+
+                if (window.innerWidth <= 768) {
+                    hamburger.classList.remove('active');
+                    navbarLinks.classList.remove('active');
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

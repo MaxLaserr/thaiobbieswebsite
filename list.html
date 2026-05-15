@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TOC List</title>
+    <title>Thai Obbies Community</title>
     <meta name="keywords" content="" />
     <meta name="description" content="" />
     <meta name="author" content="" />
@@ -34,19 +34,26 @@
             <div class="star"></div>
         </div>
     </div>
-    <div id="navbar">
-        <div id="navbar-logo">
-            <img src="./images/TOC.png" alt="TOC">
-            <a href="index.html">Home</a>
-            <a href="leaderboard.html">Leaderboard</a>
-            <a href="list.html">List</a>
-            <a href="credits.html">Credits</a>
+    <div id=navbar>
+        <div id=navbar-logo>
+            <img src=./images/TOC.png alt=TOC>
+            <a href=index.html>Thai Obbies Community</a>
+            <div id="navbar-links">
+                <a href=leaderboard.html><i class="fas fa-trophy"></i> Leaderboard</a>
+                <a href=list.html><i class="fas fa-list"></i> List</a>
+            </div>
         </div>
-       <div id="navbar-links">
-            <p><i class="fab fa-discord" style="font-size:24px"></i>
-                <a href="https://discord.gg/SWsqxZ9CTm">Discord Server</a>
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div id=navbar-links>
+            <a href=credits.html><i class="fas fa-users"></i> Credits</a>
+            <p><i class="fab fa-discord"></i>
+                <a href=https://discord.gg/SWsqxZ9CTm>Discord Server</a>
             </p>
-            <p><i class="fab fa-google" style="font-size:24px"></i>
+            <p><i class="fab fa-google"></i>
                 <a
                     href="https://docs.google.com/spreadsheets/d/1XLUy2jmo9XKshRr_qkfkvByQ9RBAROWzpPADDJ88rGw/edit?gid=1463707024#gid=1463707024">
                     List Sheets</a>
@@ -55,7 +62,7 @@
     </div>
 
     <div id="list-container">
-        <div id="topic-text"><h1>Main List</h1></div>
+        <div id="topic-text"><h1>List</h1></div>
         <div id="sections">
             <div class="section-button" data-section="towers-content" onclick="changeSection(this)">Towers</div>
             <div class="section-button" data-section="tiered-obby-content" onclick="changeSection(this)">Tiered Obby</div>

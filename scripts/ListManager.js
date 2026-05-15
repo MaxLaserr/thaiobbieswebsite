@@ -1,4 +1,5 @@
-import { TieredList, Towers } from "../data/list.js";
+import {Towers} from "../data/towers_list.js";
+import {TieredList} from "../data/tieredobby_list.js";
 import { TIERED_OBBY, DIFF_STYLES, Q_COLORS } from "../data/keyword.js";
 
 let TowersList = Towers;
@@ -8,7 +9,7 @@ let MobileTowerList = TieredList.filter(item => item.tiers === "mobile-tower-lis
 export function getTowersList() {
     return TowersList;
 }
-
+    
 export function getTieredObbyList() {
     return TieredObby;
 }

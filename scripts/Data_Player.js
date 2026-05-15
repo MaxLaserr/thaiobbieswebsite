@@ -19,49 +19,40 @@ function IconRank(rank) {
   
   return ``;
 }
+const rankColors = {
+  1: "#FFD700",   // Gold
+  2: "#C0C0C0",   // Silver
+  3: "#CD7F32",   // Bronze
+};
+
 function rankColorBackground(rank) {
-  if (rank === 1) {
-    return "#FFD700"; // Gold
-  }
-  if (rank === 2) {
-    return "#C0C0C0"; // Silver
-  }
-  if (rank === 3) {
-    return "#CD7F32"; // Bronze
-  }
-  if (rank <= 10) {
-    return "#3370c0e8"; // Dark green for ranks 4-10
-  }
-  return "#949494ff"; // Dark slate gray for ranks 11+
+  if (rankColors[rank]) return rankColors[rank];
+  if (rank <= 10)       return "#3370c0e8"; // Top 10
+  return "#949494ff";                       // 11+
 }
+
+const statusColors = {
+  Active: "#00ff00",
+  Quit:   "#ff0000",
+};
 
 function getStatusIcon(status) {
-  if (status === "Active") {
-    return '<span style="color: #00ff00;">●</span>';
-  }
-  if (status === "Quit") {
-    return '<span style="color: #ff0000;">●</span>';
-  }
-  return '<span style="color: #ffffffff;">●</span>';
+  const color = statusColors[status] ?? "#ffffffff";
+  return `<span style="color: ${color};">●</span>`;
 }
 
+const deviceIcons = {
+  "PC":             "fa-desktop",
+  "Mobile":         "fa-mobile-alt",
+  "Console":        "fa-gamepad",
+  "PC/Mobile":      "fa-desktop fa-mobile-alt",
+  "Mobile/Console": "fa-mobile-alt fa-gamepad",
+};
+
 function getDeviceIcon(device) {
-  if (device === "PC") {
-    return '<span style="color: #ffffffff;"><i class="fas fa-desktop"></i></span>';
-  }
-  if (device === "Mobile") {
-    return '<span style="color: #ffffffff;"><i class="fas fa-mobile-alt"></i></span>';
-  }
-  if (device === "Console") {
-    return '<span style="color: #ffffffff;"><i class="fas fa-gamepad"></i></span>';
-  }
-  if (device === "PC/Mobile") {
-    return '<span style="color: #ffffffff;"><i class="fas fa-desktop"></i><i class="fas fa-mobile-alt"></i></span>';
-  }
-  if (device === "Mobile/Console") {
-    return '<span style="color: #ffffffff;"><i class="fas fa-mobile-alt"></i><i class="fas fa-gamepad"></i></span>';
-  }
-  return '<span style="color: #ffffffff;"><i class="fas fa-question"></i></span>';
+  const icons = deviceIcons[device] ?? "fa-question";
+  const iconsHtml = icons.split(" ").map(i => `<i class="fas ${i}"></i>`).join("");
+  return `<span style="color: #ffffffff;">${iconsHtml}</span>`;
 }
 
 function styleUI() {
@@ -116,24 +107,29 @@ function getYouTubeId(url) {
     return match ? match[1] : null;
 }
 
+const deletedVideoPlayers = new Set(["Krozeq", "Snow_o0z", "porjai_lanafan10"]);
+const noVideoPlayers     = new Set(["datazaaz", "SpriteTH", "Zenoler", "YPJJTHXD1"]);
+
 function checkVideo(player) {
-  if (player.username == "Krozeq" || player.username == "Snow_o0z" || player.username == "porjai_lanafan10") {
-    return `<div class="detail-no-video">Video was deleted</div>`;
-  } else if (player.username == "datazaaz" || player.username == "SpriteTH" || player.username == "Zenoler" || player.username == "YPJJTHXD1") {
-    return `<div class="detail-no-video">No Video</div>`;
-  }
+  if (deletedVideoPlayers.has(player.username)) return `<div class="detail-no-video">Video was deleted</div>`;
+  if (noVideoPlayers.has(player.username))      return `<div class="detail-no-video">No Video</div>`;
   return null;
+}
+
+function buildVideoHtml(player) {
+  const ytId = getYouTubeId(player.youtubeId);
+  if (ytId) {
+    return `<iframe class="detail-video-iframe"
+               src="https://www.youtube.com/embed/${ytId}"
+               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+               allowfullscreen></iframe>`;
+  }
+  return checkVideo(player) ?? `<div class="detail-no-video">It cannot be promoted on TikTok</div>`;
 }
 
 function openPlayerDetail(player) {
   const overlay = document.getElementById('player-detail-overlay');
-  let videoHtml = getYouTubeId(player.youtubeId)
-
-        ? `<iframe class="detail-video-iframe"
-               src="https://www.youtube.com/embed/${getYouTubeId(player.youtubeId)}"
-               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-               allowfullscreen></iframe>`
-        : `<div class="detail-no-video">${checkVideo(player) || "It cannot be promoted on TikTok"}</div>`;
+  const videoHtml = buildVideoHtml(player);
   
   if (!overlay) return;
 
