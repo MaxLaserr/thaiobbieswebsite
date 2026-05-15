@@ -66,11 +66,11 @@ const Towers = [
         rate: 12.25,
         rateKey: "Mid",
         firstVictor: "Ta1_ocha",
-        creators: ["tojma07"],
+        creators: ["ScorpioexLOLez", "DD3985666"],
 
-        location: "https://www.roblox.com/games/15873244701/JToH-The-Eternal-Abyss",
-        gameStyle: "Linear, Technical, Purism",
-        difficultySource: "Raw Difficulty, Punishment",
+        location: "https://www.roblox.com/games/18603968759/Community-Top-Towers",
+        gameStyle: "Camera Control, Purism",
+        difficultySource: "Raw Difficulty",
         fps: 165,
 
         verifiedDate: "April 7, 2026",
@@ -86,11 +86,11 @@ const Towers = [
         rate: 12.25,
         rateKey: "Mid",
         firstVictor: "Ta1_ocha",
-        creators: ["tojma07"],
+        creators: ["ScorpioexLOLez"],
 
-        location: "https://www.roblox.com/games/15873244701/JToH-The-Eternal-Abyss",
-        gameStyle: "Linear, Technical, Purism",
-        difficultySource: "Raw Difficulty, Punishment",
+        location: "https://www.roblox.com/games/95603975881078/Soul-Crushing-Containment-Unit#ropro-quick-play",
+        gameStyle: "Camera Control",
+        difficultySource: "Camera Control, Purism",
         fps: 165,
 
         verifiedDate: "April 5, 2026",

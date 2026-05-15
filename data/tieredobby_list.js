@@ -99,7 +99,7 @@ const TieredList = [
         firstVictor: "guntfinnjakesanss",
         creators: ["OFFee2223"],
 
-        location: "https://www.roblox.com/games/126275032227491/CyclolcyC",
+        location: "https://www.roblox.com/games/78084313475674/Sanguine",
         gameStyle: "Linear",
         difficultySource: "Raw Gameplay",
         type: "Regular",
@@ -118,7 +118,7 @@ const TieredList = [
         firstVictor: "guntfinnjakesanss",
         creators: ["ASETBestYT"],
 
-        location: "https://www.roblox.com/games/126275032227491/CyclolcyC",
+        location: "https://www.roblox.com/games/139538456904913/Plex",
         gameStyle: "Camera Control",
         difficultySource: "Raw Gameplay",
         type: "Regular",
@@ -137,7 +137,7 @@ const TieredList = [
         firstVictor: "Holthouse60053",
         creators: ["IceNsalt"],
 
-        location: "https://www.roblox.com/games/126275032227491/CyclolcyC",
+        location: "https://www.roblox.com/games/4779026857/Mint-skies",
         gameStyle: "Jank/Low Roof/Technical",
         difficultySource: "Raw Gameplay/Endurance",
         type: "Staged",
