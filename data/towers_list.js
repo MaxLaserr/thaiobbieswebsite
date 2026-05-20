@@ -3,6 +3,25 @@ import { Q_COLORS, DIFF_STYLES } from './keyword.js';
 const Towers = [
     {
         top: 1,
+        name: "CoTEC (Citadel of The Eternal Calamity)",
+        difficulty: DIFF_STYLES.Unreal,
+        rate: 13.12,
+        rateKey: "Bottom-Low",
+        firstVictor: "CarolisticX",
+        creators: ["susplayerslayer"],
+
+        location: "https://www.roblox.com/games/15873244701/JToH-The-Eternal-Abyss",
+        gameStyle: "Mixed",
+        difficultySource: "Length, Punishment",
+        fps: 120,
+
+        verifiedDate: "May 19, 2026",
+        length: "Ridiculously Long (60+ min.)",
+        quality: Q_COLORS.B,
+        url: "https://youtu.be/pid7v4buKis",
+    },
+    {
+        top: 2,
         name: "ToEV (Tower of Eternal Void)",
         difficulty: DIFF_STYLES.Horrific,
         rate: 12.65,
@@ -21,7 +40,7 @@ const Towers = [
         url: "https://www.youtube.com/watch?v=U_L6khHRkes&t=193s",
     },
     {
-        top: 2,
+        top: 3,
         name: "ToTRP (Tower of The Roof's Pique)",
         difficulty: DIFF_STYLES.Horrific,
         rate: 12.60,
@@ -40,7 +59,7 @@ const Towers = [
         url: "https://www.youtube.com/watch?v=t6YJxLW4Z7s&t=202s",
     },
     {
-        top: 3,
+        top: 4,
         name: "ToTF (Tower of Thje Floor)",
         difficulty: DIFF_STYLES.Horrific,
         rate: 12.57,
@@ -60,10 +79,10 @@ const Towers = [
         tiktokUrl: "https://www.tiktok.com/@airiliiiz/video/7569651157916847380",
     },
      {
-        top: 4,
+        top: 5,
         name: "ToWC (Tower of Weird Core)",
         difficulty: DIFF_STYLES.Horrific,
-        rate: 12.25,
+        rate: 12.53,
         rateKey: "Mid",
         firstVictor: "Ta1_ocha",
         creators: ["ScorpioexLOLez", "DD3985666"],
@@ -80,10 +99,10 @@ const Towers = [
         tiktokUrl: "",
     },
      {
-        top: 5,
+        top: 6,
         name: "ToW:C (Tower of Wigglecore: Classic)",
         difficulty: DIFF_STYLES.Horrific,
-        rate: 12.25,
+        rate: 12.40,
         rateKey: "Mid",
         firstVictor: "Ta1_ocha",
         creators: ["ScorpioexLOLez"],
@@ -100,10 +119,10 @@ const Towers = [
         tiktokUrl: "",
     },
     {
-        top: 6,
+        top: 7,
         name: "ToQD (Tower of Quite Devious)",
         difficulty: DIFF_STYLES.Horrific,
-        rate: 12.25,
+        rate: 12.37,
         rateKey: "Mid",
         firstVictor: "thanksmonno",
         creators: ["tojma07"],
@@ -120,7 +139,7 @@ const Towers = [
         tiktokUrl: "",
     },
     {
-        top: 7,
+        top: 8,
         name: "ToWMMC (Tower of Who Moved My Camera)",
         difficulty: DIFF_STYLES.Horrific,
         rate: 12.25,
@@ -139,7 +158,7 @@ const Towers = [
         url: "https://www.youtube.com/watch?v=8briVppwHxE",
     },
     {
-        top: 8,
+        top: 9,
         name: "ToMN (Tower of Malefic Nuisances)",
         difficulty: DIFF_STYLES.Horrific,
         rate: 12.14,
@@ -158,7 +177,7 @@ const Towers = [
         url: "https://www.youtube.com/watch?v=lLbRZFwYaUU&t=9s",
     },
     {
-        top: 9,
+        top: 10,
         name: "ToEC (Tower of Elysian Crossings)",
         difficulty: DIFF_STYLES.Horrific,
         rate: 12.13,
@@ -177,7 +196,7 @@ const Towers = [
         url: "https://www.youtube.com/watch?v=SEmFJ7LPpBs&t=1s",
     },
     {
-        top: 10,
+        top: 11,
         name: "ToJJ (Tower of Jabberwock Jagger)",
         difficulty: DIFF_STYLES.Catastrophic,
         rate: 11.99,
@@ -196,7 +215,7 @@ const Towers = [
         url: "https://www.youtube.com/watch?v=V-nlnkwGgyU&t=12s",
     },
     {
-        top: 11,
+        top: 12,
         name: "ToCP (Tower of Cruel Punishment)",
         difficulty: DIFF_STYLES.Catastrophic,
         rate: 11.85,
@@ -215,7 +234,7 @@ const Towers = [
         url: "https://www.youtube.com/watch?v=027xT_d0-J0",
     },
     {
-        top: 12,
+        top: 13,
         name: "ToSE (Tower of Shunning Excursion)",
         difficulty: DIFF_STYLES.Catastrophic,
         rate: 11.81,
@@ -234,7 +253,7 @@ const Towers = [
         url: "https://www.youtube.com/watch?v=EJHZSonfips",
     },
     {
-        top: 13,
+        top: 14,
         name: "ToVH (Tower of Vacant Hindrances)",
         difficulty: DIFF_STYLES.Catastrophic,
         rate: 11.76,

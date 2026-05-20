@@ -19,9 +19,9 @@ const TIERED_OBBY = {
 
 const DIFF_STYLES = {
   Unreal: { 
-    background: "#94289415", 
-    color: "#94289467", 
-    border: "1px solid #94289467",
+    background: "#7d3ef321", 
+    color: "#7d3ef3ee", 
+    border: "1px solid #7d3ef3ee",
     image: "./images/Difficulty/UnrealIconModified100.webp"
   },
   Horrific: { 

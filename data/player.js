@@ -153,6 +153,48 @@ const players = [
   },
   {
     rank: 5,
+    username: "CarolisticX",
+    profileUrl: "https://www.youtube.com/@CarolisticXZE/videos",
+    pfpUrl: "./images/PFP/CarolisticX.jpg",
+    type: "Tiered/Tower",
+    points: 20.32,
+    device: "PC/Mobile",
+    hardest: ["[Unreal] Citadel of The Eternal Calamity [144 FPS]"],
+    completions_tower: [
+      "[Unreal] Citadel of The Eternal Calamity [144 FPS]",
+      "[Catastrophic] Tower of Cruel Punishment [144 FPS]",
+      "[Catastrophic] Tower of Quadrilaterals [144 FPS]",
+      "[Catastrophic] Tower of Generation Failure [144 FPS]",
+      "[Terrifying] Tower of Augmented Misery [144 FPS]",
+    ],
+    completions_tiered: ["N/A"],
+    status: "Active",
+    youtubeId: "https://youtu.be/pid7v4buKis",
+  },
+  {
+    rank: 6,
+    username: "Wasuthansa",
+    profileUrl: "https://www.youtube.com/@Wasuthansa",
+    pfpUrl: "./images/PFP/wasuthansa.png",
+    type: "Tower",
+    points: 25.79,
+    device: "PC",
+    hardest: ["[Horrific] Tower of Thje Floor [144 FPS]"],
+    completions_tower: [
+      "[Horrific] Tower of Thje Floor [144 FPS]",
+      "[Horrific] Tower of Malefic Nuisances [144 FPS]",
+      "[Catastrophic] Tower of Jabberwock Jagger [90 FPS]",
+      "[Catastrophic] Tower of Raging Tempest [60 FPS]",
+      "[Catastrophic] Tower of Descent Into Exile [60 FPS]",
+      "[Catastrophic] Tower of Rove Culmination [60 FPS]",
+      "[Catastrophic] Tower of Generation Failure [60 FPS]",
+    ],
+    completions_tiered: ["N/A"],
+    status: "Active",
+    youtubeId: "https://www.youtube.com/watch?v=k5insMuMEQ8&list=PLUkx-IRBy28hqzdKi3f4AGhMSype6yM4M",
+  },
+  {
+    rank: 7,
     username: "ImN0tPr0t0",
     profileUrl: "https://www.youtube.com/channel/UCK-6Lt2Nl7l_0W37-Tpp7PQ",
     pfpUrl: "./images/PFP/imn0tpr0t0.jpeg",
@@ -176,28 +218,7 @@ const players = [
     youtubeId: "https://www.youtube.com/watch?v=mUcDetWhcfo&t=11s",
   },
   {
-    rank: 6,
-    username: "Wasuthansa",
-    profileUrl: "https://www.youtube.com/@Wasuthansa",
-    pfpUrl: "./images/PFP/wasuthansa.png",
-    type: "Tower",
-    points: 32.8,
-    device: "PC",
-    hardest: ["[Horrific] Tower of Malefic Nuisances [144 FPS]"],
-    completions_tower: [
-      "[Horrific] Tower of Malefic Nuisances [144 FPS]",
-      "[Catastrophic] Tower of Jabberwock Jagger [90 FPS]",
-      "[Catastrophic] Tower of Raging Tempest [60 FPS]",
-      "[Catastrophic] Tower of Descent Into Exile [60 FPS]",
-      "[Catastrophic] Tower of Rove Culmination [60 FPS]",
-      "[Catastrophic] Tower of Generation Failure [60 FPS]",
-    ],
-    completions_tiered: ["N/A"],
-    status: "Active",
-    youtubeId: "https://www.youtube.com/watch?v=k5insMuMEQ8&list=PLUkx-IRBy28hqzdKi3f4AGhMSype6yM4M",
-  },
-  {
-    rank: 7,
+    rank: 8,
     username: "user_patt",
     profileUrl: "https://www.youtube.com/channel/UCpLu7GDxI1lmGnnjbInJK0Q",
     pfpUrl: "./images/PFP/user_patt.jpg",
@@ -225,7 +246,7 @@ const players = [
     youtubeId: "https://www.youtube.com/watch?v=lLbRZFwYaUU&t=9s",
   },
   {
-    rank: 8,
+    rank: 9,
     username: "venowattana",
     profileUrl: "https://www.youtube.com/channel/UCnOefVwko11xN1loQRbnXHg",
     pfpUrl: "./images/PFP/venowattana.jpg",
@@ -249,7 +270,7 @@ const players = [
     youtubeId: "https://www.youtube.com/watch?v=PRaLa-V07DE",
   },
   {
-    rank: 9,
+    rank: 10,
     username: "guntfinnjakesanss",
     profileUrl: "https://www.youtube.com/channel/UCGWxdkE03JctZ2tC3fWoTjw",
     pfpUrl: "./images/PFP/guntfinnjakesanss.png",
@@ -278,7 +299,7 @@ const players = [
     youtubeId: "https://www.youtube.com/watch?v=u_EoFdmog24",
   },
   {
-    rank: 10,
+    rank: 11,
     username: "zVicxlye",
     profileUrl: "https://www.tiktok.com/@definite1yzvicxlye",
     pfpUrl: "./images/PFP/zvicxlye.jpeg",
@@ -299,7 +320,7 @@ const players = [
     youtubeId: "",
   },
   {
-    rank: 11,
+    rank: 12,
     username: "OFFee2223",
     profileUrl: "https://www.tiktok.com/@imrealofe",
     pfpUrl: "./images/PFP/offee2223.jpeg",
@@ -321,7 +342,7 @@ const players = [
     youtubeId: "https://www.youtube.com/watch?v=hAizl27toZw",
   },
   {
-    rank: 12,
+    rank: 13,
     username: "Krozeq",
     profileUrl: "https://www.youtube.com/@aether4616/videos",
     pfpUrl: "./images/PFP/krozep.PNG",
@@ -341,7 +362,7 @@ const players = [
     youtubeId: "https://www.youtube.com/watch?v=0o6dSKc_Mao",
   },
   {
-    rank: 13,
+    rank: 14,
     username: "datazaaz",
     profileUrl: "#",
     pfpUrl: "./images/PFP/datazaaz.png",
@@ -362,7 +383,7 @@ const players = [
     youtubeId: "",
   },
   {
-    rank: 14,
+    rank: 15,
     username: "uyck44445",
     profileUrl: "https://www.youtube.com/channel/UCl0vG80fgJPcY7hcPujtA-g",
     pfpUrl: "./images/PFP/uyck44445.jpg",
@@ -382,7 +403,7 @@ const players = [
     youtubeId: "https://youtube.com/watch?v=FNnhYjEZC3k&feature=shared",
   },
   {
-    rank: 15,
+    rank: 16,
     username: "Crp_Killer",
     profileUrl: "https://www.youtube.com/@TheCrp/videos",
     pfpUrl: "./images/PFP/crp_killer.jpg",
@@ -410,7 +431,7 @@ const players = [
     youtubeId: "https://www.youtube.com/watch?v=MtOmsASoy6o",
   },
   {
-    rank: 16,
+    rank: 17,
     username: "SpriteTH",
     profileUrl: "#",
     pfpUrl: "./images/PFP/spriteth.png",
@@ -430,7 +451,7 @@ const players = [
     youtubeId: "",
   },
   {
-    rank: 17,
+    rank: 18,
     username: "Not_xz",
     profileUrl: "https://www.youtube.com/channel/UCTBWm_4jqXCiNMdgDM0tHhQ",
     pfpUrl: "./images/PFP/not_xz.jpg",
@@ -452,7 +473,7 @@ const players = [
     youtubeId: "https://www.youtube.com/watch?v=TiOQu_PbfWQ&list=PLUL-Iq15aq8tAWumjVtIjOpqzI9ovgKUu&index=25",
   },
   {
-    rank: 18,
+    rank: 19,
     username: "Tibet_Dev",
     profileUrl: "https://www.youtube.com/@TibeTeast",
     pfpUrl: "./images/PFP/tibet_dev.jpg",
@@ -470,7 +491,7 @@ const players = [
     youtubeId: "https://www.youtube.com/watch?v=yo8tsL3SvQw",
   },
   {
-    rank: 19,
+    rank: 20,
     username: "Snow_o0z",
     profileUrl: "https://www.tiktok.com/@beyoursnow1",
     pfpUrl: "./images/PFP/snow_o0z.png",
@@ -494,7 +515,7 @@ const players = [
     youtubeId: "",
   },
   {
-    rank: 20,
+    rank: 21,
     username: "RealTime_RT",
     profileUrl: "https://www.youtube.com/@RealTimeFurryObbySomething/videos",
     pfpUrl: "./images/PFP/realtime_rt.jpg",
@@ -515,7 +536,7 @@ const players = [
     youtubeId: "https://www.youtube.com/watch?v=W19ZVSLXIjw",
   },
   {
-    rank: 21,
+    rank: 22,
     username: "Holthouse60053",
     profileUrl: "https://www.tiktok.com/@ssliver33671",
     pfpUrl: "./images/PFP/holthouse60053.jpeg",
@@ -532,7 +553,7 @@ const players = [
     youtubeId: "https://youtu.be/qvezpKo0vrU?si=S4D4Eqkji9EEwzix",
   },
   {
-    rank: 22,
+    rank: 23,
     username: "fridayboy2524",
     profileUrl: "https://www.youtube.com/@Fridayxl/videos",
     pfpUrl: "./images/PFP/fridayboy2524.png",
@@ -553,7 +574,7 @@ const players = [
     youtubeId: "https://youtu.be/4dmy86kgAxU?si=mqeHFhLRbUvwcjiv",
   },
   {
-    rank: 23,
+    rank: 24,
     username: "PRX_f0rsakeN",
     profileUrl: "https://www.youtube.com/channel/UCZhz9XTvDUDEew6oS4apKjQ",
     pfpUrl: "./images/PFP/prx_f0rsaken.jpg",
@@ -570,7 +591,7 @@ const players = [
     youtubeId: "https://www.youtube.com/watch?v=EfNIXeyzTy0&t=351s",
   },
   {
-    rank: 24,
+    rank: 25,
     username: "NKsandPs",
     profileUrl: "https://www.tiktok.com/@nksandps",
     pfpUrl: "./images/PFP/nksandps.jpeg",
@@ -590,7 +611,7 @@ const players = [
     youtubeId: "",
   },
   {
-    rank: 25,
+    rank: 26,
     username: "Pan_9026",
     profileUrl: "https://www.youtube.com/channel/UCmnmyzDaglX-dGaSK2AyKiw",
     pfpUrl: "./images/PFP/pan_9026.jpg",
@@ -612,7 +633,7 @@ const players = [
     youtubeId: "https://www.youtube.com/watch?v=nR5aF0rRLo4",
   },
   {
-    rank: 26,
+    rank: 27,
     username: "NotQu4z",
     profileUrl: "https://www.youtube.com/@NotQu4z/videos",
     pfpUrl: "./images/PFP/notqu4z.png",
@@ -640,7 +661,7 @@ const players = [
     youtubeId: "https://www.youtube.com/watch?v=Z8uUBVQHmTU",
   },
   {
-    rank: 27,
+    rank: 28,
     username: "Zenoler",
     profileUrl: "#",
     pfpUrl: "./images/PFP/zenoler.png",
@@ -662,7 +683,7 @@ const players = [
     youtubeId: "",
   },
   {
-    rank: 28,
+    rank: 29,
     username: "siravich26",
     profileUrl: "https://www.youtube.com/@ceasareaconga/videos",
     pfpUrl: "./images/PFP/siravich26.jpeg",
@@ -684,7 +705,7 @@ const players = [
     youtubeId: "https://www.youtube.com/watch?v=1A238XOQYEg&t=18s",
   },
   {
-    rank: 29,
+    rank: 30,
     username: "Syukwa",
     profileUrl: "https://www.youtube.com/@syukwa4825",
     pfpUrl: "./images/PFP/syukwa.jpg",
@@ -701,7 +722,7 @@ const players = [
     youtubeId: "https://www.youtube.com/watch?v=i1oWNQUerWk",
   },
   {
-    rank: 30,
+    rank: 31,
     username: "ozensa123",
     profileUrl: "https://www.tiktok.com/@pigpork0",
     pfpUrl: "./images/PFP/ozensa123.jpeg",
@@ -723,7 +744,7 @@ const players = [
     youtubeId: "https://youtu.be/wICaw4-fUfI?si=TxFrYX2Vi7q2WEp4",
   },
   {
-    rank: 31,
+    rank: 32,
     username: "ultra999517_XDx3",
     profileUrl: "https://www.tiktok.com/@yharonno1_glazer",
     pfpUrl: "./images/PFP/ultra999517_xdx3.jpeg",
@@ -745,7 +766,7 @@ const players = [
     youtubeId: "",
   },
   {
-    rank: 32,
+    rank: 33,
     username: "pokintom_maeyeebai",
     profileUrl: "#",
     pfpUrl: "./images/PFP/pokintom_maeyeebai.jpeg",
@@ -771,7 +792,7 @@ const players = [
     youtubeId: "",
   },
   {
-    rank: 33,
+    rank: 34,
     username: "porjai_lanafan10",
     profileUrl: "#",
     pfpUrl: "./images/PFP/porjai_lanafan10.jpeg",
@@ -798,7 +819,7 @@ const players = [
     youtubeId: "",
   },
   {
-    rank: 34,
+    rank: 35,
     username: "End_khing",
     profileUrl: "https://www.tiktok.com/@end_khing",
     pfpUrl: "./images/PFP/end_khing.jpeg",
@@ -823,7 +844,7 @@ const players = [
     youtubeId: "",
   },
   {
-    rank: 35,
+    rank: 36,
     username: "pinkleafisgood2020",
     profileUrl: "https://www.tiktok.com/@snowwwyyy177",
     pfpUrl: "./images/PFP/pinkleafisgood2020.png",
@@ -842,7 +863,7 @@ const players = [
     youtubeId: "",
   },
   {
-    rank: 36,
+    rank: 37,
     username: "bss_guy12",
     profileUrl: "https://www.tiktok.com/@ramdom_acc_ig",
     pfpUrl: "./images/PFP/bss_guy12.jpeg",
@@ -862,7 +883,7 @@ const players = [
     youtubeId: "",
   },
   {
-    rank: 37,
+    rank: 38,
     username: "HydrargyrumW",
     profileUrl: "https://www.tiktok.com/@hydraowo?lang=en",
     pfpUrl: "./images/PFP/hydraowo.jpeg",
@@ -885,7 +906,7 @@ const players = [
     tiktokurl: "https://www.tiktok.com/@hydraowo/video/7614496135792626965?lang=en",
   },
   {
-    rank: 38,
+    rank: 39,
     username: "newgg11001",
     profileUrl: "https://www.tiktok.com/@skitsp4ce",
     pfpUrl: "./images/PFP/newgg11001.png",
@@ -904,7 +925,7 @@ const players = [
     youtubeId: "https://youtu.be/8UaebVMVDeQ?si=hFTbjO_Lz5N4H1lN",
   },
   {
-    rank: 39,
+    rank: 40,
     username: "YPJJTHXD1",
     profileUrl: "#",
     pfpUrl: "./images/PFP/YP.png",
@@ -929,7 +950,7 @@ const players = [
     youtubeId: "",
   },
   {
-    rank: 40,
+    rank: 41,
     username: "maxbank45655",
     profileUrl: "https://www.youtube.com/@MAX_XD45655",
     pfpUrl: "./images/PFP/maxbank45655.jpeg",
@@ -955,7 +976,7 @@ const players = [
     youtubeId: "https://www.youtube.com/watch?v=kMTA2hMGtAc&t=664s",
   },
   {
-    rank: 41,
+    rank: 42,
     username: "IOA_bob124",
     profileUrl: "https://www.tiktok.com/@po.no.ok.kohome?lang=en",
     pfpUrl: "./images/PFP/IOA_bob124.jpg",
@@ -975,7 +996,7 @@ const players = [
     youtubeId: "",
   },
   {
-    rank: 42,
+    rank: 43,
     username: "BeambooX2",
     profileUrl: "https://www.tiktok.com/@kidbbx2",
     pfpUrl: "./images/PFP/BeambooX2.jpeg",
@@ -993,7 +1014,7 @@ const players = [
     status: "Active",
     youtubeId: "",
   }
-];
+]
 
 export { formatCompletionItem, formatDifficultyItem, formatTieredItem };
 export default players;
