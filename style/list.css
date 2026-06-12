@@ -59,7 +59,6 @@
     scrollbar-color: #003cff #1e1e1e;
 }
 
-/* ===== Card — List View (Image 1) ===== */
 .list-card {
     display: flex;
     align-items: center;
@@ -100,7 +99,7 @@
 }
 
 .card-rank-num {
-    font-size: 30px;
+    font-size: 40px;
     font-weight: 900;
     line-height: 1;
     color: white;
@@ -124,7 +123,7 @@
 }
 
 .card-info-name {
-    font-size: 18px;
+    font-size: 24px;
     font-weight: 700;
     margin: 0 0 5px 0;
     overflow: hidden;
@@ -156,8 +155,8 @@
 }
 
 .card-thumb {
-    width: 255px;
-    height: 115px;
+    width: 340px;
+    height: 160px;
     border-radius: 12px;
     overflow: hidden;
     flex-shrink: 0;
@@ -176,13 +175,8 @@
     object-fit: cover;
     border-radius: 50%;
     border: 3px solid rgba(96, 63, 187, 0.4);
-    box-shadow: 0 6px 24px rgba(0,0,0,0.2);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card-info-pfp:hover {
-    transform: scale(1.1) rotate(5deg);
-    box-shadow: 0 8px 32px rgba(128, 92, 226, 0.952);
 }
 
 .card-thumb-placeholder {
@@ -190,7 +184,6 @@
     height: 100%;
 }
 
-/* ===== Detail Overlay — Detail View (Image 2) ===== */
 #detail-overlay {
     position: fixed;
     inset: 0;
@@ -361,7 +354,7 @@
     font-weight: 400;
 }
 
-.detail-completions{
+.detail-completions {
     color: white;
     font-weight: 350;
 }
@@ -382,27 +375,51 @@
 }
 
 @media (max-width: 700px) {
-    #detail-body { grid-template-columns: 1fr; }
-    .card-thumb { display: none; }
+    #detail-body {
+        grid-template-columns: 1fr;
+    }
+
+    .card-thumb {
+        display: none;
+    }
 }
 
 /* ===== Smooth Animations ===== */
 @keyframes overlayFadeIn {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes panelSlideUp {
-    from { opacity: 0; transform: translateY(28px); }
-    to   { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(28px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @keyframes cardFadeUp {
-    from { opacity: 0; transform: translateY(14px); }
-    to   { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(14px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-.section-button {
+/* .section-button {
     margin: 10px;
     background: rgba(40, 18, 99, 0.15);
     backdrop-filter: blur(10px) saturate(180%);
@@ -426,9 +443,9 @@
     transform: scale(1.05);
     filter: brightness(1.2);
     transition: all 0.2s;
-}
+} */
 
-#list-container #content > div {
+#list-container #content>div {
     transition: opacity 0.25s ease, transform 0.25s ease;
 }
 
@@ -440,50 +457,50 @@
         gap: 12px;
         text-align: center;
     }
-    
+
     .card-rank-col {
         align-items: center;
         min-width: auto;
     }
-    
+
     .card-diff-icon {
         width: 40px;
         height: 40px;
         font-size: 12px;
     }
-    
+
     .card-info-name {
         font-size: 16px;
     }
-    
+
     .card-info-sub {
         font-size: 11px;
     }
-    
+
     .card-thumb {
         width: 100%;
         height: 120px;
     }
-    
+
     .detail-title-row {
         flex-direction: column;
         text-align: center;
         gap: 12px;
     }
-    
+
     .detail-rank-name {
         flex-direction: column;
         gap: 8px;
     }
-    
+
     .detail-rank {
         font-size: 28px;
     }
-    
+
     .detail-name {
         font-size: 20px;
     }
-    
+
     #detail-body {
         grid-template-columns: 1fr;
     }
@@ -494,25 +511,25 @@
         padding: 12px;
         gap: 10px;
     }
-    
+
     .card-rank-num {
         font-size: 24px;
     }
-    
+
     .card-diff-icon {
         width: 35px;
         height: 35px;
         font-size: 10px;
     }
-    
+
     .card-info-name {
         font-size: 14px;
     }
-    
+
     .card-info-sub {
         font-size: 10px;
     }
-    
+
     .section-button {
         font-size: 14px;
         padding: 0.8rem;

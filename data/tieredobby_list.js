@@ -38,6 +38,24 @@ const TieredList = [
     },
     {
         top: 3,
+        name: "Moment",
+        tiers: TIERED_OBBY[16],
+        rateKey: "High",
+        firstVictor: "guntfinnjakesanss",
+        creators: ["OFFee2223"],
+
+        location: "https://www.roblox.com/games/16740353561/Moment",
+        gameStyle: "Linear",
+        difficultySource: "Raw Gameplay",
+        type: "Regular",
+
+        verifiedDate: "May 10, 2026",
+        length: "Short (1-3 minutes)",
+        quality: Q_COLORS.B,
+        url: "https://www.youtube.com/watch?v=0qWU1l-IcqA"
+    },
+    {
+        top: 4,
         name: "Tower of Amalgamation 1",
         tiers: TIERED_OBBY[16],
         rateKey: "High",
@@ -55,7 +73,7 @@ const TieredList = [
         url: "https://www.youtube.com/watch?v=hfo5QMVLujs"
     },
     {
-        top: 4,
+        top: 5,
         name: "Eau de Nil",
         tiers: TIERED_OBBY[16],
         rateKey: "Mid",
@@ -74,7 +92,7 @@ const TieredList = [
     },
     
     {
-        top: 5,
+        top: 6,
         name: "Dysphoria",
         tiers: TIERED_OBBY[16],
         rateKey: "Mid-Low",
@@ -92,7 +110,7 @@ const TieredList = [
         url: "https://www.youtube.com/watch?v=vdJXH__tzM4&list=PLUMkgPwlekNgbixRieVlqzd00YqG6sBuq&index=4"
     },
     {
-        top: 6,
+        top: 7,
         name: "Sanguine",
         tiers: TIERED_OBBY[16],
         rateKey: "Mid-Low",
@@ -111,7 +129,7 @@ const TieredList = [
         tiktokUrl: ""
     },
     {
-        top: 7,
+        top: 8,
         name: "Plex",
         tiers: TIERED_OBBY[16],
         rateKey: "Mid-Low",
@@ -130,7 +148,7 @@ const TieredList = [
         tiktokUrl: ""
     },
     {
-        top: 8,
+        top: 9,
         name: "Mint Skies",
         tiers: TIERED_OBBY[16],
         rateKey: "Mid-Low",
@@ -149,7 +167,7 @@ const TieredList = [
         tiktokUrl: ""
     },
     {
-        top: 9,
+        top: 10,
         name: "CyclolcyC",
         tiers: TIERED_OBBY[16],
         rateKey: "Mid-Low",
@@ -168,7 +186,7 @@ const TieredList = [
         tiktokUrl: "https://www.tiktok.com/@imrealofe/video/7534203031370353928"
     },
     {
-        top: 10,
+        top: 11,
         name: "Enigmatic Void",
         rateKey: "Low",
         tiers: TIERED_OBBY[16],
@@ -186,7 +204,7 @@ const TieredList = [
         url: "https://www.youtube.com/watch?v=mUcDetWhcfo"
     },
     {
-        top: 11,
+        top: 12,
         name: "Arcrux",
         tiers: TIERED_OBBY[16],
         rateKey: "Low",
@@ -204,7 +222,7 @@ const TieredList = [
         url: "https://www.youtube.com/watch?v=kiA93G7NHts&list=PLUMkgPwlekNgbixRieVlqzd00YqG6sBuq&index=2"
     },
     {
-        top: 12,
+        top: 13,
         name: "Shinku no naraku",
         tiers: TIERED_OBBY[16],
         rateKey: "Low",
@@ -222,7 +240,7 @@ const TieredList = [
         url: "https://www.youtube.com/watch?v=XgpKJf_yWSU&t=5s"
     },
     {
-        top: 13,
+        top: 14,
         name: "The Path To Testosterone",
         tiers: TIERED_OBBY[16],
         rateKey: "Low",
@@ -240,7 +258,7 @@ const TieredList = [
         url: "https://youtube.com/watch?v=FNnhYjEZC3k&feature=shared"
     },
     {
-        top: 14,
+        top: 15,
         name: "Chromium",
         tiers: TIERED_OBBY[16],
         rateKey: "Low",
@@ -254,8 +272,62 @@ const TieredList = [
 
         verifiedDate: "March 24, 2026",
         length: "Short (1-3 minutes)",
-        quality: Q_COLORS.B,
+        quality: Q_COLORS['B'],
         tiktokUrl: "https://www.tiktok.com/@imrealofe/video/7510600308607716616"
+    },
+    {
+        top: 16,
+        name: "Hope for Amendment",
+        tiers: TIERED_OBBY[16],
+        rateKey: "Low",
+        firstVictor: "Woramates",
+        creators: ["sladoledenavafla"],
+
+        location: "https://www.roblox.com/games/89602192925417/Chromium",
+        gameStyle: "Camera Control",
+        difficultySource: "Raw Gameplay",
+        type: "Regular",
+
+        verifiedDate: "January 27, 2022",
+        length: "Short (1-3 minutes)",
+        quality: Q_COLORS['A'],
+        url: "https://www.youtube.com/watch?v=Ayas-FsPqP0",
+    },
+    {
+        top: 17,
+        name: "Cobalt Paradox",
+        tiers: TIERED_OBBY[16],
+        rateKey: "Bottom-Low",
+        firstVictor: "OFFee2223",
+        creators: ["liu06", "StarLordEnzoGamer"],
+
+        location: "https://www.roblox.com/games/5956487097/Cobalt-Paradox",
+        gameStyle: "Linear",
+        difficultySource: "Raw Gameplay",
+        type: "Regular",
+
+        verifiedDate: "April 27, 2025",
+        length: "Moderate (3-7 minutes)",
+        quality: Q_COLORS['A'],
+        tiktokUrl: "https://www.tiktok.com/@imrealofe/video/7497855279686503698",
+    },
+    {
+        top: 18,
+        name: "Convoluted",
+        tiers: TIERED_OBBY[16],
+        rateKey: "Bottom",
+        firstVictor: "PandaTacoWolf",
+        creators: ["glizzygladiattorrr"],
+
+        location: "https://www.roblox.com/games/8659333110/convoluted#ropro-quick-search",
+        gameStyle: "Linear/Camera Control",
+        difficultySource: "Raw Gameplay",
+        type: "Regular",
+
+        verifiedDate: "November 2, 2025",
+        length: "Short (1-3 minutes)",
+        quality: Q_COLORS['B'],
+        url: "https://www.youtube.com/watch?v=9GPJwWMXEZM",
     },
 ];
 export {TieredList};

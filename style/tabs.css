@@ -85,12 +85,11 @@
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
-    background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.212);
 }
 
-#navbar-links a::before {
+/* #navbar-links a::before {
     content: '';
     position: absolute;
     top: 0;
@@ -101,46 +100,21 @@
     transition: left 0.5s ease;
 }
 
-#navbar-links a:hover::before {
+#navbar-links a:hover::before {s
     left: 100%;
-}
+} */
 
 #navbar-links a:hover {
-    color: #fff;
-    background: linear-gradient(135deg, #714aff, #3720b4);
+    color: #dbdbdb;
+    background: rgba(255, 255, 255, 0.247);
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(113, 74, 255, 0.4);
-    border-color: rgba(113, 74, 255, 0.5);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.274);
+    border-color: rgba(255, 255, 255, 0.5);
+    text-shadow: 0 0 10px #000000;
 }
 
-#navbar-links p {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin: 0;
-    padding: 8px 16px;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 25px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: all 0.3s ease;
-}
-
-#navbar-links p:hover {
-    background: rgba(113, 74, 255, 0.2);
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(113, 74, 255, 0.3);
-}
-
-#navbar-links p a {
-    padding: 0;
-    background: none;
-    border: none;
-}
-
-#navbar-links p a:hover {
-    background: none;
-    box-shadow: none;
-    transform: none;
+#navbar-links i {
+    margin-right: 5px;
 }
 
 #sections {
@@ -161,17 +135,16 @@
   position: relative;
   transition: all 0.3s ease;
   border-radius: 8px 8px 0 0;
+
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .section-button:hover {
   color: rgba(255, 255, 255, 0.9);
-  background: rgba(255, 255, 255, 0.05);
 }
 
 .section-button.active {
   color: #fff;
-  background: rgba(255, 255, 255, 0.1);
-  border-bottom: 3px solid #714aff;
 }
 
 .section-button.active::after {
@@ -197,26 +170,6 @@
   opacity: 1;
   transform: translateX(0);
   display: block;
-}
-
-/* Loading state */
-.section-button.loading {
-  opacity: 0.6;
-  pointer-events: none;
-}
-
-.section-button.loading::before {
-  content: '';
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  border-top-color: #4a5cff;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-  top: 50%;
-  left: 10px;
-  transform: translateY(-50%);
 }
 
 @keyframes spin {

@@ -7,6 +7,12 @@ const rankConfig = {
     3: { icon: '../images/top3.png', color: '#CD7F32' },
 };
 
+function getRankedPlayers(data = players) {
+  return [...data]
+    .sort((a, b) => Number(a.points) - Number(b.points))
+    .map((player, index) => ({ ...player, rank: index + 1 }));
+}
+
 function IconRank(rank) {
   if (!rankConfig[rank]) {
     return ``;
@@ -67,21 +73,21 @@ function searchPlayer() {
   const playerNameInput = document.querySelector("#playerInput");
   const container = document.getElementById("data-player");
   const playerName = playerNameInput.value.trim().toLowerCase();
+  const rankedPlayers = getRankedPlayers();
 
   if (playerName === "") {
-    container.innerHTML = renderLeaderboard(players);
-    attachRowClickListeners();
+    container.innerHTML = renderLeaderboard(rankedPlayers);
+    attachRowClickListeners(rankedPlayers);
     return;
   }
 
-  // Search in local players data
-  const foundPlayer = players.find(player => 
+  const foundPlayer = rankedPlayers.find(player => 
     player.username.toLowerCase().includes(playerName)
   );
 
   if (foundPlayer) {
     container.innerHTML = renderLeaderboard([foundPlayer]);
-    attachRowClickListeners();
+    attachRowClickListeners([foundPlayer]);
   } else {
     container.innerHTML = `<div style="text-align:center;padding:2rem;color:#ff6b6b;font-family:'Segoe UI',sans-serif;">Player not found</div>`;
   }
@@ -124,7 +130,7 @@ function buildVideoHtml(player) {
                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                allowfullscreen></iframe>`;
   }
-  return checkVideo(player) ?? `<div class="detail-no-video">It cannot be promoted on TikTok</div>`;
+  return checkVideo(player) ?? `<div class="detail-no-video">It cannot be promoted</div>`;
 }
 
 function openPlayerDetail(player) {
@@ -211,11 +217,11 @@ function closePlayerDetail() {
   }, 200);
 }
 
-function attachRowClickListeners() {
+function attachRowClickListeners(data = getRankedPlayers()) {
   document.querySelectorAll('#data-player .list-card[data-rank]').forEach(card => {
     card.addEventListener('click', () => {
       const rank = parseInt(card.getAttribute('data-rank'));
-      const player = players.find(p => p.rank === rank);
+      const player = data.find(p => p.rank === rank);
       if (player) openPlayerDetail(player);
     });
   });
@@ -279,9 +285,11 @@ document.addEventListener("DOMContentLoaded", () => {
   document.body.appendChild(overlay);
 
   const container = document.getElementById("data-player");
+  const rankedPlayers = getRankedPlayers();
+
   if (container) {
-    container.innerHTML = renderLeaderboard(players);
-    attachRowClickListeners();
+    container.innerHTML = renderLeaderboard(rankedPlayers);
+    attachRowClickListeners(rankedPlayers);
   }
   renderProvinceList(provinceData);
 });
