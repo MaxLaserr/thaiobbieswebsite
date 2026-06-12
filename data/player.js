@@ -153,7 +153,7 @@ const players = [
   {
     username: "CarolisticX",
     profileUrl: "https://www.youtube.com/@CarolisticXZE/videos",
-    pfpUrl: "./images/PFP/CarolisticX.jpg",
+    pfpUrl: "./images/PFP/carolisticx.jpg",
     type: "Tiered/Tower",
     points: 26.76,
     device: "PC/Mobile",
