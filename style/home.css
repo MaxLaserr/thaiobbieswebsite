@@ -1,10 +1,12 @@
 .page-shell {
-  max-width: 100%;
+  width: min(100%, 1440px);
+  box-sizing: border-box;
   margin: 0 auto;
   padding: 12px 43px 10px;
 }
 
 .hero-section {
+  display: grid;
   grid-template-columns: 1.15fr 0.85fr;
   gap: 30px;
   align-items: center;
@@ -118,7 +120,7 @@
 .hero-visual {
   margin: 0 auto;
   padding: 24px 20px 60px;
-  gap: 25;
+  gap: 25px;
   display: flex;
   justify-content: center;
 }
@@ -284,6 +286,90 @@
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
+  .page-shell {
+    width: 100%;
+    padding: 12px 16px 24px;
+  }
+
+  .hero-section {
+    display: block;
+    margin: 8px 0 24px;
+  }
+
+  .hero-copy {
+    padding: 20px 0;
+  }
+
+  #topic-text-home {
+    width: auto;
+    margin: 0;
+    text-align: center;
+    font-size: clamp(2rem, 9vw, 3rem);
+  }
+
+  .hero-actions {
+    width: 100%;
+    justify-content: center;
+    border: 0;
+  }
+
+  .hero-actions a {
+    flex: 1 1 140px;
+    text-align: center;
+    margin: 0;
+  }
+
+  .info-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  .page-shell > h2 {
+    margin: 0 0 14px;
+    padding: 0;
+    font-size: 1.2rem;
+    line-height: 1.45;
+  }
+
+  .info-card,
+  .info-card-wide {
+    grid-column: auto;
+    padding: 18px;
+  }
+
+  .info-card p,
+  .info-card li {
+    font-size: 1rem;
+  }
+
+  .hero-visual {
+    display: grid;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 24px 0;
+    gap: 16px;
+  }
+
+  .visual-card {
+    padding: 0;
+  }
+
+  .visual-card img {
+    width: 100% !important;
+    min-height: 0;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .hero-credit {
+    padding: 18px 0;
+  }
+
+  .hero-credit h2 {
+    margin: 0;
+    padding: 0;
+  }
+
   #home-content {
     font-size: 1rem;
     padding: 1rem;
@@ -301,10 +387,6 @@
 }
 
 @media (max-width: 480px) {
-  body {
-    padding-top: 100px;
-  }
-
   #home-content {
     font-size: 0.9rem;
     padding: 0.8rem;
@@ -314,5 +396,18 @@
   .search-box {
     width: 95%;
     margin: 0.5rem auto;
+  }
+
+  .page-shell {
+    padding-inline: 12px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .hero-actions a {
+    flex-basis: auto;
+    width: 100%;
   }
 }
