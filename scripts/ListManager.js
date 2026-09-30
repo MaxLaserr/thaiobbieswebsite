@@ -637,9 +637,9 @@ document.addEventListener("DOMContentLoaded", () => {
           .length,
       0,
     );
-    resultCount.textContent = listQuery
-      ? `${total} result${total === 1 ? "" : "s"}`
-      : "Search all obbies";
+    // resultCount.textContent = listQuery
+    //   ? `${total} result${total === 1 ? "" : "s"}`
+    //   : "Search all obbies";
     // clearSearch.classList.toggle("is-visible", Boolean(listQuery));
   });
   searchInput?.addEventListener("input", updateListSearch);
