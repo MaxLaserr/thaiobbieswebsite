@@ -1,6 +1,7 @@
 #File
 .sixth
 .vscode
+vscode
 .venv
 .env
 .toc-api.json

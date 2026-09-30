@@ -604,7 +604,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const resultCount = $("obby-result-count");
   const clearSearch = $("obby-search-clear");
   const updateListSearch = debounce(() => {
-    listQuery = searchInput;
+    listQuery = searchInput?.value.trim().toLowerCase() || "";
     Object.keys(TYPE_CONFIG).forEach(renderList);
     const total = Object.entries(TYPE_CONFIG).reduce(
       (sum, [type, config]) =>
