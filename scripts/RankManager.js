@@ -149,25 +149,20 @@ function getDeviceIcon(device) {
 function searchPlayer() {
   const playerNameInput = document.querySelector("#playerInput");
   const container = document.getElementById("data-player");
+  if (!playerNameInput || !container) return;
+
   const playerName = playerNameInput.value.trim().toLowerCase();
   const rankedPlayers = getRankedPlayers();
+  const matchingPlayers = playerName
+    ? rankedPlayers.filter((player) =>
+        String(player.username ?? "").toLowerCase().includes(playerName),
+      )
+    : rankedPlayers;
 
-  if (playerName === "") {
-    container.innerHTML = renderLeaderboard(rankedPlayers);
-    attachRowClickListeners(rankedPlayers);
-    return;
-  }
-
-  const foundPlayer = rankedPlayers.find((player) =>
-    player.username.toLowerCase().includes(playerName),
-  );
-
-  if (foundPlayer) {
-    container.innerHTML = renderLeaderboard([foundPlayer]);
-    attachRowClickListeners([foundPlayer]);
-  } else {
-    container.innerHTML = `<div style="text-align:center;padding:2rem;color:#ff6b6b;font-family:'Segoe UI',sans-serif;">Player not found</div>`;
-  }
+  container.innerHTML = matchingPlayers.length
+    ? renderLeaderboard(matchingPlayers)
+    : `<div style="text-align:center;padding:2rem;color:#ff6b6b;font-family:'Segoe UI',sans-serif;">No players match this search.</div>`;
+  attachRowClickListeners(matchingPlayers);
 }
 
 window.searchPlayer = searchPlayer;

@@ -92,7 +92,7 @@
     padding: 18px 22px;
     margin: 8px 0;
     cursor: pointer;
-    transition: background 0.2s, border-color 0.2s, transform 0.15s;
+    transition: background 0.2s, border-image 0.2s, transform 0.15s;
     width: 100%;
     box-sizing: border-box;
     gap: 18px;
@@ -100,9 +100,49 @@
     color: white;
 }
 
+/* .list-card-with-thumb {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    background-image: var(--card-thumb), linear-gradient(135deg, rgba(113, 95, 231, 0.92), rgba(9, 8, 28, .96));
+    background-size: cover;
+    background-position: center;
+}
+
+.list-card-with-thumb::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(90deg, rgba(7, 6, 25, .5) 0%, rgba(12, 9, 38, .5) 48%, rgba(12, 9, 38, .5) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 14px;
+    filter: blur(10px);
+}
+
+.list-card-with-thumb::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    background: var(--card-thumb) center / cover no-repeat;
+    transform: scale(1);
+    transition: transform .35s ease;
+    pointer-events: none;
+}
+
+.list-card-with-thumb:hover::after {
+    transform: scale(1.1);
+}
+
+.list-card-with-thumb > * {
+    position: relative;
+    z-index: 1;
+} */
+
 .list-card:hover {
-    background: rgba(255, 255, 255, 0.08);
-    border-color: rgba(255, 255, 255, 0.22);
+    background: rgba(104, 55, 240, 0.2);
+    border-color: rgba(255, 255, 255, 0.1);
     transform: translateY(-2px);
 }
 
@@ -662,15 +702,21 @@
 }
 
 .list-search .search-txt {
-    width: 100%;
+    width: min(100%, 440px);
     min-width: 0;
     padding: 12px 14px;
     border: 1px solid rgba(190, 168, 255, .28);
-    border-radius: 8px 0 0 8px;
+    border-radius: 24px;
     outline: none;
-    background: rgba(12, 10, 42, .62);
+    background:
+    linear-gradient(
+      135deg,
+      rgba(18, 14, 32, 0.28),
+      rgba(26, 28, 76, 0.72)
+    );
     color: #fff;
-    font: inherit;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
     font-weight: 400;
 }
 
@@ -684,7 +730,7 @@
     width: 45px;
     border: 1px solid rgba(190, 168, 255, .28);
     border-left: 0;
-    border-radius: 0 8px 8px 0;
+    border-radius: 24px;
     background: rgba(12, 10, 42, .62);
     color: rgba(255, 255, 255, .65);
     cursor: pointer;

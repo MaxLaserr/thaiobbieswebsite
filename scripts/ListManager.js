@@ -133,6 +133,14 @@ function createCard(item, type, index) {
 
   const card = el("div", "list-card");
   card.dataset.index = index;
+  const ytId = getYouTubeId(item.url);
+  // if (ytId) {
+  //   card.classList.add("list-card-with-thumb");
+  //   card.style.setProperty(
+  //     "--card-thumb",
+  //     `url("https://img.youtube.com/vi/${encodeURIComponent(ytId)}/hqdefault.jpg")`,
+  //   );
+  // }
   card.innerHTML = `
     <div class="card-rank-col">
       <span class="card-rank-label">TOP</span>
@@ -188,6 +196,12 @@ function renderList(type) {
     fragment.appendChild(createCard(item, type, index)),
   );
   container.replaceChildren(fragment);
+
+  if (listQuery && matches.length === 0) {
+    container.innerHTML = `
+    <div style="text-align:center;padding:2rem;color:#ff6b6b;font-family:'Segoe UI',sans-serif;">No obby match this search.</div>
+  `;
+  }
 
   if (!container.dataset.clickBound) {
     container.addEventListener("click", (event) => {
@@ -284,7 +298,7 @@ function openDetail(item, type) {
             <div class="detail-icon-box" style="background:${esc(diffStyle.background || "rgba(255,255,255,0.1)")};border:${esc(diffStyle.border || "1px solid rgba(255,255,255,0.2)")};color:${esc(diffStyle.color || "#fff")}">${iconHtml}</div>
             <div class="player-watch-channel-copy">
               <strong>${esc(diffLabel || "Obby")}${rateLabel ? ` · ${esc(item.rate)}` : ""}</strong>
-              <span>First victor by ${esc(item.firstVictor || "First victor not listed")}</span>
+              <span>First victor by ${item.firstVictorUrl ? `<a href="${esc(item.firstVictorUrl)}" target="_blank">${esc(item.firstVictor)}</a>` : esc(item.firstVictor || "First victor not listed")}</span>
             </div>
             <span class="player-watch-rank">#${esc(item.top)}</span>
           </div>
@@ -461,7 +475,17 @@ function showCreationDetail(item, isVerified) {
   }
   difficulty.appendChild(el("span", "", rateText));
   heading.append(
-    el("span", isVerified ? "creation-status is-verified" : "creation-status is-unverified", isVerified ? "Verified" : getYouTubeId(item.url) ? "Showcase" : "Unverified"),
+    el(
+      "span",
+      isVerified
+        ? "creation-status is-verified"
+        : "creation-status is-unverified",
+      isVerified
+        ? "Verified"
+        : getYouTubeId(item.url)
+          ? "Showcase"
+          : "Unverified",
+    ),
     el(
       "span",
       "creation-detail-rank",
@@ -602,7 +626,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const searchInput = $("obbyInput");
   const resultCount = $("obby-result-count");
-  const clearSearch = $("obby-search-clear");
+  // const clearSearch = $("obby-search-clear");
   const updateListSearch = debounce(() => {
     listQuery = searchInput?.value.trim().toLowerCase() || "";
     Object.keys(TYPE_CONFIG).forEach(renderList);
@@ -614,16 +638,16 @@ document.addEventListener("DOMContentLoaded", () => {
       0,
     );
     resultCount.textContent = listQuery
-        ? `${total} result${total === 1 ? "" : "s"}`
-        : "Search all obbies";
-    clearSearch.classList.toggle("is-visible", Boolean(listQuery));
+      ? `${total} result${total === 1 ? "" : "s"}`
+      : "Search all obbies";
+    // clearSearch.classList.toggle("is-visible", Boolean(listQuery));
   });
   searchInput?.addEventListener("input", updateListSearch);
-  clearSearch?.addEventListener("click", () => {
-    searchInput.value = "";
-    updateListSearch();
-    searchInput.focus();
-  });
+  // clearSearch?.addEventListener("click", () => {
+  //   searchInput.value = "";
+  //   updateListSearch();
+  //   searchInput.focus();
+  // });
   updateListSearch();
 
   $("creation-search")?.addEventListener(

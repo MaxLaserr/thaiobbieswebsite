@@ -417,7 +417,7 @@ const TieredList = [
     length: "Moderate (3-7 minutes)",
     quality: Q_COLORS["A"] || "A",
     top: 22,
-    url: "https://youtu.be/OkuR4C7VPXY"
+    url: "https://youtu.be/qloOESYx4t4"
   },
   {
     name: "Chromium",

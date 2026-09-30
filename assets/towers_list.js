@@ -322,6 +322,26 @@ const Towers = [
     url: "https://www.youtube.com/watch?v=7jBSQBRMqVw"
   },
   {
+    name: "Doomsday Tower",
+    difficulty: DIFF_STYLES.Horrific,
+    rate: 12.16,
+    rateKey: "Bottom-Low",
+    points: 199.73,
+    firstVictor: "Ta1_ocha",
+    firstVictorUrl: "",
+    creators: ["IceNsalt"],
+    location: "Pit of Misery (TEA)",
+    locationLink: "https://www.roblox.com/games/15873244701/JToH-The-Eternal-Abyss",
+    gameStyle: "Memory, Classic, Client Objects",
+    difficultySource: "Raw Difficulty",
+    fps: 165,
+    verifiedDate: "September 30, 2026",
+    length: "Very Short (5+ min.)",
+    quality: Q_COLORS["C"] || "C",
+    top: 17,
+    url: "https://youtu.be/--0lB50bIc0"
+  },
+  {
     name: "Tower of Malefic Nuisances",
     difficulty: DIFF_STYLES.Horrific,
     rate: 12.08,
@@ -338,7 +358,7 @@ const Towers = [
     verifiedDate: "August 12, 2025",
     length: "Very Short (5+ min.)",
     quality: Q_COLORS["A-"] || "A-",
-    top: 17,
+    top: 18,
     url: "https://www.youtube.com/watch?v=lLbRZFwYaUU&t=9s"
   },
   {
@@ -358,7 +378,7 @@ const Towers = [
     verifiedDate: "March 6, 2026",
     length: "Long (20+ min.)",
     quality: Q_COLORS["A-"] || "A-",
-    top: 18,
+    top: 19,
     url: "https://www.youtube.com/watch?v=SEmFJ7LPpBs&t=1s"
   },
   {
@@ -378,7 +398,7 @@ const Towers = [
     verifiedDate: "September 18, 2026",
     length: "Short (10+ min.)",
     quality: Q_COLORS["A-"] || "A-",
-    top: 19,
+    top: 20,
     url: "https://www.youtube.com/watch?v=SgE4yK9xLYs"
   },
   {
@@ -398,7 +418,7 @@ const Towers = [
     verifiedDate: "April 28, 2026",
     length: "Long (20+ min.)",
     quality: Q_COLORS["C"] || "C",
-    top: 20,
+    top: 21,
     url: "https://www.youtube.com/watch?v=E7wYPTMOeMM&t=195s"
   },
   {
@@ -418,7 +438,7 @@ const Towers = [
     verifiedDate: "August 23, 2026",
     length: "Very Short (5+ min.)",
     quality: Q_COLORS["C+"] || "C+",
-    top: 21,
+    top: 22,
     url: "https://youtu.be/FUjkFCKzPK8?si=pUqY2zUEYCsQCjmR"
   },
   {
@@ -438,7 +458,7 @@ const Towers = [
     verifiedDate: "December 28, 2025",
     length: "Extremely Short (<5 min.)",
     quality: Q_COLORS["B-"] || "B-",
-    top: 22,
+    top: 23,
     url: "https://www.youtube.com/watch?v=U_rNakQ80J4&t=24s"
   },
   {
@@ -458,7 +478,7 @@ const Towers = [
     verifiedDate: "November 13, 2020",
     length: "Very Long (30+ min.)",
     quality: Q_COLORS["S"] || "S",
-    top: 23,
+    top: 24,
     url: "https://www.youtube.com/watch?v=bNEctohm0pc"
   },
   {
@@ -478,7 +498,7 @@ const Towers = [
     verifiedDate: "December 2, 2025",
     length: "Short (10+ min.)",
     quality: Q_COLORS["A+"] || "A+",
-    top: 24,
+    top: 25,
     url: "https://youtu.be/V-nlnkwGgyU"
   },
   {
@@ -498,7 +518,7 @@ const Towers = [
     verifiedDate: "March 31, 2021",
     length: "Extremely Short (<5 min.)",
     quality: Q_COLORS["C"] || "C",
-    top: 25,
+    top: 26,
     url: "https://youtu.be/KVrUKoUDWLI"
   },
   {
@@ -518,7 +538,7 @@ const Towers = [
     verifiedDate: "September 30, 2020",
     length: "Very Long (30+ min.)",
     quality: Q_COLORS["C+"] || "C+",
-    top: 26,
+    top: 27,
     url: "https://www.youtube.com/watch?v=NSdfSq25-7s"
   },
   {
@@ -538,7 +558,7 @@ const Towers = [
     verifiedDate: "March 16, 2026",
     length: "Very Long (30+ min.)",
     quality: Q_COLORS["B+"] || "B+",
-    top: 27,
+    top: 28,
     url: "https://www.youtube.com/watch?v=SEmFJ7LPpBs"
   },
   {
@@ -558,7 +578,7 @@ const Towers = [
     verifiedDate: "July 30, 2026",
     length: "Very Short (5+ min.)",
     quality: Q_COLORS["S"] || "S",
-    top: 28,
+    top: 29,
     url: "https://youtu.be/aYOIbTTknLg?si=uZbrMAaeWTtQFPr3"
   },
   {
@@ -578,7 +598,7 @@ const Towers = [
     verifiedDate: "October 7, 2020",
     length: "Short (10+ min.)",
     quality: Q_COLORS["A-"] || "A-",
-    top: 29,
+    top: 30,
     url: "https://www.youtube.com/watch?v=D11yPPTFIoQ"
   },
   {
@@ -598,7 +618,7 @@ const Towers = [
     verifiedDate: "January 25, 2026",
     length: "Extremely Short (<5 min.)",
     quality: Q_COLORS["B"] || "B",
-    top: 30,
+    top: 31,
     url: ""
   },
   {
@@ -618,7 +638,7 @@ const Towers = [
     verifiedDate: "April 26, 2025",
     length: "Moderate (15+ min.)",
     quality: Q_COLORS["S+"] || "S+",
-    top: 31,
+    top: 32,
     url: ""
   },
   {
@@ -638,7 +658,7 @@ const Towers = [
     verifiedDate: "February 14 2026",
     length: "Long (20+ min.)",
     quality: Q_COLORS["B"] || "B",
-    top: 32,
+    top: 33,
     url: ""
   },
   {
@@ -658,7 +678,7 @@ const Towers = [
     verifiedDate: "August 13, 2025",
     length: "Very Short (5+ min.)",
     quality: Q_COLORS["D"] || "D",
-    top: 33,
+    top: 34,
     url: ""
   },
   {
@@ -678,7 +698,7 @@ const Towers = [
     verifiedDate: "December 26, 2025",
     length: "Long (20+ min.)",
     quality: Q_COLORS["A-"] || "A-",
-    top: 34,
+    top: 35,
     url: "https://youtu.be/qiub4-w4z3M?si=RHhGdCBOZHNcqqQN"
   },
   {
@@ -698,7 +718,7 @@ const Towers = [
     verifiedDate: "June 3, 2025",
     length: "Long (20+ min.)",
     quality: Q_COLORS["B+"] || "B+",
-    top: 35,
+    top: 36,
     url: "https://youtu.be/fDBtJBnntgE"
   },
   {
@@ -718,7 +738,7 @@ const Towers = [
     verifiedDate: "February, 25 2025",
     length: "Moderate (15+ min.)",
     quality: Q_COLORS["A-"] || "A-",
-    top: 36,
+    top: 37,
     url: ""
   },
   {
@@ -738,7 +758,7 @@ const Towers = [
     verifiedDate: "March 5, 2025",
     length: "Short (10+ min.)",
     quality: Q_COLORS["S+"] || "S+",
-    top: 37,
+    top: 38,
     url: ""
   },
   {
@@ -758,7 +778,7 @@ const Towers = [
     verifiedDate: "October 18, 2025",
     length: "Short (10+ min.)",
     quality: Q_COLORS["A-"] || "A-",
-    top: 38,
+    top: 39,
     url: "https://www.youtube.com/watch?v=nXOZpt4-kL0"
   },
   {
@@ -778,7 +798,7 @@ const Towers = [
     verifiedDate: "June 1, 2026",
     length: "Long (20+ min.)",
     quality: Q_COLORS["S"] || "S",
-    top: 39,
+    top: 40,
     url: "https://www.youtube.com/watch?v=dUa3iOTfhHc"
   },
   {
@@ -798,7 +818,7 @@ const Towers = [
     verifiedDate: "October 17, 2025",
     length: "Very Short (5+ min.)",
     quality: Q_COLORS["A-"] || "A-",
-    top: 40,
+    top: 41,
     url: ""
   },
   {
@@ -818,7 +838,7 @@ const Towers = [
     verifiedDate: "April 3, 2026",
     length: "Very Long (30+ min.)",
     quality: Q_COLORS["B"] || "B",
-    top: 41,
+    top: 42,
     url: "https://www.youtube.com/watch?v=9Jc0RrLxi48&t=445s"
   },
   {
@@ -838,7 +858,7 @@ const Towers = [
     verifiedDate: "August 17, 2025",
     length: "Moderate (15+ min.)",
     quality: Q_COLORS["S"] || "S",
-    top: 42,
+    top: 43,
     url: ""
   },
   {
@@ -858,7 +878,7 @@ const Towers = [
     verifiedDate: "August 8, 2025",
     length: "Extremely Short (<5 min.)",
     quality: Q_COLORS["C"] || "C",
-    top: 43,
+    top: 44,
     url: ""
   },
   {
@@ -878,7 +898,7 @@ const Towers = [
     verifiedDate: "January 18, 2026",
     length: "Extremely Short (<5 min.)",
     quality: Q_COLORS["C"] || "C",
-    top: 44,
+    top: 45,
     url: ""
   },
   {
@@ -898,7 +918,7 @@ const Towers = [
     verifiedDate: "March 1, 2020",
     length: "Very Long (30+ min.)",
     quality: Q_COLORS["B"] || "B",
-    top: 45,
+    top: 46,
     url: "https://youtu.be/_bnEoMlwADM"
   },
   {
@@ -918,7 +938,7 @@ const Towers = [
     verifiedDate: "February 20, 2026",
     length: "Moderate (15+ min.)",
     quality: Q_COLORS["A"] || "A",
-    top: 46,
+    top: 47,
     url: ""
   },
   {
@@ -938,7 +958,7 @@ const Towers = [
     verifiedDate: "August 24, 2025",
     length: "Very Short (5+ min.)",
     quality: Q_COLORS["A+"] || "A+",
-    top: 47,
+    top: 48,
     url: ""
   },
   {
@@ -958,7 +978,7 @@ const Towers = [
     verifiedDate: "October 6, 2025",
     length: "Long (20+ min.)",
     quality: Q_COLORS["S+"] || "S+",
-    top: 48,
+    top: 49,
     url: ""
   },
   {
@@ -978,7 +998,7 @@ const Towers = [
     verifiedDate: "December 25 2021",
     length: "Very Long (30+ min.)",
     quality: Q_COLORS["A+"] || "A+",
-    top: 49,
+    top: 50,
     url: "https://www.youtube.com/watch?v=s4l7ARbMmug"
   },
   {
@@ -998,7 +1018,7 @@ const Towers = [
     verifiedDate: "June 4, 2026",
     length: "Very Short (5+ min.)",
     quality: Q_COLORS["S-"] || "S-",
-    top: 50,
+    top: 51,
     url: "https://youtu.be/aOj1jWCUmas"
   },
   {
@@ -1018,7 +1038,7 @@ const Towers = [
     verifiedDate: "February 20, 2026",
     length: "Very Long (30+ min.)",
     quality: Q_COLORS["A"] || "A",
-    top: 51,
+    top: 52,
     url: ""
   },
   {
@@ -1038,7 +1058,7 @@ const Towers = [
     verifiedDate: "March 15, 2025",
     length: "Very Short (5+ min.)",
     quality: Q_COLORS["D"] || "D",
-    top: 52,
+    top: 53,
     url: "https://youtu.be/P1N9dzvpakc"
   },
   {
@@ -1058,7 +1078,7 @@ const Towers = [
     verifiedDate: "February 12 2026",
     length: "Short (10+ min.)",
     quality: Q_COLORS["A"] || "A",
-    top: 53,
+    top: 54,
     url: ""
   },
   {
@@ -1078,7 +1098,7 @@ const Towers = [
     verifiedDate: "July 10, 2025",
     length: "Extremely Short (<5 min.)",
     quality: Q_COLORS["C"] || "C",
-    top: 54,
+    top: 55,
     url: ""
   },
   {
@@ -1098,7 +1118,7 @@ const Towers = [
     verifiedDate: "February 22, 2026",
     length: "Moderate (15+ min.)",
     quality: Q_COLORS["A"] || "A",
-    top: 55,
+    top: 56,
     url: ""
   },
   {
@@ -1118,7 +1138,7 @@ const Towers = [
     verifiedDate: "April 24, 2025",
     length: "Short (10+ min.)",
     quality: Q_COLORS["C"] || "C",
-    top: 56,
+    top: 57,
     url: ""
   },
   {
@@ -1138,7 +1158,7 @@ const Towers = [
     verifiedDate: "March 20, 2026",
     length: "Short (10+ min.)",
     quality: Q_COLORS["B+"] || "B+",
-    top: 57,
+    top: 58,
     url: "https://youtu.be/k4tK01bgSuY?si=vA3nuqpsxxe2jjeI"
   },
   {
@@ -1158,7 +1178,7 @@ const Towers = [
     verifiedDate: "March 26, 2024",
     length: "Very Short (5+ min.)",
     quality: Q_COLORS["A"] || "A",
-    top: 58,
+    top: 59,
     url: ""
   },
   {
@@ -1178,7 +1198,7 @@ const Towers = [
     verifiedDate: "May 15, 2021",
     length: "Long (20+ min.)",
     quality: Q_COLORS["S+"] || "S+",
-    top: 59,
+    top: 60,
     url: ""
   },
   {
@@ -1198,7 +1218,7 @@ const Towers = [
     verifiedDate: "August 12, 2020",
     length: "Long (20+ min.)",
     quality: Q_COLORS["F"] || "F",
-    top: 60,
+    top: 61,
     url: ""
   },
   {
@@ -1218,7 +1238,7 @@ const Towers = [
     verifiedDate: "June 9, 2023",
     length: "Moderate (15+ min.)",
     quality: Q_COLORS["A"] || "A",
-    top: 61,
+    top: 62,
     url: ""
   },
   {
@@ -1238,7 +1258,7 @@ const Towers = [
     verifiedDate: "November 7, 2025",
     length: "Moderate (15+ min.)",
     quality: Q_COLORS["C"] || "C",
-    top: 62,
+    top: 63,
     url: ""
   },
   {
@@ -1258,7 +1278,7 @@ const Towers = [
     verifiedDate: "October 7, 2025",
     length: "Long (20+ min.)",
     quality: Q_COLORS["A+"] || "A+",
-    top: 63,
+    top: 64,
     url: ""
   },
   {
@@ -1278,7 +1298,7 @@ const Towers = [
     verifiedDate: "February 18 2022",
     length: "Very Long (30+ min.)",
     quality: Q_COLORS["C"] || "C",
-    top: 64,
+    top: 65,
     url: ""
   },
   {
@@ -1298,7 +1318,7 @@ const Towers = [
     verifiedDate: "December 29, 2025",
     length: "Extremely Short (<5 min.)",
     quality: Q_COLORS["C"] || "C",
-    top: 65,
+    top: 66,
     url: ""
   },
   {
@@ -1318,7 +1338,7 @@ const Towers = [
     verifiedDate: "October 9, 2025",
     length: "Very Short (5+ min.)",
     quality: Q_COLORS["C"] || "C",
-    top: 66,
+    top: 67,
     url: ""
   },
   {
@@ -1338,7 +1358,7 @@ const Towers = [
     verifiedDate: "May 3, 2025",
     length: "Moderate (15+ min.)",
     quality: Q_COLORS["S"] || "S",
-    top: 67,
+    top: 68,
     url: "https://www.youtube.com/watch?v=8ZiA4GPMHmY&t=4s"
   },
   {
@@ -1358,7 +1378,7 @@ const Towers = [
     verifiedDate: "December 20, 2025",
     length: "Long (20+ min.)",
     quality: Q_COLORS["B"] || "B",
-    top: 68,
+    top: 69,
     url: ""
   },
   {
@@ -1378,7 +1398,7 @@ const Towers = [
     verifiedDate: "March 21, 2026",
     length: "Very Long (30+ min.)",
     quality: Q_COLORS["S"] || "S",
-    top: 69,
+    top: 70,
     url: ""
   },
   {
@@ -1398,7 +1418,7 @@ const Towers = [
     verifiedDate: "October 2, 2025",
     length: "Short (10+ min.)",
     quality: Q_COLORS["A"] || "A",
-    top: 70,
+    top: 71,
     url: ""
   },
   {
@@ -1418,7 +1438,7 @@ const Towers = [
     verifiedDate: "October 6, 2025",
     length: "Extremely Short (<5 min.)",
     quality: Q_COLORS["C"] || "C",
-    top: 71,
+    top: 72,
     url: ""
   },
   {
@@ -1438,7 +1458,7 @@ const Towers = [
     verifiedDate: "May 15, 2021",
     length: "Moderate (15+ min.)",
     quality: Q_COLORS["A"] || "A",
-    top: 72,
+    top: 73,
     url: ""
   },
   {
@@ -1458,7 +1478,7 @@ const Towers = [
     verifiedDate: "Juno 11, 2025",
     length: "Short (10+ min.)",
     quality: Q_COLORS["A"] || "A",
-    top: 73,
+    top: 74,
     url: ""
   },
   {
@@ -1478,7 +1498,7 @@ const Towers = [
     verifiedDate: "December 23, 2021",
     length: "Short (10+ min.)",
     quality: Q_COLORS["A"] || "A",
-    top: 74,
+    top: 75,
     url: ""
   },
   {
@@ -1498,7 +1518,7 @@ const Towers = [
     verifiedDate: "August 11, 2025",
     length: "Moderate (15+ min.)",
     quality: Q_COLORS["S"] || "S",
-    top: 75,
+    top: 76,
     url: ""
   },
   {
@@ -1518,7 +1538,7 @@ const Towers = [
     verifiedDate: "October 2, 2025",
     length: "Very Short (5+ min.)",
     quality: Q_COLORS["C"] || "C",
-    top: 76,
+    top: 77,
     url: ""
   },
   {
@@ -1538,7 +1558,7 @@ const Towers = [
     verifiedDate: "June 26, 2026",
     length: "Moderate (15+ min.)",
     quality: Q_COLORS["S+"] || "S+",
-    top: 77,
+    top: 78,
     url: "https://youtu.be/0oR4yCPFs0E"
   },
   {
@@ -1558,7 +1578,7 @@ const Towers = [
     verifiedDate: "April 5, 2025",
     length: "Long (20+ min.)",
     quality: Q_COLORS["A"] || "A",
-    top: 78,
+    top: 79,
     url: ""
   },
   {
@@ -1578,7 +1598,7 @@ const Towers = [
     verifiedDate: "January 10, 2025",
     length: "Long (20+ min.)",
     quality: Q_COLORS["A"] || "A",
-    top: 79,
+    top: 80,
     url: ""
   },
   {
@@ -1598,7 +1618,7 @@ const Towers = [
     verifiedDate: "January 25 2025",
     length: "Long (20+ min.)",
     quality: Q_COLORS["B"] || "B",
-    top: 80,
+    top: 81,
     url: ""
   },
   {
@@ -1618,7 +1638,7 @@ const Towers = [
     verifiedDate: "November 11, 2019",
     length: "Short (10+ min.)",
     quality: Q_COLORS["D"] || "D",
-    top: 81,
+    top: 82,
     url: ""
   },
   {
@@ -1638,7 +1658,7 @@ const Towers = [
     verifiedDate: "September 15, 2024",
     length: "Short (10+ min.)",
     quality: Q_COLORS["B"] || "B",
-    top: 82,
+    top: 83,
     url: ""
   },
   {
@@ -1658,7 +1678,7 @@ const Towers = [
     verifiedDate: "July 23, 2026",
     length: "Extremely Short (<5 min.)",
     quality: Q_COLORS["A"] || "A",
-    top: 83,
+    top: 84,
     url: "https://youtu.be/78Fyxap9C2Y"
   },
   {
@@ -1678,7 +1698,7 @@ const Towers = [
     verifiedDate: "November 13, 2019",
     length: "Short (10+ min.)",
     quality: Q_COLORS["D"] || "D",
-    top: 84,
+    top: 85,
     url: ""
   },
   {
@@ -1698,7 +1718,7 @@ const Towers = [
     verifiedDate: "November 9, 2025",
     length: "Short (10+ min.)",
     quality: Q_COLORS["F"] || "F",
-    top: 85,
+    top: 86,
     url: ""
   },
   {
@@ -1718,7 +1738,7 @@ const Towers = [
     verifiedDate: "September 21, 2025",
     length: "Very Short (5+ min.)",
     quality: Q_COLORS["A"] || "A",
-    top: 86,
+    top: 87,
     url: ""
   },
   {
@@ -1738,7 +1758,7 @@ const Towers = [
     verifiedDate: "August 22, 2022",
     length: "Moderate (15+ min.)",
     quality: Q_COLORS["A"] || "A",
-    top: 87,
+    top: 88,
     url: ""
   }
 ];
