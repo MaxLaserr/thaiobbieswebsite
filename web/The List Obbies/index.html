@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thai Obbies Community</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="shortcut icon" href="/images/TOC.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="/style/leaderboard.css">
+    <link rel="stylesheet" href="/style/main.css">
+    <link rel="stylesheet" href="/style/star.css">
+    <link rel="stylesheet" href="/style/list.css">
+    <link rel="stylesheet" href="/style/tabs.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css">
+    <script type="module" src="/scripts/ListManager.js"></script>
+</head>
+
+<body class="list-page">
+    <div id="page-loader">
+        <div class="loader-ring"></div>
+        <p>Loading...</p>
+    </div>
+    <div class="night">
+        <div class="shooting-stars">
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+        </div>
+    </div>
+    <div id=navbar>
+        <div id=navbar-logo>
+            <img src=/images/TOC.png alt=TOC>
+            <div id="navbar-links">
+                <a href="/index.html" aria-label="Home"><i class="fas fa-home"></i>
+                    <p>Home</p>
+                </a>
+                <a href="/web/Leaderboard/index.html"><i class="fas fa-trophy"></i>
+                    <p>Leaderboard</p>
+                </a>
+                <a href="/web/The List Obbies/index.html"><i class="fas fa-list"></i>
+                    <p>List</p>
+                </a>
+                <a href="/web/Creation/index.html"><i class="fa-solid fa-hammer"></i>
+                    <p>Creation</p>
+                </a>
+            </div>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div id=navbar-links>
+            <a href="/web/Credit/index.html"><i class="fas fa-users"></i>
+                <p>Credits</p>
+            </a>
+            <a href=https://discord.gg/SWsqxZ9CTm><i class="fab fa-discord"></i>
+                <p>Discord Server</p>
+            </a>
+            <a
+                href="https://docs.google.com/spreadsheets/d/1XLUy2jmo9XKshRr_qkfkvByQ9RBAROWzpPADDJ88rGw/edit?gid=1463707024#gid=1463707024">
+                <i class="fab fa-google"></i>
+                <p>List Sheets</p>
+            </a>
+        </div>
+    </div>
+    <main id="list-container" class="leaderboard-shell list-page">
+        <header class="leaderboard-heading">
+            <p class="eyebrow">THAI OBBIES COMMUNITY</p>
+            <h1>The Obbies List</h1>
+        </header>
+        <section class="leaderboard-workspace list-workspace" aria-label="Obby list">
+            <div class="leaderboard-browser-tools">
+                <div id="sections" role="tablist" aria-label="Obby category">
+                    <button class="section-button" type="button" role="tab" data-section="towers-content">Towers</button>
+                    <button class="section-button" type="button" role="tab" data-section="tiered-obby-content">Obbies</button>
+                    <button class="section-button" type="button" role="tab" data-section="pace-based-content">Pace based</button>
+                </div>
+                <div class="list-controls-row">
+                    <label class="list-search-group" for="obbyInput">
+                        <span class="list-search-label">Search the list</span>
+                        <span class="search-box list-search">
+                            <input type="search" id="obbyInput" class="search-txt" placeholder="Name, creator, difficulty..." autocomplete="off">
+                            <button id="obby-search-clear" type="button" aria-label="Clear search" title="Clear search"><i class="fa-solid fa-xmark"></i></button>
+                        </span>
+                    </label>
+                    <span id="obby-result-count" class="list-result-count" aria-live="polite"></span>
+                </div>
+            </div>
+            <div id="content">
+                <div id="towers-content"></div>
+                <div id="tiered-obby-content"></div>
+                <div id="pace-based-content"></div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function toggleMenu() {
+            const hamburger = document.querySelector('.hamburger');
+            const navbarLinks = document.getElementById('navbar-links');
+
+            hamburger.classList.toggle('active');
+            navbarLinks.classList.toggle('active');
+        }
+
+        // Close menu when clicking on a link (mobile)
+        document.querySelectorAll('#navbar-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                const hamburger = document.querySelector('.hamburger');
+                const navbarLinks = document.getElementById('navbar-links');
+
+                if (window.innerWidth <= 768) {
+                    hamburger.classList.remove('active');
+                    navbarLinks.classList.remove('active');
+                }
+            });
+        });
+        window.addEventListener('load', () => {
+            document.querySelector('#page-loader').classList.add('loaded');
+        });
+    </script>
+</body>

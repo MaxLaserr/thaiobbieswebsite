@@ -1,3 +1,10 @@
 #File
 .sixth
 .vscode
+.venv
+.env
+.toc-api.json
+toc-api.json
+.sixth
+._pycache_
+sheets

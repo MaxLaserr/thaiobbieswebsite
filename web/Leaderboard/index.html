@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Thai Obbies Community</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="shortcut icon" href="/images/TOC.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="/style/leaderboard.css">
+    <link rel="stylesheet" href="/style/main.css">
+    <link rel="stylesheet" href="/style/star.css">
+    <link rel="stylesheet" href="/style/list.css">
+    <link rel="stylesheet" href="/style/tabs.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script type="module" src="/scripts/RankManager.js"></script>
+    <script type="module" src="/scripts/LeaderboardManager.js"></script>
+</head>
+
+<body class="leaderboard-page">
+    <div id="page-loader">
+        <div class="loader-ring"></div>
+        <p>Loading...</p>
+    </div>
+    <div class="night">
+        <div class="shooting-stars">
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+        </div>
+    </div>
+    <div id=navbar>
+        <div id=navbar-logo>
+            <img src=/images/TOC.png alt=TOC>
+            <div id="navbar-links">
+                <a href="/index.html" aria-label="Home"><i class="fas fa-home"></i>
+                    <p>Home</p>
+                </a>
+                <a href="/web/Leaderboard/index.html"><i class="fas fa-trophy"></i>
+                    <p>Leaderboard</p>
+                </a>
+                <a href="/web/The List Obbies/index.html"><i class="fas fa-list"></i>
+                    <p>List</p>
+                </a>
+                <a href="/web/Creation/index.html"><i class="fa-solid fa-hammer"></i>
+                    <p>Creation</p>
+                </a>
+            </div>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div id=navbar-links>
+            <a href="/web/Credit/index.html"><i class="fas fa-users"></i>
+                <p>Credits</p>
+            </a>
+            <a href=https://discord.gg/SWsqxZ9CTm><i class="fab fa-discord"></i>
+                <p>Discord Server</p>
+            </a>
+            <a
+                href="https://docs.google.com/spreadsheets/d/1XLUy2jmo9XKshRr_qkfkvByQ9RBAROWzpPADDJ88rGw/edit?gid=1463707024#gid=1463707024">
+                <i class="fab fa-google"></i>
+                <p>List Sheets</p>
+            </a>
+        </div>
+    </div>
+    <main class="leaderboard-shell">
+        <header class="leaderboard-heading">
+            <header class="heading">
+                <p class="eyebrow">THAI OBBIES COMMUNITY</p>
+            </header>
+            <h1>Leaderboard</h1>
+        </header>
+        <section class="leaderboard-workspace" aria-label="Leaderboard">
+            <div class="leaderboard-browser-tools">
+                <div id="sections" role="tablist" aria-label="Leaderboard category">
+                    <button class="section-button" type="button" role="tab" data-section="top-players-content">Top
+                        Players</button>
+                    <button class="section-button" type="button" role="tab"
+                        data-section="top-tower-list-content">Hardest Towers</button>
+                    <button class="section-button" type="button" role="tab"
+                        data-section="top-obbies-list-content">Hardest Obbies</button>
+                    <button class="section-button" type="button" role="tab"
+                        data-section="top-pacebased-list-content">Hardest Pace Based</button>
+                </div>
+                <div class="leaderboard-controls-row">
+                    <div class="leaderboard-search-group">
+                        <label class="leaderboard-search-label" for="playerInput">Search players</label>
+                        <div class="search-box leaderboard-search">
+                            <input type="text" id="playerInput" class="search-txt" placeholder="Username..."
+                                onkeypress="if(event.key==='Enter') searchPlayer()">
+                        </div>
+                    </div>
+                    <div id="checkbox-container" role="group" aria-label="Platform filter">
+                        <span class="leaderboard-filter-label">Platform</span>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="show-mobile-checkbox" checked>
+                            Mobile
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="show-pc-checkbox" checked>
+                            PC
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div id="leaderboard-container">
+                <div id="top-players-content">
+                    <div id="data-player"></div>
+                </div>
+                <div id="player-stats-content">
+                    <div id="player-stats"></div>
+                </div>
+                <div id="top-tower-list-content">
+                    <div id="data-tower"></div>
+                </div>
+                <div id="top-obbies-list-content">
+                    <div id="data-obbies"></div>
+                </div>
+                <div id="top-pacebased-list-content">
+                    <div id="data-pace"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+        function toggleMenu() {
+            const hamburger = document.querySelector('.hamburger');
+            const navbarLinks = document.getElementById('navbar-links');
+
+            hamburger.classList.toggle('active');
+            navbarLinks.classList.toggle('active');
+        }
+
+        // Close menu when clicking on a link (mobile)
+        document.querySelectorAll('#navbar-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                const hamburger = document.querySelector('.hamburger');
+                const navbarLinks = document.getElementById('navbar-links');
+
+                if (window.innerWidth <= 768) {
+                    hamburger.classList.remove('active');
+                    navbarLinks.classList.remove('active');
+                }
+            });
+        });
+        window.addEventListener('load', () => {
+            document.querySelector('#page-loader').classList.add('loaded');
+        });
+    </script>
+</body>
+
+</html>

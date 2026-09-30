@@ -1,0 +1,318 @@
+.page-shell {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 12px 43px 10px;
+}
+
+.hero-section {
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 30px;
+  align-items: center;
+  margin: 20px 0 30px;
+}
+
+.hero-copy {
+  border-bottom: 1px solid rgba(207, 191, 255, 0.35);
+  /* backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px); */
+}
+
+.visual-card {
+  padding: 16px;
+  width: 100%;
+  /* backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px); */
+  border-radius: 24px;
+}
+
+.visual-card p {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  color: #fff;
+}
+
+.visual-card img {
+  width: 100%;
+  display: block;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.04);
+  min-height: 280px;
+  object-fit: cover;
+}
+
+.visual-caption {
+  margin-top: 12px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.hero-copy {
+  padding: 28px;
+}
+
+.hero-copy h1 {
+  margin: 16px 0 12px;
+  color: #fff;
+  font-size: clamp(2rem, 4.5vw, 3.4rem);
+  line-height: 1.1;
+
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.hero-copy p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.hero-actions {
+  width: 275px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 22px;
+
+  border-radius: 12px;
+  border: 1px solid rgba(173, 145, 255, 0.24);
+}
+
+.primary-btn,
+.secondary-btn {
+  padding: 12px 18px;
+  border-radius: 14px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.primary-btn {
+  border: 1px solid rgba(173, 145, 255, 0.24);
+  border-radius: 12px;
+  background:
+    linear-gradient(135deg,
+      rgba(92, 72, 180, 0.28),
+      rgba(26, 28, 76, 0.72));
+  box-shadow: 0 16px 42px rgba(5, 3, 37, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.secondary-btn {
+  border: 1px solid rgba(173, 145, 255, 0.24);
+  border-radius: 12px;
+  background:
+    linear-gradient(135deg,
+      rgba(92, 72, 180, 0.28),
+      rgba(26, 28, 76, 0.72));
+  box-shadow: 0 16px 42px rgba(5, 3, 37, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.primary-btn:hover,
+.secondary-btn:hover {
+  transform: translateY(-2px);
+}
+
+.hero-visual {
+  margin: 0 auto;
+  padding: 24px 20px 60px;
+  gap: 25;
+  display: flex;
+  justify-content: center;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  border-bottom: 1px solid rgba(207, 191, 255, 0.35);
+
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.info-card {
+  border-radius: 24px;
+  padding: 22px;
+}
+
+.info-card-wide {
+  grid-column: 1 / -1;
+}
+
+.info-card h2 {
+  margin: 0 0 12px;
+  color: #fff;
+  font-size: 1.55rem;
+  text-decoration: underline;
+}
+
+.info-card h3 {
+  margin: 0 0 12px;
+  color: #fff;
+  font-size: 1.25rem;
+  text-decoration: underline;
+}
+
+.info-card p,
+.info-card li {
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.75;
+  font-size: 1.1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.info-card ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.info-card li+li {
+  margin-top: 8px;
+}
+
+.info-end {
+  border-top: 2px solid rgba(255, 255, 255, 0.5);
+  /* backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px); */
+}
+
+.hero-credit {
+  text-align: center;
+  padding: 25px;
+  align-items: center;
+}
+
+.formula-box {
+  margin-top: 14px;
+  padding: 16px;
+  border: 1px solid rgba(173, 145, 255, 0.24);
+  border-radius: 12px;
+  background:
+    linear-gradient(135deg,
+      rgba(92, 72, 180, 0.28),
+      rgba(26, 28, 76, 0.72));
+  box-shadow: 0 16px 42px rgba(5, 3, 37, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  color: #fff;
+  font-weight: 700;
+}
+
+#topic-text h1 {
+  /* background: linear-gradient(90deg, #020a1f 0%, #040718 100%); */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 2px 0 20px rgba(0, 0, 0, .3);
+  color: white;
+  opacity: 1;
+
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+
+.search-box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 20px;
+  width: fit-content;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, transform 0.15s;
+  box-sizing: border-box;
+  gap: 18px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+}
+
+.search-txt {
+  border: none;
+  background: none;
+  outline: none;
+  padding: 0;
+  color: white;
+  font-size: 16px;
+  transition: 0.4s;
+  width: 0px;
+}
+
+.search-box:hover>.search-txt {
+  width: 240px;
+  padding: 0 6px;
+}
+
+#title {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  color: #fff;
+  text-align: center;
+  font-family: Lato;
+  font-size: 2rem;
+  font-weight: 300px;
+  letter-spacing: 10px;
+  margin-top: -60px;
+  padding-left: 10px;
+}
+
+#title span {
+  background: -webkit-linear-gradient(white, #38495a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+#home-content {
+  display: none;
+}
+
+#topic-text-home {
+  width: 1200px;
+  display: grid;
+  gap: 7px;
+  text-align: left;
+  margin-left: -30px;
+
+  border-bottom: 1px solid rgba(207, 191, 255, 0.35);
+}
+
+#topic-text-home h1 {
+  font-size: 64px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  #home-content {
+    font-size: 1rem;
+    padding: 1rem;
+    margin: 1rem;
+  }
+
+  .search-box {
+    width: 90%;
+    margin: 1rem auto;
+  }
+
+  .search-txt {
+    width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding-top: 100px;
+  }
+
+  #home-content {
+    font-size: 0.9rem;
+    padding: 0.8rem;
+    margin: 0.8rem;
+  }
+
+  .search-box {
+    width: 95%;
+    margin: 0.5rem auto;
+  }
+}

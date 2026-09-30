@@ -1,0 +1,3 @@
+Package: python-dotenv
+Version: 1.2.2
+Python: C:\Python314\python.exe
