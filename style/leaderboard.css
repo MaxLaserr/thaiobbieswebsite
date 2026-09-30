@@ -101,11 +101,12 @@
 }
 
 #detail-panel.player-watch-page {
-    max-width: 2000px;
+    max-width: 1280px;
 }
 
 .player-watch-layout {
     display: grid;
+    /* grid-template-columns: minmax(2px, 1.65fr) minmax(280px, 1fr); */
     align-items: start;
     gap: 32px;
 }
@@ -116,8 +117,8 @@
 }
 
 .player-watch-frame {
-    width: 1500px;
-    margin-left: 20cap;
+    width: 100%;
+    margin: 0;
     aspect-ratio: 16 / 9;
     overflow: hidden;
     background: #05070b;
