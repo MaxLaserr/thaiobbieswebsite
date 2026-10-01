@@ -170,7 +170,7 @@ window.searchPlayer = searchPlayer;
 function buildStatsPlayer(p) {
   return `
     <tr><td class="stat-label">Rank</td><td class="stat-value">#${p.rank}</td></tr>
-    <tr><td class="stat-label">Aptitude</td><td class="stat-value">${p.type}</td></tr>
+    <tr><td class="stat-label">Types</td><td class="stat-value">${p.type}</td></tr>
     <tr><td class="stat-label">Points</td><td class="stat-value">${p.points}</td></tr>
     <tr><td class="stat-label">Device</td><td class="stat-value">${p.device} ${getDeviceIcon(p.device)}</td></tr>
     <tr><td class="stat-label">Hardest</td><td class="stat-value">${(p.hardest ?? []).map((h) => formatCompletionItem(h)).join("<br>")}</td></tr>
@@ -316,7 +316,7 @@ function renderLeaderboard(data) {
       <img class="card-info-pfp" src="${p.pfpUrl}">
       <div class="card-info">
         <p class="card-info-name">${IconRank(p.rank)} ${p.username}</p>
-        <p class="card-info-sub"><strong>Aptitude:</strong> ${p.type} &nbsp;|&nbsp; <strong>Points:</strong> ${p.points}</p>
+        <p class="card-info-sub"><strong>Types:</strong> ${p.type} &nbsp;|&nbsp; <strong>Points:</strong> ${p.points}</p>
         <p class="card-info-sub"><strong>Hardest:</strong> ${formatCompletionItem(p.hardest?.[0] ?? "")}</p>
       </div>
       <div style="display:flex;flex-direction:column;align-items:flex-end;gap:6px;flex-shrink:0;">
